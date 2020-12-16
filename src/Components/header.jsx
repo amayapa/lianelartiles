@@ -1,7 +1,9 @@
 /* ======================= IMPORTATIONS ======================= */
 import React, {useState} from 'react'
 import { Link } from 'react-router-dom'
-import '../Styles/header.css'
+import '../Styles/header.css';
+import darkLogo from '../images/dark-imadev.svg'
+import lightLogo from '../images/light-imadev.svg'
 
 const Header = () => {
   /* ======================= STATE ======================= */
@@ -12,30 +14,33 @@ const Header = () => {
   
   /* ======================= RENDERING ======================= */
   return (
-    <div className='main-header'>
-      <Link to='/landing'>
-        <img 
-          src={darkMode ? "/images/light imadev.svg" : "/images/dark imadev.svg"} 
-          className='logo' alt="imadev"
-        />
-      </Link>
-      <nav className='header'>
+    <nav className='main-header cContainer'>
+      <div>
+        <Link to='/'>
+          <img 
+            src={darkMode ? lightLogo : darkLogo}
+            className='logo' 
+            alt="imadev"
+          />
+        </Link>
+      </div>
+      <div className='header'>
         <ul>
           <Link className='link' to='/education'>
-            <li>Education</li>
+            <span>Education</span>
           </Link>
           <Link className='link' to='/skills'>
-            <li>Skills</li>
+            <span>Skills</span>
           </Link>
           <Link className='link' to='/projects'>
-            <li>Projects</li>
+            <span>Projects</span>
           </Link>
           <Link className='link' to='/jsresume'>
-            <li>Js Resume</li>
+            <span>Resume</span>
           </Link>
         </ul>
-      </nav>
-    </div>
+      </div>
+    </nav>
   )
 }
 

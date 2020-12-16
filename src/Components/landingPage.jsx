@@ -10,10 +10,10 @@ const LandingPage = (props) => {
   
   /* ======================= RENDERING ======================= */
   return (
-    <div id='me' className={darkMode ? 'landingDark' : 'landingLight'}>
-      <h1 id='las'>Lianel Artiles</h1>
-      <h3>FullStack Web and Mobile Developer</h3>
-      <span>At last working on my pasion</span>
+    <div id='me' className={darkMode ? 'landingDark cContainer' : 'landingLight cContainer'}>
+      <span id='las'>Lianel Artiles</span><br/>
+      <span id='dev'>FullStack Web and Mobile Developer</span><br/>
+      <span id='lema'>At last working on my pasion</span>
     </div>
   )
 }

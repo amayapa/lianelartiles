@@ -1,0 +1,29 @@
+#me {
+  text-align: right;
+  margin-right: 40%;
+  margin-top: 20%;
+  margin-bottom: 10px;
+}
+#las {
+  font-size: 56px;
+}
+#dev {
+  font-size: 20px;
+}
+#lema {
+  font-size: 14px;
+}
+@media (max-width: 800px) {
+  #me {
+    margin-top: 20%;
+    margin-right: 0%;
+    text-align: center;
+  }
+}
+@media (orientation: landscape) {
+  #me {
+    margin-left: 20%;
+    margin-top: 10px;
+    margin-bottom: 10px;
+  }
+}
