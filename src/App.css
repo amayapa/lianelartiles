@@ -15,20 +15,26 @@
   /* border: solid 1px black; */
   /* margin-top: 10%; */
 }
-body {
-  padding: 0;
-  margin: 0 auto;
-  background: linear-gradient(
+html {
+  background: url("./images/hive.svg"),
+    linear-gradient(
       180deg,
       rgba(255, 255, 255, 0.3) 0%,
       rgba(255, 255, 255, 0) 100%
     ),
     #292a2e;
+  width: 100%;
+  background-size: 100% 100%, 100% 100%;
+  background-repeat: no-repeat;
+  min-height: 100vh;
+}
+body {
+  padding: 0;
+  margin: 0 auto;
   font-family: "Saira", sans-serif;
   font-size: 1.2rem;
   color: white;
-  height: fit-content;
-  min-height: 120vh;
+  height: 100%;
   display: flex;
   flex-direction: column;
 }
@@ -38,4 +44,19 @@ body {
   text-decoration: none;
   padding-top: 5px;
   padding-bottom: 5px;
+}
+@media (orientation: portrait) {
+  html {
+    background: url("./images/hive-portrait.svg"),
+      linear-gradient(
+        180deg,
+        rgba(255, 255, 255, 0.3) 0%,
+        rgba(255, 255, 255, 0) 100%
+      ),
+      #292a2e;
+    width: 100%;
+    background-size: 100% 100%, 100% 100%;
+    background-repeat: no-repeat;
+    min-height: 100%;
+  }
 }

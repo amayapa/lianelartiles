@@ -12,8 +12,8 @@ function App() {
     <div className="App">
       <Router>
         <Route path="/" component={Header} />
-        <Route exact path="/" component={LandingPage} />
         <Route path="/" component={Footer} />
+        <Route exact path="/" component={LandingPage} />
         <Route path="/about" component={Footer} />
         <Route path="/contact" component={Footer} />
         <Route path="/education" component={Education} />
