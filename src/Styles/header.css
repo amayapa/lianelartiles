@@ -6,7 +6,13 @@
   width: 100px;
   height: 100px;
   filter: drop-shadow(7px 7px 7px rgba(0, 0, 0, 1));
+  transition: transform 1s;
 }
+.logo:hover {
+  transform: rotateZ(360deg) scale(0.8, 0.8);
+  transition: transform 1s;
+}
+
 .main-header {
   display: flex;
   justify-content: space-between;

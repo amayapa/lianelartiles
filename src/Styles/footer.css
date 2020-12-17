@@ -35,7 +35,6 @@
   width: 30px;
   filter: drop-shadow(3px 3px 4px rgba(0, 0, 0, 0.5));
 }
-
 .toggle {
   height: 50px;
   width: 50px;
@@ -45,7 +44,18 @@
   height: 50px;
   width: 50px;
 }
-
+#toggle:hover {
+  transform: rotateY(180deg);
+}
+.flink:hover {
+  background-color: rgba(0, 0, 0, 0.281);
+  border-radius: 10px;
+}
+#esp:hover,
+#eng:hover {
+  transform: scale(1.4, 1.4);
+  transition: transform 1s;
+}
 @media (max-width: 800px) {
   .toggle {
     justify-content: space-around;
