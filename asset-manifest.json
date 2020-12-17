@@ -1,8 +1,8 @@
 {
   "files": {
-    "main.css": "/lianelartiles/static/css/main.f562c42a.chunk.css",
-    "main.js": "/lianelartiles/static/js/main.682375e4.chunk.js",
-    "main.js.map": "/lianelartiles/static/js/main.682375e4.chunk.js.map",
+    "main.css": "/lianelartiles/static/css/main.dadb994f.chunk.css",
+    "main.js": "/lianelartiles/static/js/main.3203fb4b.chunk.js",
+    "main.js.map": "/lianelartiles/static/js/main.3203fb4b.chunk.js.map",
     "runtime-main.js": "/lianelartiles/static/js/runtime-main.0c5cb9cd.js",
     "runtime-main.js.map": "/lianelartiles/static/js/runtime-main.0c5cb9cd.js.map",
     "static/js/2.d5aa960b.chunk.js": "/lianelartiles/static/js/2.d5aa960b.chunk.js",
@@ -10,7 +10,7 @@
     "static/js/3.6eeb4e3f.chunk.js": "/lianelartiles/static/js/3.6eeb4e3f.chunk.js",
     "static/js/3.6eeb4e3f.chunk.js.map": "/lianelartiles/static/js/3.6eeb4e3f.chunk.js.map",
     "index.html": "/lianelartiles/index.html",
-    "static/css/main.f562c42a.chunk.css.map": "/lianelartiles/static/css/main.f562c42a.chunk.css.map",
+    "static/css/main.dadb994f.chunk.css.map": "/lianelartiles/static/css/main.dadb994f.chunk.css.map",
     "static/js/2.d5aa960b.chunk.js.LICENSE.txt": "/lianelartiles/static/js/2.d5aa960b.chunk.js.LICENSE.txt",
     "static/media/Dark Toggle.7540ea88.svg": "/lianelartiles/static/media/Dark Toggle.7540ea88.svg",
     "static/media/USA.be2b28d7.png": "/lianelartiles/static/media/USA.be2b28d7.png",
@@ -22,7 +22,7 @@
   "entrypoints": [
     "static/js/runtime-main.0c5cb9cd.js",
     "static/js/2.d5aa960b.chunk.js",
-    "static/css/main.f562c42a.chunk.css",
-    "static/js/main.682375e4.chunk.js"
+    "static/css/main.dadb994f.chunk.css",
+    "static/js/main.3203fb4b.chunk.js"
   ]
 }
