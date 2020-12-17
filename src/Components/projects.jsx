@@ -1,8 +1,6 @@
 import React from 'react'
 
-const Education = (props) => {
-  console.log(props);
-
+const Projects = () => {
   return (
     <div>
       <h1>Working on it</h1>
@@ -10,4 +8,4 @@ const Education = (props) => {
   )
 }
 
-export default Education
+export default Projects

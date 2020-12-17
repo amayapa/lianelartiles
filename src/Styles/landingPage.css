@@ -1,21 +1,21 @@
 #me {
   text-align: right;
-  margin-right: 50%;
+  margin-right: 40%;
   margin-top: 25vh;
 }
 #las {
-  font-size: 56px;
+  font-size: 8vw;
 }
 #dev {
-  font-size: 20px;
+  font-size: 3vw;
 }
 #lema {
-  font-size: 14px;
+  font-size: 2vw;
 }
 @media (max-width: 1200px) {
   #me {
     text-align: right;
-    margin-right: 50vw;
+    margin-right: 35vw;
     margin-top: 25vh;
   }
 }
@@ -24,6 +24,15 @@
     margin-top: 25vh;
     margin-right: 0%;
     text-align: center;
+  }
+  #las {
+    font-size: 10vw;
+  }
+  #dev {
+    font-size: 5vw;
+  }
+  #lema {
+    font-size: 3.5vw;
   }
 }
 @media (max-width: 500px) {

@@ -45,6 +45,7 @@ body {
   padding-top: 5px;
   padding-bottom: 5px;
 }
+
 @media (orientation: portrait) {
   html {
     background: url("./images/hive-portrait.svg"),

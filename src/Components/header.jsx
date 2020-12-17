@@ -26,16 +26,16 @@ const Header = () => {
       </div>
       <div className='header'>
         <ul>
-          <Link className='link' to='/education'>
+          <Link className='link hlink' to='/education'>
             <span>Education</span>
           </Link>
-          <Link className='link' to='/skills'>
+          <Link className='link hlink' to='/skills'>
             <span>Skills</span>
           </Link>
-          <Link className='link' to='/projects'>
+          <Link className='link hlink' to='/projects'>
             <span>Projects</span>
           </Link>
-          <Link className='link' to='/jsresume'>
+          <Link className='link hlink' to='/resume'>
             <span>Resume</span>
           </Link>
         </ul>

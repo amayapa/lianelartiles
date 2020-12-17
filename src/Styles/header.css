@@ -28,6 +28,25 @@
 .header span {
   padding: 10px;
 }
+.hlink {
+  position: relative;
+}
+.hlink::after {
+  content: "";
+  width: 100%;
+  height: 2px;
+  background-color: #fff;
+  position: absolute;
+  left: 0;
+  bottom: 0px;
+  transform: scaleX(0);
+  transform-origin: left;
+  transition: transform 0.5s ease;
+}
+.hlink:hover::after {
+  transform: scaleX(1);
+  color: white;
+}
 
 @media screen and (max-width: 800px) {
   .logo {
