@@ -1,28 +1,29 @@
 {
   "files": {
-    "main.css": "/lianelartiles/static/css/main.9ae99388.chunk.css",
-    "main.js": "/lianelartiles/static/js/main.bd097069.chunk.js",
-    "main.js.map": "/lianelartiles/static/js/main.bd097069.chunk.js.map",
-    "runtime-main.js": "/lianelartiles/static/js/runtime-main.0c5cb9cd.js",
-    "runtime-main.js.map": "/lianelartiles/static/js/runtime-main.0c5cb9cd.js.map",
-    "static/js/2.d5aa960b.chunk.js": "/lianelartiles/static/js/2.d5aa960b.chunk.js",
-    "static/js/2.d5aa960b.chunk.js.map": "/lianelartiles/static/js/2.d5aa960b.chunk.js.map",
-    "static/js/3.6eeb4e3f.chunk.js": "/lianelartiles/static/js/3.6eeb4e3f.chunk.js",
-    "static/js/3.6eeb4e3f.chunk.js.map": "/lianelartiles/static/js/3.6eeb4e3f.chunk.js.map",
+    "main.css": "/lianelartiles/static/css/main.74d138e6.chunk.css",
+    "main.js": "/lianelartiles/static/js/main.a2f93f2b.chunk.js",
+    "main.js.map": "/lianelartiles/static/js/main.a2f93f2b.chunk.js.map",
+    "runtime-main.js": "/lianelartiles/static/js/runtime-main.40a8493f.js",
+    "runtime-main.js.map": "/lianelartiles/static/js/runtime-main.40a8493f.js.map",
+    "static/js/2.d43f56b2.chunk.js": "/lianelartiles/static/js/2.d43f56b2.chunk.js",
+    "static/js/2.d43f56b2.chunk.js.map": "/lianelartiles/static/js/2.d43f56b2.chunk.js.map",
+    "static/js/3.159b00f8.chunk.js": "/lianelartiles/static/js/3.159b00f8.chunk.js",
+    "static/js/3.159b00f8.chunk.js.map": "/lianelartiles/static/js/3.159b00f8.chunk.js.map",
     "index.html": "/lianelartiles/index.html",
-    "static/css/main.9ae99388.chunk.css.map": "/lianelartiles/static/css/main.9ae99388.chunk.css.map",
-    "static/js/2.d5aa960b.chunk.js.LICENSE.txt": "/lianelartiles/static/js/2.d5aa960b.chunk.js.LICENSE.txt",
+    "static/css/main.74d138e6.chunk.css.map": "/lianelartiles/static/css/main.74d138e6.chunk.css.map",
+    "static/js/2.d43f56b2.chunk.js.LICENSE.txt": "/lianelartiles/static/js/2.d43f56b2.chunk.js.LICENSE.txt",
     "static/media/Dark Toggle.7540ea88.svg": "/lianelartiles/static/media/Dark Toggle.7540ea88.svg",
+    "static/media/Light Toggle.c9dd36cd.svg": "/lianelartiles/static/media/Light Toggle.c9dd36cd.svg",
     "static/media/USA.be2b28d7.png": "/lianelartiles/static/media/USA.be2b28d7.png",
     "static/media/dark-imadev.5772dc51.svg": "/lianelartiles/static/media/dark-imadev.5772dc51.svg",
     "static/media/españa.a71f0f2f.png": "/lianelartiles/static/media/españa.a71f0f2f.png",
-    "static/media/App.css": "/lianelartiles/static/media/hive.42925bb0.svg",
+    "static/media/App.css": "/lianelartiles/static/media/light-vertical-hive.ad5bdb57.svg",
     "static/media/light-imadev.a35b09f5.svg": "/lianelartiles/static/media/light-imadev.a35b09f5.svg"
   },
   "entrypoints": [
-    "static/js/runtime-main.0c5cb9cd.js",
-    "static/js/2.d5aa960b.chunk.js",
-    "static/css/main.9ae99388.chunk.css",
-    "static/js/main.bd097069.chunk.js"
+    "static/js/runtime-main.40a8493f.js",
+    "static/js/2.d43f56b2.chunk.js",
+    "static/css/main.74d138e6.chunk.css",
+    "static/js/main.a2f93f2b.chunk.js"
   ]
 }
