@@ -1,0 +1,9 @@
+
+.general-skills{
+    height: 75%;
+    background-color: transparent;
+    overflow-y: auto;
+  }
+  .general-skills::-webkit-scrollbar {
+    display: none;
+  }

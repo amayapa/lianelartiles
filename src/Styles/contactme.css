@@ -1,22 +1,22 @@
-.aboutme-container {
+.contactme-container {
   margin-top: 20px;
   height: 350px;
   background-color: transparent;
   overflow-y: auto;
 }
-.aboutme-container h1 {
+.contactme-container h1 {
   color: var(--text-color-dark);
 }
-.aboutme-container::-webkit-scrollbar {
+.contactme-container::-webkit-scrollbar {
   display: none;
 }
 @media (orientation: portrait) {
-  .aboutme-container {
+  .contactme-container {
     height: 400px;
   }
 }
 @media (max-height: 300px) {
-  .aboutme-container {
+  .contactme-container {
     height: 400px;
   }
 }

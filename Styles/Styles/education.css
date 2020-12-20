@@ -1,0 +1,9 @@
+
+.general-education{
+    height: 75%;
+    background-color: transparent;
+    overflow-y: auto;
+  }
+  .general-education::-webkit-scrollbar {
+    display: none;
+  }

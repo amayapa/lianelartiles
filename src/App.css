@@ -1,5 +1,22 @@
 @import url("https://fonts.googleapis.com/css2?family=Saira&display=swap");
-
+:root {
+  --bg-img: url("./images/hive.svg");
+  --bg-light-img: url("./images/light-hive.svg");
+  --bg-img-portrait: url("./images/hive-portrait.svg");
+  --bg-light-img-portrait: url("./images/light-vertical-hive.svg");
+  --bg-color-dark: #292a2e;
+  --bg-color-light: #b8b8b8;
+  --text-color-dark: #ffffff;
+  --text-color-light: #000000;
+  --footer-color-dark: #b8b8b8;
+  --footer-color-light: #292a2e;
+  --bg-gradient-dark-a: rgba(255, 255, 255, 0.3) 0%;
+  --bg-gradient-dark-b: rgba(255, 255, 255, 0) 100%;
+  --bg-gradient-light-a: rgba(255, 255, 255, 0.9) 0%;
+  --bg-gradient-light-b: rgba(255, 255, 255, 0) 100%;
+  --ft-gradient-a: rgba(255, 255, 255, 0.3) 0%;
+  --ft-gradient-b: rgba(255, 255, 255, 0) 100%;
+}
 .App {
   text-align: center;
   max-width: 1200px;
@@ -11,53 +28,55 @@
 *::after {
   box-sizing: border-box;
 }
-.cContainer {
-  /* border: solid 1px black; */
-  /* margin-top: 10%; */
-}
-html {
-  background: url("./images/hive.svg"),
+#root {
+  background: var(--bg-img),
     linear-gradient(
       180deg,
-      rgba(255, 255, 255, 0.3) 0%,
-      rgba(255, 255, 255, 0) 100%
+      var(--bg-gradient-dark-a),
+      var(--bg-gradient-dark-b)
     ),
-    #292a2e;
+    var(--bg-color-dark);
   width: 100%;
   background-size: 100% 100%, 100% 100%;
   background-repeat: no-repeat;
   min-height: 100vh;
+  padding: 0;
 }
 body {
   padding: 0;
-  margin: 0 auto;
+  margin: 0;
   font-family: "Saira", sans-serif;
   font-size: 1.2rem;
-  color: white;
   height: 100%;
   display: flex;
   flex-direction: column;
 }
 .link {
   display: flex;
-  color: inherit;
   text-decoration: none;
   padding-top: 5px;
   padding-bottom: 5px;
 }
 
 @media (orientation: portrait) {
-  html {
-    background: url("./images/hive-portrait.svg"),
+  #root {
+    background: var(--bg-img-portrait),
       linear-gradient(
         180deg,
-        rgba(255, 255, 255, 0.3) 0%,
-        rgba(255, 255, 255, 0) 100%
+        var(--bg-gradient-dark-a),
+        var(--bg-gradient-dark-b)
       ),
-      #292a2e;
+      var(--bg-color-dark);
     width: 100%;
     background-size: 100% 100%, 100% 100%;
     background-repeat: no-repeat;
-    min-height: 100%;
+    min-height: 100vh;
   }
+}
+.general-container > {
+  display: flex;
+  height: 100vh;
+  flex-direction: column;
+  margin: 0;
+  padding: 0;
 }

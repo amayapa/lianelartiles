@@ -1,0 +1,35 @@
+.footer-general{
+  height: 12%;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  background-color: white;
+}
+.flags-footer,.about-footer,.darkmode-footer{
+  width: 30%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.footer-general>.flags-footer{
+  display: flex;
+  justify-content: center;
+}
+.flag-footer{
+  width: 50px;
+  margin: 0 5px;
+}
+
+.footer-general>.about-footer>.link-footer{
+  color: #000;
+  text-decoration: none;
+  font-size: 14px;
+  margin: 0 5px;
+  font-weight: bold;
+}
+
+.toggleimg{
+  width: 60px;
+}

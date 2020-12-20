@@ -1,7 +1,17 @@
+.main-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  margin: auto;
+  padding-left: 5%;
+  padding-right: 5%;
+  margin-top: 10px;
+}
 .logo {
   display: flex;
   align-items: center;
-  color: inherit;
+  margin: auto;
   position: relative;
   width: 100px;
   height: 100px;
@@ -11,17 +21,6 @@
 .logo:hover {
   transform: rotateZ(360deg) scale(0.8, 0.8);
   transition: transform 1s;
-}
-
-.main-header {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  width: 100%;
-  margin: auto;
-  padding-left: 5%;
-  padding-right: 5%;
-  margin-top: 1%;
 }
 .header ul {
   display: flex;
@@ -36,6 +35,8 @@
 }
 .hlink {
   position: relative;
+  padding-top: 5px;
+  padding-bottom: 5px;
 }
 .hlink::after {
   content: "";
@@ -51,23 +52,23 @@
 }
 .hlink:hover::after {
   transform: scaleX(1);
-  color: white;
 }
 
 @media screen and (max-width: 800px) {
   .logo {
     margin: auto;
-    margin-top: 20%;
+    margin-top: 10px;
   }
   .main-header {
     flex-direction: row;
     margin: auto;
+    margin-top: 10px;
   }
 }
 @media (max-width: 500px) {
   .logo {
     margin: auto;
-    margin-top: 40%;
+    margin-top: 10px;
   }
   .main-header {
     flex-direction: column;
@@ -84,10 +85,10 @@
   }
   .logo {
     margin: auto;
-    margin-top: 15%;
+    margin-top: 15px;
   }
   .header {
-    margin-top: 5%;
+    margin-top: 5px;
   }
   .header span {
     padding: 0px;

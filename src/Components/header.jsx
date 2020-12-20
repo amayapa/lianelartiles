@@ -5,9 +5,9 @@ import '../Styles/header.css';
 import darkLogo from '../images/dark-imadev.svg'
 import lightLogo from '../images/light-imadev.svg'
 
-const Header = () => {
+const Header = (props) => {
   /* ======================= STATE ======================= */
-  const [darkMode, setDarkMode] = useState(true)
+  const darkMode = props.darkMode
 
   /* ======================= FUNCTIONS ======================= */
   
@@ -25,20 +25,37 @@ const Header = () => {
         </Link>
       </div>
       <div className='header'>
-        <ul>
-          <Link className='link hlink' to='/education'>
-            <span>Education</span>
-          </Link>
-          <Link className='link hlink' to='/skills'>
-            <span>Skills</span>
-          </Link>
-          <Link className='link hlink' to='/projects'>
-            <span>Projects</span>
-          </Link>
-          <Link className='link hlink' to='/resume'>
-            <span>Resume</span>
-          </Link>
-        </ul>
+        {
+          darkMode ?
+            (<ul>
+              <Link className='link hlink' to='/education'>
+                <span style={{color: 'white'}}>Education</span>
+              </Link>
+              <Link className='link hlink' to='/skills'>
+                <span style={{color: 'white'}}>Skills</span>
+              </Link>
+              <Link className='link hlink' to='/projects'>
+                <span style={{color: 'white'}}>Projects</span>
+              </Link>
+              <Link className='link hlink' to='/resume'>
+                <span style={{color: 'white'}}>Resume</span>
+              </Link>
+            </ul>) : 
+              (<ul>
+                <Link className='link hlink' to='/education'>
+                  <span style={{color: 'black'}}>Education</span>
+                </Link>
+                <Link className='link hlink' to='/skills'>
+                  <span style={{color: 'black'}}>Skills</span>
+                </Link>
+                <Link className='link hlink' to='/projects'>
+                  <span style={{color: 'black'}}>Projects</span>
+                </Link>
+                <Link className='link hlink' to='/resume'>
+                  <span style={{color: 'black'}}>Resume</span>
+                </Link>
+              </ul>)
+        }
       </div>
     </nav>
   )
