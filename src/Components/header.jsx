@@ -8,6 +8,7 @@ import lightLogo from '../images/light-imadev.svg'
 const Header = (props) => {
   /* ======================= STATE ======================= */
   const darkMode = props.darkMode
+  const language = props.language;
 
   /* ======================= FUNCTIONS ======================= */
 
@@ -25,20 +26,51 @@ const Header = (props) => {
         </Link>
       </div>
       <div className='header'>
-        <ul>
-          <Link className='link hlink' to='/education'>
-            <span>Education</span>
-          </Link>
-          <Link className='link hlink' to='/skills'>
-            <span>Skills</span>
-          </Link>
-          <Link className='link hlink' to='/projects'>
-            <span>Projects</span>
-          </Link>
-          <Link className='link hlink' to='/resume'>
-            <span>Resume</span>
-          </Link>
-        </ul>
+        {
+          language.eng ?
+            (<ul>
+              <Link className='link hlink' to='/resume'>
+                <span>Resume</span>
+              </Link>
+              <Link className='link hlink' to='/education'>
+                <span>Education</span>
+              </Link>
+              <Link className='link hlink' to='/skills'>
+                <span>Skills</span>
+              </Link>
+              <Link className='link hlink' to='/projects'>
+                <span>Projects</span>
+              </Link>
+            </ul>) : language.esp ?
+              (<ul>
+                <Link className='link hlink' to='/resume'>
+                  <span>CV</span>
+                </Link>
+                <Link className='link hlink' to='/education'>
+                  <span>Educación</span>
+                </Link>
+                <Link className='link hlink' to='/skills'>
+                  <span>Tecnologías</span>
+                </Link>
+                <Link className='link hlink' to='/projects'>
+                  <span>Proyectos</span>
+                </Link>
+              </ul>) :
+              (<ul>
+                <Link className='link hlink' to='/resume'>
+                  <span>CV</span>
+                </Link>
+                <Link className='link hlink' to='/education'>
+                  <span>Education</span>
+                </Link>
+                <Link className='link hlink' to='/skills'>
+                  <span>Compétences</span>
+                </Link>
+                <Link className='link hlink' to='/projects'>
+                  <span>Projects</span>
+                </Link>
+              </ul>)
+        }
       </div>
     </nav>
   )

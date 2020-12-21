@@ -13,8 +13,14 @@ import Resume from "./Components/resume";
 import Skills from "./Components/skills";
 
 function App() {
-  /* ======================= STATE ======================= */
+  /* ======================= STATE & VARS ======================= */
   const [darkMode, setDarkMode] = useState(getInitialMode());
+  const [language, setLanguage] = useState({
+    eng: true,
+    esp: false,
+    fre: false,
+  });
+  console.log(language);
   const html = document.querySelector("#root");
   const root = document.querySelector(":root");
   const colors = getComputedStyle(root);
@@ -36,6 +42,8 @@ function App() {
   const bgGradientLightB = colors.getPropertyValue("--bg-gradient-light-b");
   const ftDarkHoverColor = colors.getPropertyValue("--ft-dark-hover-color");
   const ftLightHoverColor = colors.getPropertyValue("--ft-light-hover-color");
+  const shadowHeaderDark = colors.getPropertyValue("--shadow-header-dark");
+  const shadowHeaderLight = colors.getPropertyValue("--shadow-header-light");
   /* ======================= FUNCTIONS ======================= */
   useEffect(() => {
     localStorage.setItem("dark", JSON.stringify(darkMode));
@@ -51,7 +59,9 @@ function App() {
       html.style.setProperty("--text-color-dark", textColorDark);
       html.style.setProperty("--ft-color-dark", textColorLight);
       html.style.setProperty("--ft-dark-hover-color", ftDarkHoverColor);
+      html.style.setProperty("--shadow-header-dark", shadowHeaderDark);
     } else {
+      html.style.setProperty("--shadow-header-dark", shadowHeaderLight);
       html.style.setProperty("--bg-img", bgLightImage);
       html.style.setProperty("--bg-img-portrait", bgLightPortraitImage);
       html.style.setProperty("--bg-color-dark", bgColorLight);
@@ -89,17 +99,36 @@ function App() {
       <Router>
         <div className="general-container">
           <Route path="/">
-            <Header darkMode={darkMode} />
+            <Header darkMode={darkMode} language={language} />
           </Route>
-          <Route exact path="/" component={LandingPage} />
-          <Route path="/about" component={About} />
-          <Route path="/contact" component={Contact} />
-          <Route path="/education" component={Education} />
-          <Route path="/projects" component={Projects} />
-          <Route path="/resume" component={Resume} />
-          <Route path="/skills" component={Skills} />
+          <Route exact path="/">
+            <LandingPage language={language} />
+          </Route>
+          <Route path="/about">
+            <About language={language} />
+          </Route>
+          <Route path="/contact">
+            <Contact language={language} />
+          </Route>
+          <Route path="/education">
+            <Education language={language} />
+          </Route>
+          <Route path="/projects">
+            <Projects language={language} />
+          </Route>
+          <Route path="/resume">
+            <Resume language={language} />
+          </Route>
+          <Route path="/skills">
+            <Skills language={language} />
+          </Route>
           <Route path="/">
-            <Footer setDarkMode={setDarkMode} darkMode={darkMode} />
+            <Footer
+              darkMode={darkMode}
+              setDarkMode={setDarkMode}
+              language={language}
+              setLanguage={setLanguage}
+            />
           </Route>
         </div>
       </Router>

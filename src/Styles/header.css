@@ -16,7 +16,7 @@
   position: relative;
   width: 100px;
   height: 100px;
-  filter: drop-shadow(7px 7px 7px rgba(0, 0, 0, 1));
+  filter: drop-shadow(4px 4px 6px rgba(0, 0, 0, 1));
   transition: transform 1s;
 }
 .logo:hover {
@@ -28,8 +28,8 @@
   margin: 0;
   padding: 0;
   list-style: none;
-  filter: drop-shadow(6px 6px 4px rgba(0, 0, 0, 0.6));
-  /* border: solid 1px black; */
+  filter: var(--shadow-header-dark);
+  align-items: center;
 }
 .header span {
   padding: 10px;

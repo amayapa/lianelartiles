@@ -19,6 +19,9 @@
   --ft-gradient-b: rgba(255, 255, 255, 0) 100%;
   --ft-dark-hover-color: rgba(95, 94, 94, 0.281);
   --ft-light-hover-color: rgba(209, 202, 202, 0.178);
+  --shadow-ft-dark: drop-shadow(3px 3px 2px rgb(27, 27, 27));
+  --shadow-header-dark: drop-shadow(4px 4px 3px rgba(0, 0, 0, 0.651));
+  --shadow-header-light: drop-shadow(4px 4px 3px rgb(0, 0, 0));
 }
 .general-container > {
   display: flex;
@@ -71,7 +74,7 @@ h4 {
   width: 100%;
   background-size: 100% 100%, 100% 100%;
   background-repeat: no-repeat;
-  min-height: 100vh;
+  min-height: 150vh;
 }
 @media (orientation: portrait) {
   #root {

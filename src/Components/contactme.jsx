@@ -3,13 +3,30 @@ import Message from "./productionMsg";
 import '../Styles/contactme.css'
 
 const ContactMe = (props) => {
-  const darkMode = props.darkMode;
+  const language = props.language;
 
   return (
     <div className='contactme-container'>
-      <h1>Contact me</h1>
-      <h3>Working on it</h3>
-      <Message />
+      {
+        language.eng ? (
+          <>
+            <h1>Contact me</h1>
+            <h3>Working on it</h3>
+          </>
+        ) : language.esp ?
+            (
+              <>
+                <h1>Contactame</h1>
+                <h3>En construcción</h3>
+              </>
+            ) : (
+              <>
+                <h1>Contactez moi</h1>
+                <h3>En construction</h3>
+              </>
+            )
+      }
+      <Message language={language} />
     </div>
   )
 }

@@ -1,6 +1,6 @@
 .aboutme-container {
   margin-top: 20px;
-  height: 350px;
+  height: 550px;
   background-color: transparent;
   overflow-y: auto;
 }
@@ -15,5 +15,15 @@
 @media (max-height: 300px) {
   .aboutme-container {
     height: 400px;
+  }
+}
+@media (orientation: portrait) and (max-width: 330px) {
+  .aboutme-container {
+    min-height: calc(100vw * 2.7);
+  }
+}
+@media (orientation: portrait) and (max-width: 290px) {
+  .aboutme-container {
+    min-height: calc(100vw * 2.9);
   }
 }
