@@ -1,9 +1,0 @@
-
-.general-projects{
-    height: 75%;
-    background-color: transparent;
-    overflow-y: auto;
-  }
-  .general-projects::-webkit-scrollbar {
-    display: none;
-  }

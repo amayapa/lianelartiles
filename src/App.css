@@ -6,6 +6,7 @@
   --bg-light-img-portrait: url("./images/light-vertical-hive.svg");
   --bg-color-dark: #292a2e;
   --bg-color-light: #b8b8b8;
+  --ft-color-dark: #ffffff;
   --text-color-dark: #ffffff;
   --text-color-light: #000000;
   --footer-color-dark: #b8b8b8;
@@ -16,6 +17,15 @@
   --bg-gradient-light-b: rgba(255, 255, 255, 0) 100%;
   --ft-gradient-a: rgba(255, 255, 255, 0.3) 0%;
   --ft-gradient-b: rgba(255, 255, 255, 0) 100%;
+  --ft-dark-hover-color: rgba(95, 94, 94, 0.281);
+  --ft-light-hover-color: rgba(209, 202, 202, 0.178);
+}
+.general-container > {
+  display: flex;
+  height: 100%;
+  flex-direction: column;
+  margin: 0;
+  padding: 0;
 }
 .App {
   text-align: center;
@@ -27,6 +37,28 @@
 *::before,
 *::after {
   box-sizing: border-box;
+}
+body {
+  padding: 0;
+  margin: 0;
+  font-family: "Saira", sans-serif;
+  font-size: 1.2rem;
+  display: flex;
+  flex-direction: column;
+}
+.link {
+  display: flex;
+  text-decoration: none;
+  padding-top: 5px;
+  padding-bottom: 5px;
+}
+span,
+p,
+h1,
+h2,
+h3,
+h4 {
+  color: var(--text-color-dark);
 }
 #root {
   background: var(--bg-img),
@@ -40,24 +72,7 @@
   background-size: 100% 100%, 100% 100%;
   background-repeat: no-repeat;
   min-height: 100vh;
-  padding: 0;
 }
-body {
-  padding: 0;
-  margin: 0;
-  font-family: "Saira", sans-serif;
-  font-size: 1.2rem;
-  height: 100%;
-  display: flex;
-  flex-direction: column;
-}
-.link {
-  display: flex;
-  text-decoration: none;
-  padding-top: 5px;
-  padding-bottom: 5px;
-}
-
 @media (orientation: portrait) {
   #root {
     background: var(--bg-img-portrait),
@@ -72,11 +87,4 @@ body {
     background-repeat: no-repeat;
     min-height: 100vh;
   }
-}
-.general-container > {
-  display: flex;
-  height: 100vh;
-  flex-direction: column;
-  margin: 0;
-  padding: 0;
 }

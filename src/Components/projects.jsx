@@ -1,9 +1,12 @@
 import React from 'react'
+import Message from './productionMsg'
 
 const Projects = () => {
   return (
     <div>
-      <h1>Working on it</h1>
+      <h1>Projects</h1>
+      <h3>Working on it</h3>
+      <Message/>
     </div>
   )
 }

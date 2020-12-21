@@ -1,9 +1,12 @@
 import React from 'react'
+import Message from './productionMsg'
 
 const Skills = () => {
   return (
     <div>
-      <h1>Working on it</h1>
+      <h1>Skills</h1>
+      <h3>Working on it</h3>
+      <Message/>
     </div>
   )
 }

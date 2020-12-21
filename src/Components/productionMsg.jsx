@@ -5,28 +5,16 @@ const Message = (props) => {
 
   return (
     <>
-      {
-        darkMode ? (<div>
-          <p style={{color: 'white'}}>
-            This website is under construction.<br/>
-            For the moment you can go to the following pages:
-          </p>
-          <span className='check'>✔</span><span style={{color: 'white'}}> Home <br/></span>
-          <span className='check'>✔</span><span style={{color: 'white'}}> About me <br/></span>
-          <p style={{color: 'white'}}>And try the following features:</p>
-          <span className='check'>✔</span><span style={{color: 'white'}}> Dark Mode <br/></span>
-        </div>) : 
-          (<div>
-            <p style={{color: 'black'}}>
-              This website is under construction.<br/>
-              For the moment you can go to the following pages:
-            </p>
-            <span className='check'>✔</span><span style={{color: 'black'}}> Home <br/></span>
-            <span className='check'>✔</span><span style={{color: 'black'}}> About me <br/></span>
-            <p style={{color: 'black'}}>And try the following features:</p>
-            <span className='check'>✔</span><span style={{color: 'black'}}> Dark Mode <br/></span>
-          </div>)
-      }
+      <div>
+        <p style={{ padding: '15px', fontSize: 22 }}>
+          This website is under construction.<br />
+          For the moment you can go to the following pages:
+        </p>
+        <span className='check'>✔</span><span>Home<br /></span>
+        <span className='check'>✔</span><span>JavasCript Resume<br /></span>
+        <p style={{ padding: '15px', fontSize: 22 }}>And try the following features:</p>
+        <span className='check'>✔</span><span>Dark Mode<br /></span>
+      </div>
     </>
   )
 }

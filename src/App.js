@@ -34,8 +34,8 @@ function App() {
   const bgGradientDarkB = colors.getPropertyValue("--bg-gradient-dark-b");
   const bgGradientLightA = colors.getPropertyValue("--bg-gradient-light-a");
   const bgGradientLightB = colors.getPropertyValue("--bg-gradient-light-b");
-  const ftGradientA = colors.getPropertyValue("--ft-gradient-a");
-  const ftGradientB = colors.getPropertyValue("--ft-gradient-b");
+  const ftDarkHoverColor = colors.getPropertyValue("--ft-dark-hover-color");
+  const ftLightHoverColor = colors.getPropertyValue("--ft-light-hover-color");
   /* ======================= FUNCTIONS ======================= */
   useEffect(() => {
     localStorage.setItem("dark", JSON.stringify(darkMode));
@@ -49,6 +49,8 @@ function App() {
       html.style.setProperty("--bg-gradient-dark-a", bgGradientDarkA);
       html.style.setProperty("--bg-gradient-dark-b", bgGradientDarkB);
       html.style.setProperty("--text-color-dark", textColorDark);
+      html.style.setProperty("--ft-color-dark", textColorLight);
+      html.style.setProperty("--ft-dark-hover-color", ftDarkHoverColor);
     } else {
       html.style.setProperty("--bg-img", bgLightImage);
       html.style.setProperty("--bg-img-portrait", bgLightPortraitImage);
@@ -57,6 +59,8 @@ function App() {
       html.style.setProperty("--bg-gradient-dark-a", bgGradientLightA);
       html.style.setProperty("--bg-gradient-dark-b", bgGradientLightB);
       html.style.setProperty("--text-color-dark", textColorLight);
+      html.style.setProperty("--ft-color-dark", textColorDark);
+      html.style.setProperty("--ft-dark-hover-color", ftLightHoverColor);
     }
   }, [darkMode]);
 
@@ -87,15 +91,9 @@ function App() {
           <Route path="/">
             <Header darkMode={darkMode} />
           </Route>
-          <Route exact path="/">
-            <LandingPage darkMode={darkMode} />
-          </Route>
-          <Route path="/about">
-            <About darkMode={darkMode} />
-          </Route>
-          <Route path="/contact">
-            <Contact darkMode={darkMode} />
-          </Route>
+          <Route exact path="/" component={LandingPage} />
+          <Route path="/about" component={About} />
+          <Route path="/contact" component={Contact} />
           <Route path="/education" component={Education} />
           <Route path="/projects" component={Projects} />
           <Route path="/resume" component={Resume} />

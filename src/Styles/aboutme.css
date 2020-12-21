@@ -4,9 +4,6 @@
   background-color: transparent;
   overflow-y: auto;
 }
-.aboutme-container h1 {
-  color: var(--text-color-dark);
-}
 .aboutme-container::-webkit-scrollbar {
   display: none;
 }

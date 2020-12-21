@@ -1,8 +1,0 @@
-.aboutme-container {
-  height: 75%;
-  background-color: transparent;
-  overflow-y: auto;
-}
-.aboutme-container::-webkit-scrollbar {
-  display: none;
-}

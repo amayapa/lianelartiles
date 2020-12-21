@@ -7,8 +7,9 @@ const ContactMe = (props) => {
 
   return (
     <div className='contactme-container'>
-      <h1>Working on it</h1>
-      <Message darkMode={darkMode}/>
+      <h1>Contact me</h1>
+      <h3>Working on it</h3>
+      <Message />
     </div>
   )
 }

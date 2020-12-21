@@ -1,11 +1,13 @@
 import React from 'react'
+import Message from './productionMsg'
 
 const Education = (props) => {
-  console.log(props);
 
   return (
     <div>
-      <h1>Working on it</h1>
+      <h1>Education</h1>
+      <h3>Working on it</h3>
+      <Message/>
     </div>
   )
 }

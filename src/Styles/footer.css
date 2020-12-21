@@ -1,6 +1,5 @@
 .main-footer {
   display: flex;
-  font-weight: normal;
   position: fixed;
   bottom: 0;
   left: 0;
@@ -33,6 +32,7 @@
   padding: 0;
 }
 .footer .flink {
+  color: var(--ft-color-dark);
   filter: drop-shadow(3px 3px 4px rgba(0, 0, 0, 0.9));
   padding-top: 4px;
   padding-bottom: 4px;
@@ -62,7 +62,7 @@
   transform: rotateY(180deg);
 }
 .flink:hover {
-  background-color: rgba(0, 0, 0, 0.281);
+  background-color: var(--ft-dark-hover-color);
   border-radius: 10px;
 }
 #esp:hover,
