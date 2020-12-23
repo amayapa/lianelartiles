@@ -13,40 +13,27 @@ const AboutMe = (props) => {
           language.eng ? (
             <>
               <p>
-                Mi carácter sacrificado, disciplinado y
-                responsable he podido enfrentar este difícil
-                camino de volverme desarrollador. En mi caso
-                esta pandemia fue una oportunidad para
-                alcanzar el sueño de volverme profesional en
-                las ciencias informáticas.
-                Me satisface trabajar en equipo, me gusta
-                superarme y dar lo mejor de mí. Soy afable,
-                entusiasta y me apasionan los idiomas y
-                solucionar problemas técnicos. Experiencia en
-                desarrollo FullStack tanto web como de
-                aplicaciones móviles.
+                My self-sacrificing, disciplined and responsible aptitudes 🧘🏼‍♂️, ➕ quarantine, were the main keys to walk through this difficult path, and make true that dream of make myself a Developer. 🦾
+                Passionate by foreign languages, teamwork and solve technical problems.
+                FullStack development experience of web and mobile applications.
               </p>
             </>
           ) : language.esp ?
               (
                 <>
                   <p>
-                    FullStack developer self-sacrificing, disciplined
-                    and responsible. I love teamwork and
-                    leadership; I like to improve and always give
-                    my best. Kind, empathetic and enthusiastic
-                    character. Passionate by foreign languages
-                    and solve technical problems.
-                    Experience in FullStack development of web
-                    and mobile applications. Specialist in Physical
-                    Culture, Sports and Massage therapy.
-                    Empirical skills, experience and love for design
-                    and sales.
+                    Me considero una persona disciplinada y responsable 🧘🏼‍♂️, esas características ➕ la cuarentena me hicieron posible enfrentar este difícil camino y cumplir mi sueño de volverme desarrollador. 💪🏼
+                    Me satisface trabajar en equipo, me apasionan los idiomas y solucionar problemas técnicos.
+                    Experiencia en desarrollo FullStack tanto Web como de aplicaciones móviles.
                   </p>
                 </>
               ) : (
                 <>
-                  <h1>Sur moi</h1>
+                  <p>
+                    Je suis dévoué, discipliné et responsable, 🧘🏼‍♂️ et ces compétences ➕ quarantaine sont les principales clés qui m'ont conduit sur ce chemin difficile de devenir un professionnel des sciences IT. 🦾
+                    Apasioné des langues étrangers, le travail en equipe et de solutionné des problèmes techniques.
+                    Experience en développement autant web que mobile.
+                  </p>
                 </>
               )
         }
