@@ -1,0 +1,10 @@
+@media (orientation: landscape) {
+  #pic {
+    width: 35vw;
+  }
+}
+@media (orientation: portrait) {
+  #pic {
+    width: 35vh;
+  }
+}

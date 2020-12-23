@@ -1,20 +1,37 @@
-.aboutme-container {
-  margin-top: 20px;
-  height: 550px;
-  background-color: transparent;
-  overflow-y: auto;
-}
 .aboutme-container::-webkit-scrollbar {
   display: none;
 }
-@media (orientation: portrait) {
+@media (orientation: landscape) {
   .aboutme-container {
-    height: 400px;
+    display: flex;
+    margin: 5%;
+    justify-content: center;
+    height: calc(100vw * 0.4);
+    /* background-color: rgba(0, 0, 0, 0.2); */
+    align-items: center;
+  }
+  .text {
+    margin-left: 5vw;
+    text-align: justify;
+    text-justify: inter-word;
+    padding: 20px;
+    height: fit-content;
+    background-color: rgba(0, 0, 0, 0.2);
+    border-radius: 10px;
   }
 }
-@media (max-height: 300px) {
+@media (orientation: portrait) {
   .aboutme-container {
-    height: 400px;
+    min-height: calc(100vw * 2);
+  }
+  .text {
+    text-align: justify;
+    text-justify: inter-word;
+    padding: 20px;
+    background-color: rgba(0, 0, 0, 0.2);
+    border-radius: 10px;
+    width: 80%;
+    margin: auto;
   }
 }
 @media (orientation: portrait) and (max-width: 330px) {

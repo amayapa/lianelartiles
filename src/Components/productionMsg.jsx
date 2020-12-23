@@ -3,7 +3,6 @@ import "../Styles/msg.css";
 
 const Message = (props) => {
   const language = props.language || true;
-  console.log(language);
 
   return (
     <div>

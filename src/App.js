@@ -20,7 +20,6 @@ function App() {
     esp: false,
     fre: false,
   });
-  console.log(language);
   const html = document.querySelector("#root");
   const root = document.querySelector(":root");
   const colors = getComputedStyle(root);
