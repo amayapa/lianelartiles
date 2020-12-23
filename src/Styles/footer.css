@@ -76,6 +76,9 @@
   .main-footer {
     height: 75px;
   }
+  #copyright {
+    bottom: 75px;
+  }
 }
 @media (max-width: 800px) {
   .toggle {
@@ -138,7 +141,7 @@
       var(--footer-color-dark);
   }
   #copyright {
-    bottom: 80px;
+    bottom: 90px;
   }
   .flags {
     display: flex;
