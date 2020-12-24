@@ -43,6 +43,10 @@ function App() {
   const ftLightHoverColor = colors.getPropertyValue("--ft-light-hover-color");
   const shadowHeaderDark = colors.getPropertyValue("--shadow-header-dark");
   const shadowHeaderLight = colors.getPropertyValue("--shadow-header-light");
+  const textCRDark = colors.getPropertyValue("--text-copyRight-dark");
+  const textCRLight = colors.getPropertyValue("--text-copyRight-light");
+  const shadowSmDark = colors.getPropertyValue("--shadow-sm-dark");
+  const shadowSMLight = colors.getPropertyValue("--shadow-sm-light");
   /* ======================= FUNCTIONS ======================= */
   useEffect(() => {
     localStorage.setItem("dark", JSON.stringify(darkMode));
@@ -59,6 +63,8 @@ function App() {
       html.style.setProperty("--ft-color-dark", textColorLight);
       html.style.setProperty("--ft-dark-hover-color", ftDarkHoverColor);
       html.style.setProperty("--shadow-header-dark", shadowHeaderDark);
+      html.style.setProperty("--shadow-sm-dark", shadowSmDark);
+      html.style.setProperty("--text-copyRight-dark", textCRLight);
     } else {
       html.style.setProperty("--shadow-header-dark", shadowHeaderLight);
       html.style.setProperty("--bg-img", bgLightImage);
@@ -70,6 +76,8 @@ function App() {
       html.style.setProperty("--text-color-dark", textColorLight);
       html.style.setProperty("--ft-color-dark", textColorDark);
       html.style.setProperty("--ft-dark-hover-color", ftLightHoverColor);
+      html.style.setProperty("--shadow-sm-dark", shadowSMLight);
+      html.style.setProperty("--text-copyRight-dark", textCRDark);
     }
   }, [darkMode]);
 

@@ -23,6 +23,7 @@
   font-size: 10px;
   padding-right: 5px;
   text-align: end;
+  font-weight: var(--text-copyRight-dark);
 }
 .sm {
   position: fixed;
