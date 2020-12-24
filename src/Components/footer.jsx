@@ -20,21 +20,21 @@ const Footer = (props) => {
   /* ======================= RENDERING ======================= */
   return (
     <div>
-      <div className='sm'>
-        <a target="_blank" href='https://github.com/larts85'>
-          <img className="smIcon" src={github} alt="Ups!" />
-        </a>
-        <a target="_blank" href='https://www.linkedin.com/in/imadev'>
-          <img className="smIcon" src={linkedin} alt="Ups!" />
-        </a>
-        <a target="_blank" href='http://wa.me/5491127375403'>
-          <img className="smIcon" src={wapp} alt="Ups!" />
-        </a>
-      </div>
-      <p id='copyright'>
-        Copyright &copy; {new Date().getFullYear()}, Lianel Artiles
-      </p>
       <nav className='main-footer'>
+        <div className='sm'>
+          <a target="_blank" rel="noreferrer" href='https://github.com/larts85'>
+            <img className="smIcon" src={github} alt="Ups!" />
+          </a>
+          <a target="_blank" rel="noreferrer" href='https://www.linkedin.com/in/imadev'>
+            <img className="smIcon" src={linkedin} alt="Ups!" />
+          </a>
+          <a target="_blank" rel="noreferrer" href='http://wa.me/5491127375403'>
+            <img className="smIcon" src={wapp} alt="Ups!" />
+          </a>
+        </div>
+        <p id='copyright'>
+          Copyright &copy; {new Date().getFullYear()}, Lianel Artiles
+      </p>
         <div className='flags-container'>
           <img
             src={espFlag}
