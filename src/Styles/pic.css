@@ -8,3 +8,8 @@
     width: 35vh;
   }
 }
+@media (orientation: portrait) and (min-width: 600px) {
+  #pic {
+    margin-top: 20px;
+  }
+}

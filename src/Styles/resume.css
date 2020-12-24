@@ -6,7 +6,7 @@
 }
 @media (orientation: portrait) {
   #jscv {
-    min-height: calc(100vw * 2.4);
+    min-height: calc(100vw * 2.5);
   }
   #jscv img {
     width: 90%;
@@ -16,7 +16,7 @@
 }
 @media (orientation: portrait) and (max-width: 330px) {
   #jscv {
-    min-height: calc(100vw * 2.7);
+    min-height: calc(100vw * 2.8);
   }
   #jscv img {
     width: 90%;
@@ -26,7 +26,7 @@
 }
 @media (orientation: portrait) and (max-width: 290px) {
   #jscv {
-    min-height: calc(100vw * 2.9);
+    min-height: calc(100vw * 3);
   }
   #jscv img {
     width: 90%;
@@ -34,7 +34,6 @@
     filter: drop-shadow(3px 3px 4px rgba(0, 0, 0, 0.9));
   }
 }
-
 @media (orientation: landscape) {
   #jscv {
     height: calc(100vw * 1.8);
@@ -43,5 +42,12 @@
     filter: drop-shadow(3px 3px 4px rgba(0, 0, 0, 0.9));
     border-radius: 10px;
     width: 80%;
+  }
+}
+/* iPhone 4 */
+@media (orientation: landscape) and (max-height: 400px) and (max-width: 500px) {
+  #jscv {
+    height: calc(100vw * 2);
+    margin-top: 15%;
   }
 }
