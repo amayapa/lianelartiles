@@ -74,7 +74,7 @@ h4 {
   width: 100%;
   background-size: 100% 100%, 100% 100%;
   background-repeat: no-repeat;
-  min-height: 150vh;
+  min-height: 100vh;
 }
 @media (orientation: portrait) {
   #root {

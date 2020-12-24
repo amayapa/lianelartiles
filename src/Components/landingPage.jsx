@@ -1,5 +1,5 @@
 /* ======================= IMPORTATIONS ======================= */
-import React, { useEffect } from 'react'
+import React from 'react'
 import '../Styles/landingPage.css'
 
 const LandingPage = (props) => {

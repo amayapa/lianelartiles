@@ -1,11 +1,14 @@
 /* ======================= IMPORTATIONS ======================= */
 import React from 'react';
 import '../Styles/footer.css';
-import espFlag from '../images/españa.png';
-import engFlag from '../images/USA.png';
+import espFlag from '../images/españa.svg';
+import engFlag from '../images/USA.svg';
 import freFlag from '../images/francia.svg';
 import darkToggle from '../images/Dark Toggle.svg';
 import lightToggle from '../images/Light Toggle.svg';
+import wapp from '../images/wapp.svg';
+import github from '../images/github.svg';
+import linkedin from '../images/in.svg';
 import { Link } from 'react-router-dom';
 
 const Footer = (props) => {
@@ -17,6 +20,17 @@ const Footer = (props) => {
   /* ======================= RENDERING ======================= */
   return (
     <div>
+      <div className='sm'>
+        <a target="_blank" rel="noreferrer" href='https://github.com/larts85'>
+          <img className="smIcon" src={github} alt="Ups!" />
+        </a>
+        <a target="_blank" rel="noreferrer" href='https://www.linkedin.com/in/imadev'>
+          <img className="smIcon" src={linkedin} alt="Ups!" />
+        </a>
+        <a target="_blank" rel="noreferrer" href='http://wa.me/5491127375403'>
+          <img className="smIcon" src={wapp} alt="Ups!" />
+        </a>
+      </div>
       <p id='copyright'>
         Copyright &copy; {new Date().getFullYear()}, Lianel Artiles
       </p>
