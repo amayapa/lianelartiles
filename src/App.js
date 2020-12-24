@@ -77,6 +77,7 @@ function App() {
       html.style.setProperty("--ft-dark-hover-color", ftLightHoverColor);
       html.style.setProperty("--shadow-header-dark", shadowHeaderLight);
       html.style.setProperty("--text-copyRight-dark", textCRDark);
+      html.style.setProperty("--shadow-sm-dark", shadowSMLight);
     }
   }, [darkMode]);
 

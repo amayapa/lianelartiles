@@ -140,11 +140,11 @@
   }
 }
 @media (max-height: 450px) {
-  #copyright {
-    bottom: 50px;
-  }
   .main-footer {
     height: 50px;
+  }
+  #copyright {
+    bottom: 50px;
   }
   .sm {
     bottom: 50px;
@@ -185,6 +185,9 @@
   .sm {
     flex-direction: row-reverse;
     bottom: 90px;
+  }
+  .flags {
+    padding: 2px;
   }
   .flags-container {
     display: flex;
