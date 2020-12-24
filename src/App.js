@@ -51,7 +51,8 @@ function App() {
   useEffect(() => {
     localStorage.setItem("dark", JSON.stringify(darkMode));
   }, [darkMode]);
-  useEffect(() => {
+
+  const switchMode = () => {
     if (darkMode) {
       html.style.setProperty("--bg-img", bgImage);
       html.style.setProperty("--bg-img-portrait", bgPortraitImage);
@@ -79,7 +80,10 @@ function App() {
       html.style.setProperty("--shadow-sm-dark", shadowSMLight);
       html.style.setProperty("--text-copyRight-dark", textCRDark);
     }
-    // eslint-disable-next-line
+  };
+
+  useEffect(() => {
+    switchMode();
   }, [darkMode]);
 
   function getInitialMode() {
