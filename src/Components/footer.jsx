@@ -22,48 +22,36 @@ const Footer = (props) => {
       </p>
       <nav className='main-footer'>
         <div className='flags'>
-          <div>
-            <a href={`${window.location.href}`}>
-              <img
-                src={espFlag}
-                alt="imadev"
-                id='esp'
-                onClick={() => setLanguage({
-                  eng: false,
-                  esp: true,
-                  fre: false
-                })}
-              />
-            </a>
-          </div>
-          <div>
-            <a href={`${window.location.href}`}>
-              <img
-                src={engFlag}
-                alt="imadev"
-                id='eng'
-                onClick={() => setLanguage({
-                  eng: true,
-                  esp: false,
-                  fre: false
-                })}
-              />
-            </a>
-          </div>
-          <div>
-            <a href={`${window.location.href}`}>
-              <img
-                src={freFlag}
-                alt="imadev"
-                id='fre'
-                onClick={() => setLanguage({
-                  eng: false,
-                  esp: false,
-                  fre: true
-                })}
-              />
-            </a>
-          </div>
+          <img
+            src={espFlag}
+            alt="imadev"
+            id='esp'
+            onClick={() => setLanguage({
+              eng: false,
+              esp: true,
+              fre: false
+            })}
+          />
+          <img
+            src={engFlag}
+            alt="imadev"
+            id='eng'
+            onClick={() => setLanguage({
+              eng: true,
+              esp: false,
+              fre: false
+            })}
+          />
+          <img
+            src={freFlag}
+            alt="imadev"
+            id='fre'
+            onClick={() => setLanguage({
+              eng: false,
+              esp: false,
+              fre: true
+            })}
+          />
         </div>
         {
           language.eng ?
