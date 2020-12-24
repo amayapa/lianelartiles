@@ -8,7 +8,7 @@ import darkToggle from '../images/Dark Toggle.svg';
 import lightToggle from '../images/Light Toggle.svg';
 import wapp from '../images/wapp.svg';
 import github from '../images/github.svg';
-import linkedin from '../images/In.svg';
+import linkedin from '../images/in.svg';
 import { Link } from 'react-router-dom';
 
 const Footer = (props) => {
@@ -36,7 +36,6 @@ const Footer = (props) => {
       </p>
       <nav className='main-footer'>
         <div className='flags-container'>
-          {/* <a href={`${window.location.href}`}> */}
           <img
             src={espFlag}
             alt="imadev"
@@ -48,8 +47,6 @@ const Footer = (props) => {
               fre: false
             })}
           />
-          {/* </a> */}
-          {/* <a href={`${window.location.href}`}> */}
           <img
             className='flags'
             src={engFlag}
@@ -61,8 +58,6 @@ const Footer = (props) => {
               fre: false
             })}
           />
-          {/* </a> */}
-          {/* <a href={`${window.location.href}`}> */}
           <img
             src={freFlag}
             alt="imadev"
@@ -74,7 +69,6 @@ const Footer = (props) => {
               fre: true
             })}
           />
-          {/* </a> */}
         </div>
         {
           language.eng ?
