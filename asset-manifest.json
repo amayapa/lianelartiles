@@ -1,6 +1,6 @@
 {
   "files": {
-    "main.css": "/lianelartiles/static/css/main.465b2b5d.chunk.css",
+    "main.css": "/lianelartiles/static/css/main.59675cca.chunk.css",
     "main.js": "/lianelartiles/static/js/main.d4100073.chunk.js",
     "main.js.map": "/lianelartiles/static/js/main.d4100073.chunk.js.map",
     "runtime-main.js": "/lianelartiles/static/js/runtime-main.cf47f2ee.js",
@@ -10,7 +10,7 @@
     "static/js/3.f3d54134.chunk.js": "/lianelartiles/static/js/3.f3d54134.chunk.js",
     "static/js/3.f3d54134.chunk.js.map": "/lianelartiles/static/js/3.f3d54134.chunk.js.map",
     "index.html": "/lianelartiles/index.html",
-    "static/css/main.465b2b5d.chunk.css.map": "/lianelartiles/static/css/main.465b2b5d.chunk.css.map",
+    "static/css/main.59675cca.chunk.css.map": "/lianelartiles/static/css/main.59675cca.chunk.css.map",
     "static/js/2.1f1fd04d.chunk.js.LICENSE.txt": "/lianelartiles/static/js/2.1f1fd04d.chunk.js.LICENSE.txt",
     "static/media/Dark Toggle.7540ea88.svg": "/lianelartiles/static/media/Dark Toggle.7540ea88.svg",
     "static/media/Light Toggle.c9dd36cd.svg": "/lianelartiles/static/media/Light Toggle.c9dd36cd.svg",
@@ -29,7 +29,7 @@
   "entrypoints": [
     "static/js/runtime-main.cf47f2ee.js",
     "static/js/2.1f1fd04d.chunk.js",
-    "static/css/main.465b2b5d.chunk.css",
+    "static/css/main.59675cca.chunk.css",
     "static/js/main.d4100073.chunk.js"
   ]
 }
