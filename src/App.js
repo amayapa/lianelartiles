@@ -33,6 +33,8 @@ function App() {
   const bgColorLight = colors.getPropertyValue("--bg-color-light");
   const textColorDark = colors.getPropertyValue("--text-color-dark");
   const textColorLight = colors.getPropertyValue("--text-color-light");
+  const textCRDark = colors.getPropertyValue("--text-copyRight-dark");
+  const textCRLight = colors.getPropertyValue("--text-copyRight-light");
   const footerColorDark = colors.getPropertyValue("--footer-color-dark");
   const footerColorLight = colors.getPropertyValue("--footer-color-light");
   const bgGradientDarkA = colors.getPropertyValue("--bg-gradient-dark-a");
@@ -43,6 +45,8 @@ function App() {
   const ftLightHoverColor = colors.getPropertyValue("--ft-light-hover-color");
   const shadowHeaderDark = colors.getPropertyValue("--shadow-header-dark");
   const shadowHeaderLight = colors.getPropertyValue("--shadow-header-light");
+  const shadowSmDark = colors.getPropertyValue("--shadow-sm-dark");
+  const shadowSMLight = colors.getPropertyValue("--shadow-sm-light");
   /* ======================= FUNCTIONS ======================= */
   useEffect(() => {
     localStorage.setItem("dark", JSON.stringify(darkMode));
@@ -59,8 +63,9 @@ function App() {
       html.style.setProperty("--ft-color-dark", textColorLight);
       html.style.setProperty("--ft-dark-hover-color", ftDarkHoverColor);
       html.style.setProperty("--shadow-header-dark", shadowHeaderDark);
+      html.style.setProperty("--shadow-sm-dark", shadowSmDark);
+      html.style.setProperty("--text-copyRight-dark", textCRLight);
     } else {
-      html.style.setProperty("--shadow-header-dark", shadowHeaderLight);
       html.style.setProperty("--bg-img", bgLightImage);
       html.style.setProperty("--bg-img-portrait", bgLightPortraitImage);
       html.style.setProperty("--bg-color-dark", bgColorLight);
@@ -70,6 +75,8 @@ function App() {
       html.style.setProperty("--text-color-dark", textColorLight);
       html.style.setProperty("--ft-color-dark", textColorDark);
       html.style.setProperty("--ft-dark-hover-color", ftLightHoverColor);
+      html.style.setProperty("--shadow-header-dark", shadowHeaderLight);
+      html.style.setProperty("--text-copyRight-dark", textCRDark);
     }
   }, [darkMode]);
 
