@@ -179,3 +179,11 @@
     align-items: center;
   }
 }
+@media (orientation: landscape) and (max-height: 350px) {
+  .main-footer {
+    height: 40px;
+  }
+  #copyright {
+    bottom: 40px;
+  }
+} ;

@@ -4,13 +4,14 @@
 @media (orientation: landscape) {
   .aboutme-container {
     display: flex;
-    margin: 5%;
+    width: 90%;
+    margin: auto;
+    margin-top: 100px;
     justify-content: center;
-    height: calc(100vw * 0.4);
-    /* background-color: rgba(0, 0, 0, 0.2); */
     align-items: center;
   }
   .text {
+    overflow-y: auto;
     margin-left: 5vw;
     text-align: justify;
     text-justify: inter-word;
@@ -20,23 +21,57 @@
     border-radius: 10px;
   }
 }
-@media (orientation: portrait) {
+@media (orientation: landscape) and (max-height: 800px) {
   .aboutme-container {
-    min-height: calc(100vw * 2.3);
-  }
-  .text {
-    text-align: justify;
-    text-justify: inter-word;
-    padding: 20px;
-    background-color: rgba(0, 0, 0, 0.2);
-    border-radius: 10px;
-    width: 80%;
-    margin: auto;
+    margin-top: 0px;
+    height: 80vh;
   }
 }
-@media (orientation: portrait) and (min-height: 700px) {
+@media (orientation: landscape) and (max-height: 500px) and (max-width: 600px) {
   .aboutme-container {
-    min-height: calc(100vw * 1.3);
+    height: calc(100vw * 0.4);
+  }
+}
+@media (orientation: landscape) and (max-height: 500px) {
+  .aboutme-container {
+    margin-top: 20px;
+    height: calc(100vw * 0.8);
+    align-items: flex-start;
+  }
+  .text {
+    padding: 10px;
+  }
+}
+@media (orientation: landscape) and (max-height: 500px) and (min-width: 700px) {
+  .aboutme-container {
+    height: 100vh;
+    align-items: flex-start;
+  }
+  .text {
+    margin-top: 10px;
+    padding: 10px;
+  }
+}
+@media (orientation: landscape) and (max-height: 350px) and (max-width: 600px) {
+  .aboutme-container {
+    height: calc(100vw * 1.1);
+  }
+}
+/* iPhone 4 */
+@media (orientation: landscape) and (max-height: 400px) and (max-width: 500px) {
+  .aboutme-container {
+    margin-top: 15%;
+    height: calc(100vw * 1.4);
+    align-items: flex-start;
+  }
+  .text {
+    margin-top: 10px;
+    padding: 10px;
+  }
+}
+@media (orientation: portrait) {
+  .aboutme-container {
+    min-height: 100vh;
   }
   .text {
     text-align: justify;
@@ -46,20 +81,29 @@
     border-radius: 10px;
     width: 80%;
     margin: auto;
+    margin-top: 40px;
+  }
+}
+@media (orientation: portrait) and (max-width: 500px) {
+  .aboutme-container {
+    min-height: 110vh;
   }
 }
 @media (orientation: portrait) and (max-width: 400px) {
   .aboutme-container {
     min-height: calc(100vw * 2.4);
+    margin-top: 0px;
   }
 }
 @media (orientation: portrait) and (max-width: 330px) {
   .aboutme-container {
-    min-height: calc(100vw * 3.4);
+    margin-top: 0px;
+    min-height: calc(100vw * 3);
   }
 }
 @media (orientation: portrait) and (max-width: 290px) {
   .aboutme-container {
     min-height: calc(100vw * 3.9);
+    margin-top: 0px;
   }
 }

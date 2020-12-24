@@ -26,3 +26,8 @@
     min-height: calc(100vw * 2);
   }
 }
+@media (orientation: landscape) and (max-height: 390px) {
+  .msg {
+    min-height: calc(100vw * 0.61);
+  }
+}

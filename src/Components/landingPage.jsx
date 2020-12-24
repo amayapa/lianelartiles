@@ -1,5 +1,5 @@
 /* ======================= IMPORTATIONS ======================= */
-import React, { useEffect } from 'react'
+import React from 'react'
 import '../Styles/landingPage.css'
 
 const LandingPage = (props) => {
@@ -7,37 +7,7 @@ const LandingPage = (props) => {
   const language = props.language;
 
   /* ======================= FUNCTIONS ======================= */
-  const ua = navigator.userAgent;
-  const getDeviceType = () => {
-    var hasTouchScreen = false;
-    if ("maxTouchPoints" in navigator) {
-      hasTouchScreen = navigator.maxTouchPoints > 0;
-      console.log('Has orientation, isMobile');
-    } else if ("msMaxTouchPoints" in navigator) {
-      hasTouchScreen = navigator.msMaxTouchPoints > 0;
-      console.log('Has multitouch, isMobile');
-    } else {
-      var mQ = window.matchMedia && matchMedia("(pointer:coarse)");
-      if (mQ && mQ.media === "(pointer:coarse)") {
-        hasTouchScreen = !!mQ.matches;
-        console.log("Don't has pointer device, isMobile!");
-      } else if ('orientation' in window) {
-        hasTouchScreen = true; // deprecated, but good fallback
-        console.log('Has orientation, isMobile');
-      } else {
-        // Only as a last resort, fall back to user agent sniffing
-        hasTouchScreen = (
-          /\b(BlackBerry|webOS|iPhone|IEMobile)\b/i.test(ua) ||
-          /\b(Android|Windows Phone|iPad|iPod)\b/i.test(ua)
-        );
-        console.log('isMobile');
-      }
-    }
-  };
-  useEffect(() => {
-    getDeviceType()
-    console.log(ua);
-  }, [])
+
   /* ======================= RENDERING ======================= */
   return (
     <div id='me' >
