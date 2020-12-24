@@ -1,10 +1,6 @@
 .check {
   color: green;
 }
-.msg {
-  min-height: calc(100vw * 1.8);
-  background-color: rgba(240, 230, 140, 0.342);
-}
 @media (orientation: portrait) {
   .msg {
     min-height: calc(100vw * 0.6);

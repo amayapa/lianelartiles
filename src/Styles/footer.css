@@ -147,6 +147,11 @@
     bottom: 50px;
   }
 }
+@media (orientation: portrait) {
+  .sm {
+    flex-direction: row-reverse;
+  }
+}
 @media (orientation: portrait) and (max-width: 330px) {
   .main-footer {
     display: flex;

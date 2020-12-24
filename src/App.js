@@ -79,6 +79,7 @@ function App() {
       html.style.setProperty("--shadow-sm-dark", shadowSMLight);
       html.style.setProperty("--text-copyRight-dark", textCRDark);
     }
+    // eslint-disable-next-line
   }, [darkMode]);
 
   function getInitialMode() {

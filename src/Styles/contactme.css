@@ -1,7 +1,6 @@
 .contactme-container {
   margin-top: 20px;
   height: 550px;
-  overflow-y: auto;
 }
 .contactme-container h1 {
   color: var(--text-color-dark);
@@ -9,7 +8,6 @@
 .contactme-container::-webkit-scrollbar {
   display: none;
 }
-
 @media (orientation: portrait) {
   .contactme-container {
     height: 400px;
