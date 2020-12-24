@@ -33,8 +33,6 @@ function App() {
   const bgColorLight = colors.getPropertyValue("--bg-color-light");
   const textColorDark = colors.getPropertyValue("--text-color-dark");
   const textColorLight = colors.getPropertyValue("--text-color-light");
-  const textCRDark = colors.getPropertyValue("--text-copyRight-dark");
-  const textCRLight = colors.getPropertyValue("--text-copyRight-light");
   const footerColorDark = colors.getPropertyValue("--footer-color-dark");
   const footerColorLight = colors.getPropertyValue("--footer-color-light");
   const bgGradientDarkA = colors.getPropertyValue("--bg-gradient-dark-a");
@@ -45,13 +43,16 @@ function App() {
   const ftLightHoverColor = colors.getPropertyValue("--ft-light-hover-color");
   const shadowHeaderDark = colors.getPropertyValue("--shadow-header-dark");
   const shadowHeaderLight = colors.getPropertyValue("--shadow-header-light");
+  const textCRDark = colors.getPropertyValue("--text-copyRight-dark");
+  const textCRLight = colors.getPropertyValue("--text-copyRight-light");
   const shadowSmDark = colors.getPropertyValue("--shadow-sm-dark");
   const shadowSMLight = colors.getPropertyValue("--shadow-sm-light");
   /* ======================= FUNCTIONS ======================= */
   useEffect(() => {
     localStorage.setItem("dark", JSON.stringify(darkMode));
   }, [darkMode]);
-  useEffect(() => {
+
+  const switchMode = () => {
     if (darkMode) {
       html.style.setProperty("--bg-img", bgImage);
       html.style.setProperty("--bg-img-portrait", bgPortraitImage);
@@ -79,6 +80,10 @@ function App() {
       html.style.setProperty("--text-copyRight-dark", textCRDark);
       html.style.setProperty("--shadow-sm-dark", shadowSMLight);
     }
+  };
+
+  useEffect(() => {
+    switchMode();
   }, [darkMode]);
 
   function getInitialMode() {

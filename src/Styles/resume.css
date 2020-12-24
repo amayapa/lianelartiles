@@ -34,7 +34,6 @@
     filter: drop-shadow(3px 3px 4px rgba(0, 0, 0, 0.9));
   }
 }
-
 @media (orientation: landscape) {
   #jscv {
     height: calc(100vw * 1.8);

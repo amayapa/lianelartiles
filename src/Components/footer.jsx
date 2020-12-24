@@ -1,8 +1,8 @@
 /* ======================= IMPORTATIONS ======================= */
 import React from 'react';
 import '../Styles/footer.css';
-import espFlag from '../images/españa.png';
-import engFlag from '../images/USA.png';
+import espFlag from '../images/españa.svg';
+import engFlag from '../images/USA.svg';
 import freFlag from '../images/francia.svg';
 import darkToggle from '../images/Dark Toggle.svg';
 import lightToggle from '../images/Light Toggle.svg';
@@ -35,52 +35,37 @@ const Footer = (props) => {
         Copyright &copy; {new Date().getFullYear()}, Lianel Artiles
       </p>
       <nav className='main-footer'>
-        <div className='flags-container'>
-          <div>
-            <a href={`${window.location.href}`}>
-              <img
-                src={espFlag}
-                alt="imadev"
-                id='esp'
-                className='flags'
-                onClick={() => setLanguage({
-                  eng: false,
-                  esp: true,
-                  fre: false
-                })}
-              />
-            </a>
-          </div>
-          <div>
-            <a href={`${window.location.href}`}>
-              <img
-                src={engFlag}
-                alt="imadev"
-                id='eng'
-                className='flags'
-                onClick={() => setLanguage({
-                  eng: true,
-                  esp: false,
-                  fre: false
-                })}
-              />
-            </a>
-          </div>
-          <div>
-            <a href={`${window.location.href}`}>
-              <img
-                src={freFlag}
-                alt="imadev"
-                id='fre'
-                className='flags'
-                onClick={() => setLanguage({
-                  eng: false,
-                  esp: false,
-                  fre: true
-                })}
-              />
-            </a>
-          </div>
+        <div className='flags'>
+          <img
+            src={espFlag}
+            alt="imadev"
+            id='esp'
+            onClick={() => setLanguage({
+              eng: false,
+              esp: true,
+              fre: false
+            })}
+          />
+          <img
+            src={engFlag}
+            alt="imadev"
+            id='eng'
+            onClick={() => setLanguage({
+              eng: true,
+              esp: false,
+              fre: false
+            })}
+          />
+          <img
+            src={freFlag}
+            alt="imadev"
+            id='fre'
+            onClick={() => setLanguage({
+              eng: false,
+              esp: false,
+              fre: true
+            })}
+          />
         </div>
         {
           language.eng ?
