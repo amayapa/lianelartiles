@@ -97,3 +97,15 @@
     margin: 0%;
   }
 }
+@media (orientation: landscape) and (max-height: 350px) {
+  .main-header {
+    height: 60px;
+  }
+  #copyright {
+    bottom: 40px;
+  }
+  .logo {
+    height: 60px;
+    width: 60px;
+  }
+} ;

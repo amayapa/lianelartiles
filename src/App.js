@@ -67,7 +67,6 @@ function App() {
       html.style.setProperty("--shadow-sm-dark", shadowSmDark);
       html.style.setProperty("--text-copyRight-dark", textCRLight);
     } else {
-      html.style.setProperty("--shadow-header-dark", shadowHeaderLight);
       html.style.setProperty("--bg-img", bgLightImage);
       html.style.setProperty("--bg-img-portrait", bgLightPortraitImage);
       html.style.setProperty("--bg-color-dark", bgColorLight);
@@ -77,8 +76,9 @@ function App() {
       html.style.setProperty("--text-color-dark", textColorLight);
       html.style.setProperty("--ft-color-dark", textColorDark);
       html.style.setProperty("--ft-dark-hover-color", ftLightHoverColor);
-      html.style.setProperty("--shadow-sm-dark", shadowSMLight);
+      html.style.setProperty("--shadow-header-dark", shadowHeaderLight);
       html.style.setProperty("--text-copyRight-dark", textCRDark);
+      html.style.setProperty("--shadow-sm-dark", shadowSMLight);
     }
   };
 
