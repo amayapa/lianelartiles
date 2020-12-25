@@ -1,9 +1,11 @@
+div {
+}
 .sm {
+  display: flex;
+  flex-direction: column;
   position: fixed;
   bottom: 60px;
   left: 10px;
-  display: flex;
-  flex-direction: column;
 }
 .smIcon {
   filter: var(--shadow-sm-dark);

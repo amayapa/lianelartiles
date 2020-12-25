@@ -19,7 +19,7 @@ const Footer = (props) => {
 
   /* ======================= RENDERING ======================= */
   return (
-    <nav className='main-footer'>
+    <div>
       <div className='sm'>
         <a target="_blank" rel="noreferrer" href='https://github.com/larts85'>
           <img className="smIcon" src={github} alt="Ups!" />
@@ -34,76 +34,78 @@ const Footer = (props) => {
       <p id='copyright'>
         Copyright &copy; {new Date().getFullYear()}, Lianel Artiles
       </p>
-      <div className='flags'>
-        <img
-          src={espFlag}
-          alt="imadev"
-          id='esp'
-          onClick={() => setLanguage({
-            eng: false,
-            esp: true,
-            fre: false
-          })}
-        />
-        <img
-          src={engFlag}
-          alt="imadev"
-          id='eng'
-          onClick={() => setLanguage({
-            eng: true,
-            esp: false,
-            fre: false
-          })}
-        />
-        <img
-          src={freFlag}
-          alt="imadev"
-          id='fre'
-          onClick={() => setLanguage({
-            eng: false,
-            esp: false,
-            fre: true
-          })}
-        />
-      </div>
-      {
-        language.eng ?
-          (<div className='footer'>
-            <Link className='link' to='/about'>
-              <span className='flink'>About me</span>
-            </Link>
-            <Link className='link' to='/contact'>
-              <span className='flink'>Contact me</span>
-            </Link>
-          </div>) : language.esp ?
-            (<div className='footer'>
-              <Link className='link' to='/about'>
-                <span className='flink'>Sobre mi</span>
-              </Link>
-              <Link className='link' to='/contact'>
-                <span className='flink'>Contactame</span>
-              </Link>
-            </div>) :
-            (<div className='footer'>
-              <Link className='link' to='/about'>
-                <span className='flink'>Sur moi</span>
-              </Link>
-              <Link className='link' to='/contact'>
-                <span className='flink'>Contactez moi</span>
-              </Link>
-            </div>)
-      }
-      <div className='toggle'>
-        <a href={`${window.location.href}`}>
+      <nav className='main-footer'>
+        <div className='flags'>
           <img
-            id='toggle'
-            src={darkMode ? darkToggle : lightToggle}
-            alt="toggleMode"
-            onClick={() => setDarkMode((prevMode) => !prevMode)}
+            src={espFlag}
+            alt="imadev"
+            id='esp'
+            onClick={() => setLanguage({
+              eng: false,
+              esp: true,
+              fre: false
+            })}
           />
-        </a>
-      </div>
-    </nav>
+          <img
+            src={engFlag}
+            alt="imadev"
+            id='eng'
+            onClick={() => setLanguage({
+              eng: true,
+              esp: false,
+              fre: false
+            })}
+          />
+          <img
+            src={freFlag}
+            alt="imadev"
+            id='fre'
+            onClick={() => setLanguage({
+              eng: false,
+              esp: false,
+              fre: true
+            })}
+          />
+        </div>
+        {
+          language.eng ?
+            (<div className='footer'>
+              <Link className='link' to='/about'>
+                <span className='flink'>About me</span>
+              </Link>
+              <Link className='link' to='/contact'>
+                <span className='flink'>Contact me</span>
+              </Link>
+            </div>) : language.esp ?
+              (<div className='footer'>
+                <Link className='link' to='/about'>
+                  <span className='flink'>Sobre mi</span>
+                </Link>
+                <Link className='link' to='/contact'>
+                  <span className='flink'>Contactame</span>
+                </Link>
+              </div>) :
+              (<div className='footer'>
+                <Link className='link' to='/about'>
+                  <span className='flink'>Sur moi</span>
+                </Link>
+                <Link className='link' to='/contact'>
+                  <span className='flink'>Contactez moi</span>
+                </Link>
+              </div>)
+        }
+        <div className='toggle'>
+          <a href={`${window.location.href}`}>
+            <img
+              id='toggle'
+              src={darkMode ? darkToggle : lightToggle}
+              alt="toggleMode"
+              onClick={() => setDarkMode((prevMode) => !prevMode)}
+            />
+          </a>
+        </div>
+      </nav>
+    </div>
   )
 }
 
