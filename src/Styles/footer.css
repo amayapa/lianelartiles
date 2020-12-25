@@ -54,15 +54,15 @@
   padding: 5px;
   display: block;
 }
-.flags-container {
+.flags {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
 }
-.flags {
-  padding: 5px;
-  height: 27pt;
-  width: 33pt;
+.flags img {
+  height: 20pt;
+  width: 30pt;
+  padding: 3px;
   filter: var(--shadow-ft-dark);
 }
 

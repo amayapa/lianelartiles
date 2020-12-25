@@ -18,7 +18,7 @@
 }
 @media (orientation: portrait) and (max-width: 330px) {
   .msg {
-    min-height: calc(100vw * 1.7);
+    min-height: calc(100vw * 2);
   }
 }
 @media (orientation: portrait) and (max-width: 290px) {
