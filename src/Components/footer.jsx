@@ -21,14 +21,17 @@ const Footer = (props) => {
   return (
     <div>
       <div className='sm'>
-        <a target="_blank" rel="noreferrer" href='https://github.com/larts85'>
+        <a id='gitLink' target="_blank" rel="noreferrer" href='https://github.com/larts85'>
           <img className="smIcon" src={github} alt="Ups!" />
+          <span id='gitMsg'>Check my repos</span>
         </a>
-        <a target="_blank" rel="noreferrer" href='https://www.linkedin.com/in/imadev'>
+        <a id='inLink' target="_blank" rel="noreferrer" href='https://www.linkedin.com/in/imadev'>
           <img className="smIcon" src={linkedin} alt="Ups!" />
+          <span id='inMsg'>Let's connect</span>
         </a>
-        <a target="_blank" rel="noreferrer" href='http://wa.me/5491127375403'>
+        <a id='wappLink' target="_blank" rel="noreferrer" href='http://wa.me/5491127375403'>
           <img className="smIcon" src={wapp} alt="Ups!" />
+          <span id='wappMsg'>WhatsApp me</span>
         </a>
       </div>
       <p id='copyright'>

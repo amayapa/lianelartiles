@@ -94,6 +94,58 @@ div {
   transform: scale(2);
   transition: transform 1s;
 }
+#gitMsg {
+  width: auto;
+  overflow: hidden;
+  white-space: nowrap;
+  max-width: 0%;
+  transition: max-width 4s linear;
+  visibility: hidden;
+  position: fixed;
+  bottom: 145px;
+  left: 50px;
+  color: var(--footer-color-dark);
+  animation: fadein ease-in-out 4s;
+}
+#inMsg {
+  width: auto;
+  overflow: hidden;
+  white-space: nowrap;
+  max-width: 0%;
+  transition: max-width 4s linear;
+  visibility: hidden;
+  position: fixed;
+  bottom: 105px;
+  left: 50px;
+  color: var(--footer-color-dark);
+}
+#wappMsg {
+  width: auto;
+  overflow: hidden;
+  white-space: nowrap;
+  max-width: 0%;
+  transition: max-width 4s linear;
+  visibility: hidden;
+  position: fixed;
+  bottom: 65px;
+  left: 50px;
+  color: var(--footer-color-dark);
+}
+@media (orientation: landscape) {
+  #gitLink:hover #gitMsg {
+    visibility: visible;
+    max-width: 100%;
+    transition: max-width 4s linear;
+  }
+  #inLink:hover #inMsg {
+    visibility: visible;
+    max-width: 100%;
+  }
+  #wappLink:hover #wappMsg {
+    visibility: visible;
+    max-width: 100%;
+  }
+}
 @media (min-height: 1000px) {
   .main-footer {
     height: 75px;
