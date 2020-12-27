@@ -13,21 +13,21 @@
 }
 @media (orientation: portrait) and (max-width: 400px) {
   .msg {
-    min-height: calc(100vw * 1.4);
+    min-height: calc(100vw * 1.8);
   }
 }
 @media (orientation: portrait) and (max-width: 330px) {
   .msg {
-    min-height: calc(100vw * 2);
+    min-height: calc(100vw * 2.3);
   }
 }
 @media (orientation: portrait) and (max-width: 290px) {
   .msg {
-    min-height: calc(100vw * 2);
+    min-height: calc(100vw * 2.6);
   }
 }
 @media (orientation: landscape) and (max-height: 390px) {
   .msg {
-    min-height: calc(100vw * 0.61);
+    min-height: calc(100vw * 0.9);
   }
 }

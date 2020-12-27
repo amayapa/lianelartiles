@@ -30,7 +30,7 @@ const Header = (props) => {
           language.eng ?
             (<ul>
               <Link className='link hlink' to='/resume'>
-                <span>Resume</span>
+                <span>JsResume</span>
               </Link>
               <Link className='link hlink' to='/education'>
                 <span>Education</span>
@@ -44,7 +44,7 @@ const Header = (props) => {
             </ul>) : language.esp ?
               (<ul>
                 <Link className='link hlink' to='/resume'>
-                  <span>CV</span>
+                  <span>JsCV</span>
                 </Link>
                 <Link className='link hlink' to='/education'>
                   <span>Educación</span>
@@ -58,7 +58,7 @@ const Header = (props) => {
               </ul>) :
               (<ul>
                 <Link className='link hlink' to='/resume'>
-                  <span>CV</span>
+                  <span>JsCV</span>
                 </Link>
                 <Link className='link hlink' to='/education'>
                   <span>Education</span>
