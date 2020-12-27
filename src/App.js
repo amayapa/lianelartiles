@@ -57,7 +57,9 @@ function App() {
       html.style.setProperty("--bg-img", bgImage);
       html.style.setProperty("--bg-img-portrait", bgPortraitImage);
       html.style.setProperty("--bg-color-dark", bgColorDark);
+      html.style.setProperty("--bg-color-light", bgColorLight);
       html.style.setProperty("--footer-color-dark", footerColorDark);
+      html.style.setProperty("--footer-color-light", footerColorLight);
       html.style.setProperty("--bg-gradient-dark-a", bgGradientDarkA);
       html.style.setProperty("--bg-gradient-dark-b", bgGradientDarkB);
       html.style.setProperty("--text-color-dark", textColorDark);
@@ -70,7 +72,9 @@ function App() {
       html.style.setProperty("--bg-img", bgLightImage);
       html.style.setProperty("--bg-img-portrait", bgLightPortraitImage);
       html.style.setProperty("--bg-color-dark", bgColorLight);
+      html.style.setProperty("--bg-color-light", bgColorDark);
       html.style.setProperty("--footer-color-dark", footerColorLight);
+      html.style.setProperty("--footer-color-light", footerColorDark);
       html.style.setProperty("--bg-gradient-dark-a", bgGradientLightA);
       html.style.setProperty("--bg-gradient-dark-b", bgGradientLightB);
       html.style.setProperty("--text-color-dark", textColorLight);

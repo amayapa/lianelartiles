@@ -4,7 +4,7 @@ div {
   display: flex;
   flex-direction: column;
   position: fixed;
-  bottom: 60px;
+  bottom: 65px;
   left: 10px;
 }
 .smIcon {
@@ -91,8 +91,8 @@ div {
 #fre:hover,
 #esp:hover,
 #eng:hover {
-  transform: scale(2);
-  transition: transform 1s;
+  transform: scale(1.5);
+  transition: transform 0.5s;
 }
 #gitMsg {
   width: auto;
@@ -102,7 +102,7 @@ div {
   transition: max-width 4s linear;
   visibility: hidden;
   position: fixed;
-  bottom: 145px;
+  bottom: 150px;
   left: 50px;
   color: var(--footer-color-dark);
   animation: fadein ease-in-out 4s;
@@ -115,7 +115,7 @@ div {
   transition: max-width 4s linear;
   visibility: hidden;
   position: fixed;
-  bottom: 105px;
+  bottom: 110px;
   left: 50px;
   color: var(--footer-color-dark);
 }
@@ -127,7 +127,7 @@ div {
   transition: max-width 4s linear;
   visibility: hidden;
   position: fixed;
-  bottom: 65px;
+  bottom: 70px;
   left: 50px;
   color: var(--footer-color-dark);
 }
@@ -154,7 +154,7 @@ div {
     bottom: 75px;
   }
   .sm {
-    bottom: 75px;
+    bottom: 80px;
   }
 }
 @media (max-width: 800px) {
