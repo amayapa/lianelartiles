@@ -88,6 +88,7 @@ function App() {
 
   useEffect(() => {
     switchMode();
+    // eslint-disable-next-line
   }, [darkMode]);
 
   function getInitialMode() {

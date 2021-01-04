@@ -16,7 +16,7 @@ const LandingPage = (props) => {
           <>
             <span id='las'>Lianel Artiles</span><br />
             <span id='dev'>FullStack Web and Mobile Developer</span><br />
-            <span id='lema'>At last working on my pasion</span>
+            <span id='lema'>At last working on my passion</span>
           </ >
         ) :
           language.esp ? (

@@ -93,6 +93,7 @@ form {
   grid-column: 3;
   grid-row: 1/3;
   align-items: center;
+  cursor: pointer;
 }
 #btn p {
   color: var(--footer-color-light);

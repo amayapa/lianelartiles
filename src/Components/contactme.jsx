@@ -20,11 +20,11 @@ const ContactMe = (props) => {
   });
   const templateId = 'template_hzuwv1r';
   const englishFL = 'Hello!,'
-  const englishSL = 'I will be very happy to receive a message from you, if you send me a constructive review on this site, I will greatly appreciate it. Regards.'
+  const englishSL = 'I will be very happy to receive a message from you, and if you send me a constructive review on this site, I will greatly appreciate it. Regards.'
   const spanishFL = 'Hola!,';
-  const spanishSL = 'Estaré muy feliz de recibir un mensaje tuyo, si me envías una reseña constructiva sobre este sitio, te lo agradeceré enormemente. Saludos.'
+  const spanishSL = 'Estaré muy feliz de recibir un mensaje tuyo, si me envías además una reseña constructiva sobre este sitio, te lo agradeceré enormemente. Saludos.'
   const frenchFL = 'Bonjours!,';
-  const frenchSL = "Je serai très heureux de recevoir un message de votre part, si vous m'envoyez une critique constructive sur ce site, je l'apprécierai grandement. Cordialement."
+  const frenchSL = "Je serai très heureux de recevoir un message de votre part, et si vous m'envoyez une critique constructive sur ce site, je l'apprécierai grandement. Cordialement."
   var i = 0;
   var f = 0;
   var interval, intervalo;
@@ -197,6 +197,7 @@ const ContactMe = (props) => {
   }
   useEffect(() => {
     displayChars()
+    // eslint-disable-next-line
   }, [language])
 
   /* ======================== RENDERING ========================= */
