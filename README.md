@@ -2,7 +2,7 @@
 
 ## It is hosted using GitHub Pages at:
 
-<img src="../images/light-imadev.svg" width="20px" height='20px'/>[Follow this link](https://larts85.github.io/lianelartiles)
+<img src="https://github.com/larts85/lianelartiles/blob/master/src/images/light-imadev.svg" width="20px" height='20px'/>[Follow this link](https://larts85.github.io/lianelartiles)
 
 ## Available Scripts if you clone it
 
