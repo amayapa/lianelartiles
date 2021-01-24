@@ -1,18 +1,20 @@
 {
   "files": {
     "main.css": "/lianelartiles/static/css/main.024ee857.chunk.css",
-    "main.js": "/lianelartiles/static/js/main.2f18f7ac.chunk.js",
-    "main.js.map": "/lianelartiles/static/js/main.2f18f7ac.chunk.js.map",
-    "runtime-main.js": "/lianelartiles/static/js/runtime-main.1c99bc95.js",
-    "runtime-main.js.map": "/lianelartiles/static/js/runtime-main.1c99bc95.js.map",
-    "static/js/2.af6fc11b.chunk.js": "/lianelartiles/static/js/2.af6fc11b.chunk.js",
-    "static/js/2.af6fc11b.chunk.js.map": "/lianelartiles/static/js/2.af6fc11b.chunk.js.map",
-    "static/js/3.fc2e4a1d.chunk.js": "/lianelartiles/static/js/3.fc2e4a1d.chunk.js",
-    "static/js/3.fc2e4a1d.chunk.js.map": "/lianelartiles/static/js/3.fc2e4a1d.chunk.js.map",
+    "main.js": "/lianelartiles/static/js/main.3e2e231b.chunk.js",
+    "main.js.map": "/lianelartiles/static/js/main.3e2e231b.chunk.js.map",
+    "runtime-main.js": "/lianelartiles/static/js/runtime-main.44df8cc9.js",
+    "runtime-main.js.map": "/lianelartiles/static/js/runtime-main.44df8cc9.js.map",
+    "static/js/2.aebeab32.chunk.js": "/lianelartiles/static/js/2.aebeab32.chunk.js",
+    "static/js/2.aebeab32.chunk.js.map": "/lianelartiles/static/js/2.aebeab32.chunk.js.map",
+    "static/js/3.3605b2a3.chunk.js": "/lianelartiles/static/js/3.3605b2a3.chunk.js",
+    "static/js/3.3605b2a3.chunk.js.map": "/lianelartiles/static/js/3.3605b2a3.chunk.js.map",
     "index.html": "/lianelartiles/index.html",
     "static/css/main.024ee857.chunk.css.map": "/lianelartiles/static/css/main.024ee857.chunk.css.map",
-    "static/js/2.af6fc11b.chunk.js.LICENSE.txt": "/lianelartiles/static/js/2.af6fc11b.chunk.js.LICENSE.txt",
+    "static/js/2.aebeab32.chunk.js.LICENSE.txt": "/lianelartiles/static/js/2.aebeab32.chunk.js.LICENSE.txt",
     "static/media/Dark Toggle.7540ea88.svg": "/lianelartiles/static/media/Dark Toggle.7540ea88.svg",
+    "static/media/Lianel-Artiles-Dev-CV-Eng.fd0053eb.pdf": "/lianelartiles/static/media/Lianel-Artiles-Dev-CV-Eng.fd0053eb.pdf",
+    "static/media/Lianel-Artiles-Dev-CV-Esp.fae6b575.pdf": "/lianelartiles/static/media/Lianel-Artiles-Dev-CV-Esp.fae6b575.pdf",
     "static/media/Light Toggle.84290f85.svg": "/lianelartiles/static/media/Light Toggle.84290f85.svg",
     "static/media/USA.55a2d77a.svg": "/lianelartiles/static/media/USA.55a2d77a.svg",
     "static/media/dark-imadev.5772dc51.svg": "/lianelartiles/static/media/dark-imadev.5772dc51.svg",
@@ -24,9 +26,9 @@
     "static/media/pol-pic.44f923df.svg": "/lianelartiles/static/media/pol-pic.44f923df.svg"
   },
   "entrypoints": [
-    "static/js/runtime-main.1c99bc95.js",
-    "static/js/2.af6fc11b.chunk.js",
+    "static/js/runtime-main.44df8cc9.js",
+    "static/js/2.aebeab32.chunk.js",
     "static/css/main.024ee857.chunk.css",
-    "static/js/main.2f18f7ac.chunk.js"
+    "static/js/main.3e2e231b.chunk.js"
   ]
 }
