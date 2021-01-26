@@ -11,6 +11,7 @@ import Education from "./Components/education";
 import Projects from "./Components/projects";
 import Resume from "./Components/resume";
 import Skills from "./Components/skills";
+// import Pdf from "./Components/pdfViewver";
 
 function App() {
   /* ======================= STATE & VARS ======================= */
@@ -47,6 +48,7 @@ function App() {
   const textCRLight = colors.getPropertyValue("--text-copyRight-light");
   // const shadowSmDark = colors.getPropertyValue("--shadow-sm-dark");
   // const shadowSMLight = colors.getPropertyValue("--shadow-sm-light");
+
   /* ======================= FUNCTIONS ======================= */
   useEffect(() => {
     localStorage.setItem("dark", JSON.stringify(darkMode));
@@ -139,6 +141,9 @@ function App() {
           <Route path="/skills">
             <Skills language={language} />
           </Route>
+          {/* <Route>
+            <Pdf exact path="/pdf" language={language} />
+          </Route> */}
           <Route path="/">
             <Footer
               darkMode={darkMode}

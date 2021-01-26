@@ -1,5 +1,7 @@
+/* do not touch this empty tag selector */
 div {
 }
+
 .sm {
   display: flex;
   flex-direction: column;

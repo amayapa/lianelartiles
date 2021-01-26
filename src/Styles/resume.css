@@ -1,9 +1,33 @@
+#jscv {
+  margin-top: 15px;
+}
 #jscv p {
   padding: 15px;
 }
 #jscv::-webkit-scrollbar {
   display: none;
 }
+.pdf {
+  display: flex;
+  width: 88%;
+  height: 75%;
+  margin: auto;
+}
+.toggleButtons {
+  filter: var(--shadow-header-dark);
+  color: var(--text-color-dark);
+}
+#downloadBtn {
+  padding: 10px;
+  border-radius: 8px;
+  margin-top: 15px;
+  background-color: var(--bg-color-light);
+}
+#downloadBtn > a > span {
+  color: var(--footer-color-light);
+  font-size: 150%;
+}
+
 @media (orientation: portrait) {
   #jscv {
     min-height: calc(100vw * 2.5);

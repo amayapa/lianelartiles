@@ -101,11 +101,13 @@
   .main-header {
     height: 60px;
   }
-  #copyright {
-    bottom: 40px;
-  }
   .logo {
     height: 60px;
     width: 60px;
   }
-} ;
+}
+@media (orientation: portrait) {
+  .main-header {
+    margin-bottom: 15px;
+  }
+}

@@ -9,10 +9,11 @@ const Message = (props) => {
       {
         language.eng ?
           (<>
+            <h3>Working on it</h3>
             <p style={{ padding: '15px', fontSize: 22 }}>
               This website is under construction.<br />
-          For the moment you can go to the following pages:
-        </p>
+              For the moment you can go to the following pages:
+            </p>
             <span className='check'>✔</span><span>Home<br /></span>
             <span className='check'>✔</span><span>JavasCript Resume<br /></span>
             <span className='check'>✔</span><span>About me<br /></span>
@@ -23,10 +24,11 @@ const Message = (props) => {
             <span className='check'>✔</span><span>Social media buttons<br /></span>
           </>) : language.esp ?
             (<>
+              <h3>En construcción</h3>
               <p style={{ padding: '15px', fontSize: 22 }}>
                 Este sitio web está en construcción. <br />
-              Por el momento puedes ir a las siguientes páginas:
-            </p>
+                Por el momento puedes ir a las siguientes páginas:
+              </p>
               <span className='check'>✔</span><span>Inicio<br /></span>
               <span className='check'>✔</span><span>CV en JavasCript<br /></span>
               <span className='check'>✔</span><span>Sobre mi<br /></span>
@@ -37,6 +39,7 @@ const Message = (props) => {
               <span className='check'>✔</span><span>Iconos de redes sociales<br /></span>
             </>) :
             (<>
+              <h3>En construction</h3>
               <p style={{ padding: '15px', fontSize: 22 }}>
                 Ce site est en construction. <br />
                 Pour le moment vous pouvez aller aux pages suivantes:

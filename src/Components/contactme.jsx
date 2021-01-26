@@ -226,8 +226,10 @@ const ContactMe = (props) => {
             onChange={e => handleOnChange(e)}
           />
           <textarea
+            style={{ resize: 'none' }}
             name='body'
             id='body'
+            wrap='soft'
             className='form'
             rows="15" cols="33"
             placeholder={language.eng ? 'Your message' : language.esp ? 'Su mensaje' : 'Votre message'}

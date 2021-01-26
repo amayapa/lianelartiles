@@ -1,35 +1,46 @@
-import React from 'react'
-import jsResume from '../images/jsCV.svg';
-import '../Styles/resume.css'
+import React, { useState } from 'react';
+import ToggleButton from '@material-ui/lab/ToggleButton';
+import ToggleButtonGroup from '@material-ui/lab/ToggleButtonGroup';
+import Pdf from './pdfViewver';
+import JsResume from './JsResume';
 
-const Resume = (props) => {
-  const language = props.language;
+const Resume = ({ language }) => {
+  const [selected, setSelected] = useState('TradResume')
 
+  const handleOnChange = (e, selected) => {
+    if (selected !== null) {
+      setSelected(selected);
+    }
+  }
   return (
-    <>
+    <div>
+      <ToggleButtonGroup
+        value={selected}
+        onChange={handleOnChange}
+        exclusive
+      >
+        <ToggleButton
+          className='toggleButtons'
+          value='TradResume'
+          id='asd'
+          style={{ fontWeight: 'lighter', fontSize: 18 }}
+        >
+          Traditional resume
+        </ToggleButton>
+        <ToggleButton
+          className='toggleButtons'
+          value="JsResume"
+          style={{ fontWeight: 'lighter', fontSize: 18 }}
+        >
+          JavaScript resume
+        </ToggleButton>
+      </ToggleButtonGroup>
       {
-        language.eng ?
-          (<div id='jscv'>
-            <h1>JavaScript Resume</h1>
-            <p>Here you are an extract of my resume, designed with some of my JavaScript knowledge.
-            </p>
-            <img src={jsResume} alt='jscv' />
-          </div>) : language.esp ?
-            (<div id='jscv'>
-              <h1>CV JavaScript</h1>
-              <p>Este es un extracto de mi currículum, diseñado con algunos de mis conocimientos de JavaScript.
-              </p>
-              <img src={jsResume} alt='jscv' />
-            </div>) :
-            (<div id='jscv'>
-              <h1>CV JavaScript</h1>
-              <p>Voici un extrait de mon CV, conçu avec certaines de mes connaissances JavaScript.
-              </p>
-              <img src={jsResume} alt='jscv' />
-            </div>)
+        selected === 'TradResume' ? <Pdf language={language} /> : <JsResume language={language} />
       }
-    </>
+    </div>
   )
 }
 
-export default Resume;
+
+export default Resume
