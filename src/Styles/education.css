@@ -1,0 +1,23 @@
+#education-container {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-evenly;
+}
+.school {
+  display: flex;
+  flex-direction: column;
+  align-content: space-between;
+  justify-content: center;
+  background: var(--bg-card-dark);
+  filter: var(--shadow-header-dark);
+  border-radius: 40px;
+  width: 70%;
+  height: 50vh;
+  margin-top: 50px;
+  padding: 20px;
+}
+.school p,
+.school h1 {
+  color: var(--footer-color-light);
+}

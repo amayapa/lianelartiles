@@ -14,6 +14,18 @@
   --bg-gradient-dark-a: rgba(255, 255, 255, 0.3) 0%;
   --bg-gradient-dark-b: rgba(255, 255, 255, 0) 100%;
   --bg-gradient-light-a: rgba(255, 255, 255, 0.9) 0%;
+  --bg-card-dark: linear-gradient(
+      180deg,
+      #ffffff 0%,
+      rgba(255, 255, 255, 0) 100%
+    ),
+    #b8b8b8;
+  --bg-card-light: linear-gradient(
+      180deg,
+      rgba(255, 255, 255, 0.3) 0%,
+      rgba(255, 255, 255, 0) 100%
+    ),
+    #292a2e;
   --bg-gradient-light-b: rgba(255, 255, 255, 0) 100%;
   --ft-gradient-a: rgba(255, 255, 255, 0.3) 0%;
   --ft-gradient-b: rgba(255, 255, 255, 0) 100%;

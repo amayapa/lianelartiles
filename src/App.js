@@ -46,8 +46,8 @@ function App() {
   const shadowHeaderLight = colors.getPropertyValue("--shadow-header-light");
   const textCRDark = colors.getPropertyValue("--text-copyRight-dark");
   const textCRLight = colors.getPropertyValue("--text-copyRight-light");
-  // const shadowSmDark = colors.getPropertyValue("--shadow-sm-dark");
-  // const shadowSMLight = colors.getPropertyValue("--shadow-sm-light");
+  const bgCardDark = colors.getPropertyValue("--bg-card-dark");
+  const bgCardLight = colors.getPropertyValue("--bg-card-light");
 
   /* ======================= FUNCTIONS ======================= */
   useEffect(() => {
@@ -68,7 +68,7 @@ function App() {
       html.style.setProperty("--ft-color-dark", textColorLight);
       html.style.setProperty("--ft-dark-hover-color", ftDarkHoverColor);
       html.style.setProperty("--shadow-header-dark", shadowHeaderDark);
-      // html.style.setProperty("--shadow-sm-dark", shadowSmDark);
+      html.style.setProperty("--bg-card-dark", bgCardDark);
       html.style.setProperty("--text-copyRight-dark", textCRLight);
     } else {
       html.style.setProperty("--bg-img", bgLightImage);
@@ -84,7 +84,7 @@ function App() {
       html.style.setProperty("--ft-dark-hover-color", ftLightHoverColor);
       html.style.setProperty("--shadow-header-dark", shadowHeaderLight);
       html.style.setProperty("--text-copyRight-dark", textCRDark);
-      // html.style.setProperty("--shadow-sm-dark", shadowSMLight);
+      html.style.setProperty("--bg-card-dark", bgCardLight);
     }
   };
 
@@ -130,7 +130,7 @@ function App() {
             <Contact language={language} />
           </Route>
           <Route path="/education">
-            <Education language={language} />
+            <Education language={language} darkMode={darkMode} />
           </Route>
           <Route path="/projects">
             <Projects language={language} />
