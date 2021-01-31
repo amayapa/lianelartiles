@@ -1,17 +1,17 @@
 {
   "files": {
-    "main.css": "/lianelartiles/static/css/main.7e3b7247.chunk.css",
-    "main.js": "/lianelartiles/static/js/main.b5607f2e.chunk.js",
-    "main.js.map": "/lianelartiles/static/js/main.b5607f2e.chunk.js.map",
+    "main.css": "/lianelartiles/static/css/main.1f8ad0f2.chunk.css",
+    "main.js": "/lianelartiles/static/js/main.1460ce87.chunk.js",
+    "main.js.map": "/lianelartiles/static/js/main.1460ce87.chunk.js.map",
     "runtime-main.js": "/lianelartiles/static/js/runtime-main.5b0bd800.js",
     "runtime-main.js.map": "/lianelartiles/static/js/runtime-main.5b0bd800.js.map",
-    "static/js/2.a2a57215.chunk.js": "/lianelartiles/static/js/2.a2a57215.chunk.js",
-    "static/js/2.a2a57215.chunk.js.map": "/lianelartiles/static/js/2.a2a57215.chunk.js.map",
+    "static/js/2.3024b9c5.chunk.js": "/lianelartiles/static/js/2.3024b9c5.chunk.js",
+    "static/js/2.3024b9c5.chunk.js.map": "/lianelartiles/static/js/2.3024b9c5.chunk.js.map",
     "static/js/3.2fee3fc8.chunk.js": "/lianelartiles/static/js/3.2fee3fc8.chunk.js",
     "static/js/3.2fee3fc8.chunk.js.map": "/lianelartiles/static/js/3.2fee3fc8.chunk.js.map",
     "index.html": "/lianelartiles/index.html",
-    "static/css/main.7e3b7247.chunk.css.map": "/lianelartiles/static/css/main.7e3b7247.chunk.css.map",
-    "static/js/2.a2a57215.chunk.js.LICENSE.txt": "/lianelartiles/static/js/2.a2a57215.chunk.js.LICENSE.txt",
+    "static/css/main.1f8ad0f2.chunk.css.map": "/lianelartiles/static/css/main.1f8ad0f2.chunk.css.map",
+    "static/js/2.3024b9c5.chunk.js.LICENSE.txt": "/lianelartiles/static/js/2.3024b9c5.chunk.js.LICENSE.txt",
     "static/media/Dark Toggle.7540ea88.svg": "/lianelartiles/static/media/Dark Toggle.7540ea88.svg",
     "static/media/GoLeft-Light.2ff3a5a0.svg": "/lianelartiles/static/media/GoLeft-Light.2ff3a5a0.svg",
     "static/media/GoLeft.ff9f9e95.svg": "/lianelartiles/static/media/GoLeft.ff9f9e95.svg",
@@ -30,6 +30,7 @@
     "static/media/españa.78dbc62f.svg": "/lianelartiles/static/media/españa.78dbc62f.svg",
     "static/media/expo.8cf88e94.svg": "/lianelartiles/static/media/expo.8cf88e94.svg",
     "static/media/express-original.415f9b1f.svg": "/lianelartiles/static/media/express-original.415f9b1f.svg",
+    "static/media/fcc.753b8a94.png": "/lianelartiles/static/media/fcc.753b8a94.png",
     "static/media/figma.753c0742.svg": "/lianelartiles/static/media/figma.753c0742.svg",
     "static/media/firebase.eeb70775.svg": "/lianelartiles/static/media/firebase.eeb70775.svg",
     "static/media/francia.7b212668.svg": "/lianelartiles/static/media/francia.7b212668.svg",
@@ -56,8 +57,8 @@
   },
   "entrypoints": [
     "static/js/runtime-main.5b0bd800.js",
-    "static/js/2.a2a57215.chunk.js",
-    "static/css/main.7e3b7247.chunk.css",
-    "static/js/main.b5607f2e.chunk.js"
+    "static/js/2.3024b9c5.chunk.js",
+    "static/css/main.1f8ad0f2.chunk.css",
+    "static/js/main.1460ce87.chunk.js"
   ]
 }
