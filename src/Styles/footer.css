@@ -65,6 +65,7 @@ div {
   align-items: center;
   margin: 0;
   padding: 0;
+  margin-left: -7%;
 }
 .footer .flink {
   color: var(--ft-color-dark);
@@ -180,7 +181,7 @@ div {
     margin: auto;
   }
 }
-@media (max-width: 370px) {
+@media (max-width: 450px) {
   .footer .flink {
     padding-top: 0px;
     padding-bottom: 0px;
@@ -197,6 +198,9 @@ div {
   }
   .sm {
     bottom: 75px;
+  }
+  .flags {
+    margin-left: -4%;
   }
 }
 @media (max-height: 450px) {
@@ -215,57 +219,9 @@ div {
     flex-direction: row-reverse;
   }
 }
-@media (orientation: portrait) and (max-width: 330px) {
+@media (orientation: portrait) and (max-width: 350px) {
   .main-footer {
-    display: flex;
-    position: fixed;
-    bottom: 0;
-    left: 0;
-    justify-content: space-around;
-    align-items: center;
-    width: 100%;
-    height: 90px;
-    background: linear-gradient(
-        180deg,
-        var(--ft-gradient-a),
-        var(--ft-gradient-b)
-      ),
-      var(--footer-color-dark);
-  }
-  #copyright {
-    bottom: 90px;
-  }
-  .sm {
-    flex-direction: row-reverse;
-    bottom: 90px;
-  }
-  .flags {
-    padding: 2px;
-  }
-  .flags-container {
-    display: flex;
-    flex-direction: column;
-    height: 70px;
-    justify-content: space-around;
-    align-items: center;
-  }
-}
-@media (orientation: portrait) and (max-width: 290px) {
-  .main-footer {
-    display: flex;
-    position: fixed;
-    bottom: 0;
-    left: 0;
-    justify-content: space-around;
-    align-items: center;
-    width: 100%;
     height: 100px;
-    background: linear-gradient(
-        180deg,
-        var(--ft-gradient-a),
-        var(--ft-gradient-b)
-      ),
-      var(--footer-color-dark);
   }
   #copyright {
     bottom: 100px;
@@ -285,5 +241,24 @@ div {
     height: 90px;
     justify-content: space-around;
     align-items: center;
+    margin-left: 0;
+  }
+  .footer {
+    margin-left: 0;
+  }
+}
+@media (orientation: portrait) and (max-width: 330px) {
+  .main-footer {
+    height: 90px;
+  }
+  #copyright {
+    bottom: 90px;
+  }
+  .sm {
+    flex-direction: row-reverse;
+    bottom: 90px;
+  }
+  .flags {
+    padding: 2px;
   }
 }

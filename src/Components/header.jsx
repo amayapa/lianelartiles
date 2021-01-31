@@ -5,15 +5,7 @@ import '../Styles/header.css';
 import darkLogo from '../images/dark-imadev.svg'
 import lightLogo from '../images/light-imadev.svg'
 
-const Header = (props) => {
-  /* ======================= STATE ======================= */
-  const darkMode = props.darkMode
-  const language = props.language;
-
-  /* ======================= FUNCTIONS ======================= */
-
-
-  /* ======================= RENDERING ======================= */
+const Header = ({ darkMode, language }) => {
   return (
     <nav className='main-header cContainer'>
       <div>
@@ -26,51 +18,20 @@ const Header = (props) => {
         </Link>
       </div>
       <div className='header'>
-        {
-          language.eng ?
-            (<ul>
-              <Link className='link hlink' to='/resume'>
-                <span>Resume</span>
-              </Link>
-              <Link className='link hlink' to='/education'>
-                <span>Education</span>
-              </Link>
-              <Link className='link hlink' to='/skills'>
-                <span>Skills</span>
-              </Link>
-              <Link className='link hlink' to='/projects'>
-                <span>Projects</span>
-              </Link>
-            </ul>) : language.esp ?
-              (<ul>
-                <Link className='link hlink' to='/resume'>
-                  <span>CV</span>
-                </Link>
-                <Link className='link hlink' to='/education'>
-                  <span>Educación</span>
-                </Link>
-                <Link className='link hlink' to='/skills'>
-                  <span>Tecnologías</span>
-                </Link>
-                <Link className='link hlink' to='/projects'>
-                  <span>Proyectos</span>
-                </Link>
-              </ul>) :
-              (<ul>
-                <Link className='link hlink' to='/resume'>
-                  <span>CV</span>
-                </Link>
-                <Link className='link hlink' to='/education'>
-                  <span>Education</span>
-                </Link>
-                <Link className='link hlink' to='/skills'>
-                  <span>Compétences</span>
-                </Link>
-                <Link className='link hlink' to='/projects'>
-                  <span>Projects</span>
-                </Link>
-              </ul>)
-        }
+        <ul>
+          <Link className='link hlink' to='/resume'>
+            <span>{language.eng ? 'Resume' : language.esp ? 'CV' : 'CV'}</span>
+          </Link>
+          <Link className='link hlink' to='/education'>
+            <span>{language.eng ? 'Education' : language.esp ? 'Educación' : 'Éducation'}</span>
+          </Link>
+          <Link className='link hlink' to='/skills'>
+            <span>{language.eng ? 'Skills' : language.esp ? 'Tecnologías' : 'Compétences'}</span>
+          </Link>
+          <Link className='link hlink' to='/projects'>
+            <span>{language.eng ? 'Projects' : language.esp ? 'Proyectos' : 'Projects'}</span>
+          </Link>
+        </ul>
       </div>
     </nav>
   )

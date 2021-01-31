@@ -1,33 +1,7 @@
 .check {
   color: green;
 }
-@media (orientation: portrait) {
-  .msg {
-    min-height: calc(100vw * 0.6);
-  }
-}
-@media (orientation: portrait) and (min-height: 700px) {
-  .msg {
-    min-height: calc(100vw * 0.4);
-  }
-}
-@media (orientation: portrait) and (max-width: 400px) {
-  .msg {
-    min-height: calc(100vw * 1.8);
-  }
-}
-@media (orientation: portrait) and (max-width: 330px) {
-  .msg {
-    min-height: calc(100vw * 2.3);
-  }
-}
-@media (orientation: portrait) and (max-width: 290px) {
-  .msg {
-    min-height: calc(100vw * 2.6);
-  }
-}
-@media (orientation: landscape) and (max-height: 390px) {
-  .msg {
-    min-height: calc(100vw * 0.9);
-  }
+.msg {
+  min-height: auto;
+  margin-bottom: 150px;
 }

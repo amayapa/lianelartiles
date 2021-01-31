@@ -133,7 +133,7 @@ function App() {
             <Education language={language} darkMode={darkMode} />
           </Route>
           <Route path="/projects">
-            <Projects language={language} />
+            <Projects language={language} darkMode={darkMode} />
           </Route>
           <Route path="/resume">
             <Resume language={language} />
