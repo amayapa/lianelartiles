@@ -11,7 +11,7 @@ const AboutMe = (props) => {
       <div className='text'>
         {language.eng ? (
             <p>
-              My self-sacrificing, disciplined and responsible aptitudes 🧘🏼‍♂️, ➕ quarantine, were the main keys to walk through this difficult path, and make true that dream of make myself a Developer. 💪🏼<br/>
+              My self-sacrificing, disciplined and responsible aptitudes 🧘🏼‍♂️, were the main keys to walk through this difficult path, and make true that dream of make myself a Developer. 💪🏼<br/>
               Passionate by foreign languages, teamwork and solve technical problems.
               FullStack development experience of web and mobile applications.
             </p>
@@ -23,7 +23,7 @@ const AboutMe = (props) => {
                 </p>
               ) : (
                 <p>
-                  Je suis dévoué, discipliné et responsable, 🧘🏼‍♂️ et ces compétences ➕ quarantaine sont les principales clés qui m'ont conduit sur ce chemin difficile de devenir un professionnel des sciences IT. 💪🏼<br/>
+                  Je suis dévoué, discipliné et responsable 🧘🏼‍♂️, et ces compétences sont les principales clés qui m'ont conduit sur ce chemin difficile de devenir un professionnel des sciences IT. 💪🏼<br/>
                   Apasioné des langues étrangers, le travail en equipe et de solutionné des problèmes techniques. Experience en développement autant web que mobile.
                 </p>
               )}

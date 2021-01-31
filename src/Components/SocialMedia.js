@@ -78,7 +78,9 @@ const SocialMedia = (props) => {
         id="inLink"
         target="_blank"
         rel="noopener noreferrer"
-        href="https://www.linkedin.com/in/imadev"
+        href={`https://www.linkedin.com/in/imadev/?locale=${
+          language.eng ? "en_EN" : language.fre ? "fr_FR" : "es_ES"
+        }`}
       >
         <svg
           className="smIcon"

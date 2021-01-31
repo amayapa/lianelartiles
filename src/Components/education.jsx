@@ -13,23 +13,23 @@ const Education = ({ language, darkMode }) => {
 
   const schools = [
     {
+      name: 'Henry',
+      logo: LogoHenry,
+      engText: "Incredible academy that trained me as a Full Stack Web and Mobile Developer with an wide technological stack, and with JavaScript as the core technology.",
+      spaText: "Increíble academia que me capacitó como desarrollador web y móvil Full Stack con un amplio stack tecnológico, y con JavaScript como tecnología principal.",
+      freText: "Incroyable académie qui m'a formé en tant que développeur Web et mobile Full Stack avec un large pile technologique, et avec JavaScript comme technologie principal.",
+      webSite: "https://soyhenry.com/"
+    },
+    {
       name:
         language.eng ? 'University of Sciences of Physical Culture and Sports' :
-          language.esp ? 'Univesidad de las Ciencias de la Cltura Física y el Deporte'
+          language.esp ? 'Univesidad de las Ciencias de la Cultura Física y el Deporte'
             : 'Université des Sciences de la Culture Physique et des Sports',
       logo: Fajardo,
       engText: 'The University of Physical Culture and Sports Sciences "Manuel Fajardo" (UCCFD) is an institution certified by the National Accreditation Board, internationally recognized as the "University of Cuban Sports", its classrooms have graduated more than 90% of the Cuban Olympic champions. It is the governing center of 17 other faculties throughout the country, its campus is located in a central Cerro de La Habana municipality. It is close to the Sports City.',
       spaText: 'La Universidad de Ciencias de la Cultura Física y el Deporte "Manuel Fajardo" (UCCFD) es una institución certificada por la Junta de Acreditación Nacional, reconocida internacionalmente como la “Universidad del Deporte Cubano”, de sus aulas han egresado más del 90 % de los campeones olímpicos cubanos. Es el Centro rector de otras 17 facultades a lo largo de todo el país, su campus está ubicado en un céntrico municipio Cerro de La Habana. Aledaña a la Ciudad Deportiva.',
       freText: "L'Université de la culture physique et des sciences du sport 'Manuel Fajardo' (UCCFD) est une institution certifiée par le Conseil national d'accréditation, internationalement reconnue comme l 'Université des sports cubains, ses salles de classe ont diplômé plus de 90% des champions olympiques cubains. C'est le centre administratif de 17 autres facultés à travers le pays, son campus est situé dans une municipalité centrale de Cerro de La Habana. Il est proche de la Ville des sports.",
       webSite: "http://accion.uccfd.cu/index.php/accion"
-    },
-    {
-      name: 'Henry BootCamp',
-      logo: LogoHenry,
-      engText: "Almost five months of an incredible crash course that trained me as a Full Stack Web and Mobile Developer with an wide technological stack, and with JavaScript as the core technology.",
-      spaText: "Casi cinco meses de un increíble curso intensivo que me capacitó como desarrollador web y móvil Full Stack con un amplio stack tecnológico, y con JavaScript como tecnología principal.",
-      freText: "Près de cinq mois d'un incroyable cours intensif qui m'a formé en tant que développeur Web et mobile Full Stack avec un large pile technologique, et avec JavaScript comme technologie principal.",
-      webSite: "https://soyhenry.com/"
     },
     {
       name: language.eng ? 'French Alliance' : language.esp ? 'Alianza Francesa' : 'Alliance française',
