@@ -38,20 +38,7 @@
   --shadow-sm-light: drop-shadow(4px 4px 3px rgba(0, 0, 0, 0.562));
   --text-copyRight-dark: bold;
   --text-copyRight-light: normal;
-}
-.general-container > {
-  display: flex;
-  height: 100%;
-  flex-direction: column;
-  margin: 0;
-  padding: 0;
-  position: relative;
-}
-.App {
-  text-align: center;
-  max-width: 1200px;
-  margin: 0 auto;
-  flex-grow: 1;
+  --fit-content: fit-content;
 }
 *,
 *::before,
@@ -64,7 +51,34 @@ body {
   font-family: "Saira", sans-serif;
   font-size: 1.2rem;
   display: flex;
-  flex-direction: column;
+}
+#root {
+  background: var(--bg-img),
+    linear-gradient(
+      180deg,
+      var(--bg-gradient-dark-a),
+      var(--bg-gradient-dark-b)
+    ),
+    var(--bg-color-dark);
+  width: 100%;
+  background-size: 100% 100%, 100% 100%;
+  min-height: 100vh;
+}
+.App {
+  text-align: center;
+  max-width: 1600px;
+  margin: 0 auto;
+  flex-grow: 1;
+  height: 100%;
+}
+.general-container > {
+  display: flex;
+  align-content: center;
+  justify-content: center;
+  margin: 0;
+  height: 100%;
+  padding: 0;
+  position: relative;
 }
 .link {
   display: flex;
@@ -80,19 +94,6 @@ h3,
 h4 {
   color: var(--text-color-dark);
 }
-#root {
-  background: var(--bg-img),
-    linear-gradient(
-      180deg,
-      var(--bg-gradient-dark-a),
-      var(--bg-gradient-dark-b)
-    ),
-    var(--bg-color-dark);
-  width: 100%;
-  background-size: 100% 100%, 100% 100%;
-  background-repeat: no-repeat;
-  min-height: 100vh;
-}
 @media (orientation: portrait) {
   #root {
     background: var(--bg-img-portrait),
@@ -104,7 +105,6 @@ h4 {
       var(--bg-color-dark);
     width: 100%;
     background-size: 100% 100%, 100% 100%;
-    background-repeat: no-repeat;
     min-height: 100vh;
   }
 }

@@ -78,6 +78,7 @@ div {
 .toggle {
   height: 50px;
   width: 50px;
+  cursor: pointer;
 }
 #toggle {
   filter: var(--shadow-ft-dark);

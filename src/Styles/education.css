@@ -1,23 +1,62 @@
 #education-container {
+}
+#education-container {
   display: flex;
-  flex-direction: row;
+  align-self: center;
   align-items: center;
   justify-content: space-evenly;
+  min-height: auto;
+  margin-bottom: 150px;
+  margin-top: 10vh;
+}
+.inactive {
+  opacity: 0;
+  transition-duration: 1s ease;
 }
 .school {
+  opacity: 1;
+  transition-duration: 1s;
+  transform: scale(1.08);
   display: flex;
   flex-direction: column;
-  align-content: space-between;
   justify-content: center;
+  align-items: center;
   background: var(--bg-card-dark);
   filter: var(--shadow-header-dark);
   border-radius: 40px;
-  width: 70%;
-  height: 50vh;
-  margin-top: 50px;
+  min-height: 50vh;
+  max-width: 700px;
+  width: 70vw;
   padding: 20px;
+  position: relative;
+  margin: auto;
 }
-.school p,
-.school h1 {
+.school > p {
   color: var(--footer-color-light);
+  max-width: 550px;
+}
+.school > h1 {
+  margin-top: 12%;
+  color: var(--footer-color-light);
+  max-width: 500px;
+}
+.school > a > img {
+  width: 15%;
+  position: absolute;
+  top: 10px;
+  left: 15px;
+  filter: drop-shadow(2px 2px 2px rgba(0, 0, 0, 0.651));
+}
+.arrows {
+  cursor: pointer;
+  width: 10vw;
+  margin: 5%;
+}
+@media (orientation: portrait) and (max-width: 400px) {
+  #school-name {
+    font-size: 1em;
+  }
+  .school > p {
+    font-size: 0.5em;
+  }
 }

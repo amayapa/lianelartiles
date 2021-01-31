@@ -99,7 +99,7 @@
 }
 @media (orientation: landscape) and (max-height: 350px) {
   .main-header {
-    height: 60px;
+    height: 130px;
   }
   .logo {
     height: 60px;

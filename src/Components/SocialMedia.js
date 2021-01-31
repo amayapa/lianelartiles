@@ -14,7 +14,7 @@ const SocialMedia = (props) => {
       <a
         id="wappLink"
         target="_blank"
-        rel="noreferrer"
+        rel="noopener noreferrer"
         href={`${language.eng ? wappMsg : language.esp ? wappMsj : wappMssg}`}
       >
         <svg
@@ -41,7 +41,7 @@ const SocialMedia = (props) => {
       <a
         id="gitLink"
         target="_blank"
-        rel="noreferrer"
+        rel="noopener noreferrer"
         href="https://github.com/larts85"
       >
         <svg
@@ -77,7 +77,7 @@ const SocialMedia = (props) => {
       <a
         id="inLink"
         target="_blank"
-        rel="noreferrer"
+        rel="noopener noreferrer"
         href="https://www.linkedin.com/in/imadev"
       >
         <svg

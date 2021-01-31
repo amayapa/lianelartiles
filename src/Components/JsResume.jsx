@@ -6,29 +6,15 @@ const Resume = (props) => {
   const language = props.language;
 
   return (
-    <>
-      {
-        language.eng ?
-          (<div id='jscv'>
-            <h1>JavaScript Resume</h1>
-            <p>Here you are an extract of my resume, designed with some of my JavaScript knowledge.
-            </p>
-            <img src={jsResume} alt='jscv' />
-          </div>) : language.esp ?
-            (<div id='jscv'>
-              <h1>CV JavaScript</h1>
-              <p>Este es un extracto de mi currículum, diseñado con algunos de mis conocimientos de JavaScript.
-              </p>
-              <img src={jsResume} alt='jscv' />
-            </div>) :
-            (<div id='jscv'>
-              <h1>CV JavaScript</h1>
-              <p>Voici un extrait de mon CV, conçu avec certaines de mes connaissances JavaScript.
-              </p>
-              <img src={jsResume} alt='jscv' />
-            </div>)
-      }
-    </>
+    <div id='jscv'>
+      <h1>{language.eng ? 'JavaScript Resume' : language.esp ? 'CV JavaScript' : 'CV JavaScript'}</h1>
+      <p>{language.eng ?
+        'Here you are an extract of my resume, designed with some of my JavaScript knowledge.' :
+        language.esp ?
+          'Este es un extracto de mi currículum, diseñado con algunos de mis conocimientos de JavaScript.' :
+          'Voici un extrait de mon CV, conçu avec certaines de mes connaissances JavaScript.'}</p>
+      <img src={jsResume} alt='jscv' />
+    </div>
   )
 }
 

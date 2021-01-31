@@ -1,8 +1,15 @@
 #jscv {
   margin-top: 15px;
+  margin-bottom: 150px;
+  min-height: auto;
 }
 #jscv p {
   padding: 15px;
+}
+#jscv img {
+  filter: drop-shadow(3px 3px 4px rgba(0, 0, 0, 0.9));
+  border-radius: 10px;
+  width: 90%;
 }
 #jscv::-webkit-scrollbar {
   display: none;
@@ -10,8 +17,12 @@
 .pdf {
   display: flex;
   width: 88%;
-  height: 75%;
+  height: 100vh;
   margin: auto;
+}
+object {
+  width: 100%;
+  height: 100%;
 }
 .toggleButtons {
   filter: var(--shadow-header-dark);
@@ -22,56 +33,21 @@
   border-radius: 8px;
   margin-top: 15px;
   background-color: var(--bg-color-light);
+  margin-bottom: 150px;
 }
 #downloadBtn > a > span {
   color: var(--footer-color-light);
   font-size: 150%;
 }
 
-@media (orientation: portrait) {
-  #jscv {
-    min-height: calc(100vw * 2.5);
-  }
-  #jscv img {
-    width: 90%;
-    border-radius: 10px;
-    filter: var(--shadow-dark);
-  }
-}
-@media (orientation: portrait) and (max-width: 330px) {
-  #jscv {
-    min-height: calc(100vw * 2.8);
-  }
-  #jscv img {
-    width: 90%;
-    border-radius: 10px;
-    filter: drop-shadow(3px 3px 4px rgba(0, 0, 0, 0.9));
-  }
-}
-@media (orientation: portrait) and (max-width: 290px) {
-  #jscv {
-    min-height: calc(100vw * 3);
-  }
-  #jscv img {
-    width: 90%;
-    border-radius: 10px;
-    filter: drop-shadow(3px 3px 4px rgba(0, 0, 0, 0.9));
-  }
-}
 @media (orientation: landscape) {
-  #jscv {
-    height: calc(100vw * 1.8);
-  }
   #jscv img {
-    filter: drop-shadow(3px 3px 4px rgba(0, 0, 0, 0.9));
-    border-radius: 10px;
     width: 80%;
   }
 }
 /* iPhone 4 */
 @media (orientation: landscape) and (max-height: 400px) and (max-width: 500px) {
   #jscv {
-    height: calc(100vw * 2);
     margin-top: 15%;
   }
 }

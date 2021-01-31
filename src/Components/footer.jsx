@@ -17,7 +17,7 @@ const Footer = (props) => {
 
   /* ======================= RENDERING ======================= */
   return (
-    <div>
+    <>
       <div className='sm'>
         <SocialMedia
           darkMode={darkMode}
@@ -60,45 +60,24 @@ const Footer = (props) => {
             })}
           />
         </div>
-        {
-          language.eng ?
-            (<div className='footer'>
-              <Link className='link' to='/about'>
-                <span className='flink'>About me</span>
-              </Link>
-              <Link className='link' to='/contact'>
-                <span className='flink'>Contact me</span>
-              </Link>
-            </div>) : language.esp ?
-              (<div className='footer'>
-                <Link className='link' to='/about'>
-                  <span className='flink'>Sobre mi</span>
-                </Link>
-                <Link className='link' to='/contact'>
-                  <span className='flink'>Contactame</span>
-                </Link>
-              </div>) :
-              (<div className='footer'>
-                <Link className='link' to='/about'>
-                  <span className='flink'>Sur moi</span>
-                </Link>
-                <Link className='link' to='/contact'>
-                  <span className='flink'>Contactez moi</span>
-                </Link>
-              </div>)
-        }
+        <div className='footer'>
+          <Link className='link' to='/about'>
+            <span className='flink'>{language.eng ? 'About me' : language.esp ? 'Sobre mi' : 'Sur moi'}</span>
+          </Link>
+          <Link className='link' to='/contact'>
+            <span className='flink'>{language.eng ? 'Contact me' : language.esp ? 'Contactame' : 'Contactez moi'}</span>
+          </Link>
+        </div>
         <div className='toggle'>
-          <a href={`${window.location.href}`}>
-            <img
-              id='toggle'
-              src={darkMode ? darkToggle : lightToggle}
-              alt="toggleMode"
-              onClick={() => setDarkMode((prevMode) => !prevMode)}
-            />
-          </a>
+          <img
+            id='toggle'
+            src={darkMode ? darkToggle : lightToggle}
+            alt="toggleMode"
+            onClick={() => setDarkMode((prevMode) => !prevMode)}
+          />
         </div>
       </nav>
-    </div>
+    </>
   )
 }
 

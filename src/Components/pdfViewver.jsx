@@ -34,54 +34,18 @@ const Pdf = ({ language }) => {
   }
 
   return (
-    <>
-      {
-        language.eng ?
-          (<div id='jscv'>
-            <h1>Traditional Resume</h1>
-            <p>This is my resume in PDF format.
-            </p>
-            <div className='pdf'>
-              <object
-                data={language.esp ? espPdf : language.fre ? frePdf : engPdf}
-                type="application/pdf"
-                width="100%"
-                height="100%"
-              >
-              </object>
-            </div>
-          </div>) :
-          language.esp ?
-            (<div id='jscv'>
-              <h1>CV Tradicional</h1>
-              <p>Este es mi currículum en formato PDF.
-            </p>
-              <div className='pdf'>
-                <object
-                  data={language.esp ? espPdf : language.fre ? frePdf : engPdf}
-                  type="application/pdf"
-                  width="100%"
-                  height="100%"
-                >
-                </object>
-              </div>
-            </div>) :
-            (<div id='jscv'>
-              <h1>CV Traditionnel</h1>
-              <p>Ceci est mon CV au format PDF.
-            </p>
-              <div className='pdf'>
-                <object
-                  data={language.esp ? espPdf : language.fre ? frePdf : engPdf}
-                  type="application/pdf"
-                  width="100%"
-                  height="100%"
-                >
-                </object>
-              </div>
-            </div>)
-      }
-    </>
+    <div id='jscv'>
+      <h1>{language.esp ? 'CV Tradicional' : language.fre ? 'CV Traditionnel' : 'Traditional Resume'}</h1>
+      <p>{language.esp ? 'Este es mi currículum en formato PDF.' : language.fre ? 'Ceci est mon CV au format PDF.' : 'This is my resume in PDF format.'}
+      </p>
+      <div className='pdf'>
+        <object
+          data={language.esp ? espPdf : language.fre ? frePdf : engPdf}
+          type="application/pdf"
+        >
+        </object>
+      </div>
+    </div>
   );
 }
 

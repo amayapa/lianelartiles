@@ -1,13 +1,12 @@
 #skills-container {
-  display: block;
+  min-height: auto;
+  margin-bottom: 150px;
 }
 .skillsContainer {
   display: flex;
   justify-content: space-evenly;
   margin: auto;
   flex-wrap: wrap;
-  /* background: linear-gradient(180deg, #ffffff 0%, rgba(255, 255, 255, 0) 100%),
-    #b8b8b8; */
   border-radius: 10px;
   width: 80%;
   padding: 10px;
@@ -18,7 +17,6 @@
   flex-direction: column;
   align-items: center;
   margin: 2vw;
-  /* background-color: blanchedalmond; */
 }
 .tech img {
   filter: var(--shadow-ft-dark);
@@ -39,20 +37,6 @@
   #programLanguages {
     width: 90%;
   }
-  #skills-container {
-    height: calc(100vw * 5.3);
-  }
-}
-
-@media (orientation: portrait) and (min-width: 450px) {
-  #skills-container {
-    height: calc(100vw * 3.8);
-  }
-}
-@media (orientation: portrait) and (min-width: 700px) {
-  #skills-container {
-    height: calc(100vw * 2);
-  }
 }
 @media (orientation: landscape) {
   .tech img {
@@ -63,13 +47,5 @@
   }
   #programLanguages {
     width: 60%;
-  }
-  #skills-container {
-    height: calc(100vw * 2.1);
-  }
-}
-@media (orientation: landscape) and (min-width: 800px) {
-  #skills-container {
-    height: calc(100vw * 1.5);
   }
 }
