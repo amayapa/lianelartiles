@@ -11,28 +11,13 @@ const LandingPage = (props) => {
   /* ======================= RENDERING ======================= */
   return (
     <div id='me' >
-      {
-        language.eng ? (
-          <>
-            <span id='las'>Lianel Artiles</span><br />
-            <span id='dev'>FullStack Web and Mobile Developer</span><br />
-            <span id='lema'>At last working on my passion</span>
-          </ >
-        ) :
-          language.esp ? (
-            <>
-              <span id='las'>Lianel Artiles</span><br />
-              <span id='dev'>Desarrollador FullStack Web y Mobile</span><br />
-              <span id='lema'>Finalmente haciendo lo que me apasiona</span>
-            </>
-          ) : (
-              <>
-                <span id='las'>Lianel Artiles</span><br />
-                <span id='dev'>Développeur Web et Mobile FullStack</span><br />
-                <span id='lema'>En travaillant enfin sur ma passion</span>
-              </>
-            )
-      }
+      <span id='las'>Lianel Artiles</span><br />
+      <span id='dev'>
+        {language.eng ? 'FullStack Web and Mobile Developer' : language.esp ? 'Desarrollador FullStack Web y Mobile' : 'Développeur Web et Mobile FullStack'}
+      </span><br />
+      <span id='lema'>
+        {language.eng ? 'At last working on my passion' : language.esp ? 'Finalmente haciendo lo que me apasiona' : 'En travaillant enfin sur ma passion'}
+      </span>
     </div>
   )
 }

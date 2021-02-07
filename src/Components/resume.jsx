@@ -25,14 +25,14 @@ const Resume = ({ language }) => {
           id='asd'
           style={{ fontWeight: 'lighter', fontSize: 18 }}
         >
-          Traditional resume
+          {language.esp ? 'CV Tradicional' : language.fre ? 'CV Traditionnel' : 'Traditional Resume'}
         </ToggleButton>
         <ToggleButton
           className='toggleButtons'
           value="JsResume"
           style={{ fontWeight: 'lighter', fontSize: 18 }}
         >
-          JavaScript resume
+          {language.eng ? 'JavaScript Resume' : language.esp ? 'CV JavaScript' : 'CV JavaScript'}
         </ToggleButton>
       </ToggleButtonGroup>
       {

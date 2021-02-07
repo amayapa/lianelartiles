@@ -3,7 +3,9 @@
   margin-right: 40%;
   margin-top: 25vh;
   overflow-y: auto;
-  height: 75%;
+  height: 100%;
+  min-height: auto;
+  margin-bottom: 15%;
 }
 #me::-webkit-scrollbar {
   display: none;
@@ -21,12 +23,12 @@
   #me {
     text-align: right;
     margin-right: 35vw;
-    margin-top: 25vh;
+    /* margin-top: 25vh; */
   }
 }
 @media (max-width: 800px) {
   #me {
-    margin-top: 25vh;
+    /* margin-top: 25vh; */
     margin-right: 0%;
     text-align: center;
   }
@@ -42,28 +44,41 @@
 }
 @media (max-width: 500px) {
   #me {
-    margin-top: 30%;
-    margin-bottom: 10px;
+    /* margin-top: 40vh; */
+    /* margin-bottom: 10px; */
     width: 100vw;
   }
 }
 @media (max-width: 370px) {
   #me {
-    margin: auto;
-    margin-top: 15%;
+    /* margin: auto; */
+    /* margin-top: 15%; */
     text-align: center;
   }
 }
 @media (max-height: 450px) {
   #me {
-    margin: auto;
-    margin-top: 0%;
+    /* margin: auto; */
+    /* margin-top: 0%; */
     text-align: center;
   }
 }
-@media (orientation: portrait) and (min-height: 350px) {
+@media (orientation: landscape) and (max-height: 600px) {
   #me {
-    height: 400;
-    overflow-y: auto;
+    margin-top: 10vh;
+  }
+}
+@media (orientation: landscape) and (max-height: 450px) {
+  #las {
+    font-size: 6vw;
+  }
+  #dev {
+    font-size: 2vw;
+  }
+  #lema {
+    font-size: 1.5vw;
+  }
+  #me {
+    margin-top: 5vh;
   }
 }

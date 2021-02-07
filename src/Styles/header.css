@@ -77,7 +77,7 @@
     margin: auto;
   }
 }
-@media (max-width: 370px) {
+@media (max-width: 385px) {
   .main-header {
     flex-direction: row;
   }

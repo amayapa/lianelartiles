@@ -29,7 +29,7 @@ const Footer = (props) => {
       </p>
       <nav className='main-footer'>
         <div className='flags'>
-          <img
+          {!language.esp ? (<img
             src={espFlag}
             alt="imadev"
             id='esp'
@@ -38,8 +38,8 @@ const Footer = (props) => {
               esp: true,
               fre: false
             })}
-          />
-          <img
+          />) : null}
+          {!language.eng ? (<img
             src={engFlag}
             alt="imadev"
             id='eng'
@@ -48,8 +48,8 @@ const Footer = (props) => {
               esp: false,
               fre: false
             })}
-          />
-          <img
+          />) : null}
+          {!language.fre ? (<img
             src={freFlag}
             alt="imadev"
             id='fre'
@@ -58,7 +58,7 @@ const Footer = (props) => {
               esp: false,
               fre: true
             })}
-          />
+          />) : null}
         </div>
         <div className='footer'>
           <Link className='link' to='/about'>
