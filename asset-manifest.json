@@ -1,17 +1,17 @@
 {
   "files": {
     "main.css": "/lianelartiles/static/css/main.a4760f3f.chunk.css",
-    "main.js": "/lianelartiles/static/js/main.7273a7c8.chunk.js",
-    "main.js.map": "/lianelartiles/static/js/main.7273a7c8.chunk.js.map",
-    "runtime-main.js": "/lianelartiles/static/js/runtime-main.5b0bd800.js",
-    "runtime-main.js.map": "/lianelartiles/static/js/runtime-main.5b0bd800.js.map",
-    "static/js/2.3024b9c5.chunk.js": "/lianelartiles/static/js/2.3024b9c5.chunk.js",
-    "static/js/2.3024b9c5.chunk.js.map": "/lianelartiles/static/js/2.3024b9c5.chunk.js.map",
-    "static/js/3.2fee3fc8.chunk.js": "/lianelartiles/static/js/3.2fee3fc8.chunk.js",
-    "static/js/3.2fee3fc8.chunk.js.map": "/lianelartiles/static/js/3.2fee3fc8.chunk.js.map",
+    "main.js": "/lianelartiles/static/js/main.9caa41a9.chunk.js",
+    "main.js.map": "/lianelartiles/static/js/main.9caa41a9.chunk.js.map",
+    "runtime-main.js": "/lianelartiles/static/js/runtime-main.145aaa59.js",
+    "runtime-main.js.map": "/lianelartiles/static/js/runtime-main.145aaa59.js.map",
+    "static/js/2.41137da7.chunk.js": "/lianelartiles/static/js/2.41137da7.chunk.js",
+    "static/js/2.41137da7.chunk.js.map": "/lianelartiles/static/js/2.41137da7.chunk.js.map",
+    "static/js/3.a7f3276a.chunk.js": "/lianelartiles/static/js/3.a7f3276a.chunk.js",
+    "static/js/3.a7f3276a.chunk.js.map": "/lianelartiles/static/js/3.a7f3276a.chunk.js.map",
     "index.html": "/lianelartiles/index.html",
     "static/css/main.a4760f3f.chunk.css.map": "/lianelartiles/static/css/main.a4760f3f.chunk.css.map",
-    "static/js/2.3024b9c5.chunk.js.LICENSE.txt": "/lianelartiles/static/js/2.3024b9c5.chunk.js.LICENSE.txt",
+    "static/js/2.41137da7.chunk.js.LICENSE.txt": "/lianelartiles/static/js/2.41137da7.chunk.js.LICENSE.txt",
     "static/media/Dark Toggle.7540ea88.svg": "/lianelartiles/static/media/Dark Toggle.7540ea88.svg",
     "static/media/GoLeft-Light.2ff3a5a0.svg": "/lianelartiles/static/media/GoLeft-Light.2ff3a5a0.svg",
     "static/media/GoLeft.ff9f9e95.svg": "/lianelartiles/static/media/GoLeft.ff9f9e95.svg",
@@ -56,9 +56,9 @@
     "static/media/styled-components.1368146f.svg": "/lianelartiles/static/media/styled-components.1368146f.svg"
   },
   "entrypoints": [
-    "static/js/runtime-main.5b0bd800.js",
-    "static/js/2.3024b9c5.chunk.js",
+    "static/js/runtime-main.145aaa59.js",
+    "static/js/2.41137da7.chunk.js",
     "static/css/main.a4760f3f.chunk.css",
-    "static/js/main.7273a7c8.chunk.js"
+    "static/js/main.9caa41a9.chunk.js"
   ]
 }
