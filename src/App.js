@@ -11,7 +11,6 @@ import Education from "./Components/education";
 import Projects from "./Components/projects";
 import Resume from "./Components/resume";
 import Skills from "./Components/skills";
-import ReactGa from "react-ga";
 
 function App() {
   /* ======================= STATE & VARS ======================= */
@@ -92,10 +91,6 @@ function App() {
     switchMode();
     // eslint-disable-next-line
   }, [darkMode]);
-  useEffect(() => {
-    ReactGa.initialize("G-15NEHLH3QT");
-    ReactGa.pageview(window.location.pathname + window.location.search);
-  }, []);
 
   function getInitialMode() {
     const isReturningUser = "dark" in localStorage;
