@@ -1,0 +1,22 @@
+#hexangon-container {
+  display: flex;
+  margin: auto;
+  margin-top: 7%;
+}
+.hexangon {
+  width: 30px;
+  height: 30px;
+  margin-left: 10px;
+  margin-right: 10px;
+  cursor: pointer;
+  filter: var(--shadow-header-dark);
+}
+#hexagon:hover {
+  background-color: var(--footer-color-dark);
+}
+/* 
+.bottom-half-checked {
+  -webkit-transform: rotate(180deg);
+  -ms-transform: rotate(180deg);
+  transform: rotate(180deg);
+} */

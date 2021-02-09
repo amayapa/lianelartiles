@@ -4,7 +4,9 @@ import RightArrow from "../images/GoRight.svg"
 import LeftArrowLight from "../images/GoLeft-Light.svg"
 import RightArrowLight from "../images/GoRight-Light.svg"
 import '../Styles/education.css'
+import '../Styles/slideButtons.css'
 import { schools } from "../data/schools";
+import SliderButton from "../Components/sliderButton";
 
 const Education = ({ language, darkMode }) => {
   const [current, setCurrent] = useState(0);
@@ -51,7 +53,19 @@ const Education = ({ language, darkMode }) => {
         }
         <img onClick={() => nextSlide()} className='arrows right-arrow' src={darkMode ? RightArrowLight : RightArrow} alt='ups' />
       </div>
-      <div id='inputs'>
+      <div id='hexangon-container'>
+        {schools.map((school, index) => {
+          return (
+            <SliderButton
+              current={current}
+              darkMode={darkMode}
+              index={index}
+              handleOnSlide={handleOnSlide}
+            />
+          )
+        })}
+      </div>
+      {/* <div id='inputs'>
         {schools.map((school, index) => {
           return (
             <div
@@ -61,7 +75,7 @@ const Education = ({ language, darkMode }) => {
             ></div>
           )
         })}
-      </div>
+      </div> */}
     </div>
   )
 }

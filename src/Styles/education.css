@@ -11,7 +11,7 @@
   display: flex;
   align-self: center;
   align-items: center;
-  justify-content: space-evenly;
+  justify-content: space-between;
   margin-top: 10vh;
 }
 .inactive {
@@ -32,9 +32,9 @@
   border-radius: 30px;
   min-height: 40vh;
   max-width: 700px;
-  width: 70vw;
   padding: 20px;
   position: relative;
+  width: 65vw;
   margin: auto;
 }
 .school > p {
@@ -58,15 +58,18 @@
 .arrows {
   cursor: pointer;
   width: 10vw;
-  margin: 5%;
+  position: absolute;
+  margin: 15px;
+  top: auto;
+  z-index: 1;
 }
 .left-arrow {
-  margin-left: 2%;
+  left: 0;
 }
 .right-arrow {
-  margin-right: 2%;
+  right: 0;
 }
-#inputs {
+/* #inputs {
   display: flex;
   margin: auto;
   margin-top: 7%;
@@ -96,8 +99,13 @@
 }
 .inputs:hover {
   background-color: var(--footer-color-dark);
-}
+} */
 
+@media (orientation: portrait) {
+  .arrows {
+    margin: 5px;
+  }
+}
 @media (orientation: portrait) and (max-width: 500px) {
   .school-name {
     font-size: 1.2em;
