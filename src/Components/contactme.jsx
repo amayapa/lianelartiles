@@ -14,22 +14,23 @@ const ContactMe = (props) => {
   const [state, setState] = useState({ name: '', email: '', body: '' })
   const [success, setSuccess] = useState(false)
   const [loading, setLoading] = useState(false)
+  const [isDone, setIsDone] = useState(false)
   const [Err, setErr] = useState({
     emptyField: "",
     invalidEmailFormat: "",
   });
   const templateId = 'template_hzuwv1r';
   const englishFL = 'Hello!,'
-  const englishSL = 'I will be very happy to receive a message from you, and if you send me a constructive review on this site, I will greatly appreciate it. Regards.'
+  const englishSL = 'Do not hesitate to write to me, I will be happy to collaborate on your project, let me know how I can be of help. Greetings.';
   const spanishFL = 'Hola!,';
-  const spanishSL = 'Estaré muy feliz de recibir un mensaje tuyo, si me envías además una reseña constructiva sobre este sitio, te lo agradeceré enormemente. Saludos.'
+  const spanishSL = 'No dudes en escribirme, estaré encantado de colaborar en tu proyecto, déjame saber como puedo ser de ayuda. Saludos.'
   const frenchFL = 'Bonjours!,';
-  const frenchSL = "Je serai très heureux de recevoir un message de votre part, et si vous m'envoyez une critique constructive sur ce site, je l'apprécierai grandement. Cordialement."
-  var i = 0;
-  var f = 0;
-  var interval, intervalo;
-  var firstline = '';
-  var secondLine = '';
+  const frenchSL = "N'hésitez pas à m'écrire, je serai très heureux de collaborer sur votre projet, faites-moi savoir comment je peux vous aider. Salutations.";
+  let i = 0;
+  let f = 0;
+  let interval, intervalo;
+  let firstline = '';
+  let secondLine = '';
 
   /* ======================== FUNCTIONS ========================= */
   const sendEmail = (e) => {
@@ -82,12 +83,42 @@ const ContactMe = (props) => {
       return false;
     } else return true;
   };
+
   function displayChars() {
     interval = setInterval(displayFirstLine, 100);
     setTimeout(() => {
       intervalo = setInterval(displaySecondLine, 50);
+      setIsDone(!isDone)
     }, 2500);
   }
+
+  function displayFullFrase() {
+    if (language.eng) {
+      firstline = englishFL;
+      secondLine = englishSL;
+      setString({
+        firstline,
+        secondLine
+      })
+    }
+    else if (language.esp) {
+      firstline = spanishFL;
+      secondLine = spanishSL;
+      setString({
+        firstline,
+        secondLine
+      })
+    }
+    else {
+      firstline = frenchFL;
+      secondLine = frenchSL;
+      setString({
+        firstline,
+        secondLine
+      })
+    }
+  }
+
   const displayFirstLine = () => {
     if (language.eng) {
       if (i < englishFL.length) {
@@ -196,7 +227,7 @@ const ContactMe = (props) => {
     }
   }
   useEffect(() => {
-    displayChars()
+    const display = isDone ? displayFullFrase() : displayChars()
     // eslint-disable-next-line
   }, [language])
 
@@ -204,7 +235,7 @@ const ContactMe = (props) => {
   return (
     <div className='contactme-container'>
       <p id='intro'>
-        {string.firstline}<br />
+        🤗{string.firstline}<br />
         {string.secondLine}{span === 141 ? <span></span> : null}
       </p>
       <form onSubmit={(e) => sendEmail(e)}>
