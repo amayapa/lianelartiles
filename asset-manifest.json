@@ -1,8 +1,8 @@
 {
   "files": {
-    "main.css": "/lianelartiles/static/css/main.74b6462a.chunk.css",
-    "main.js": "/lianelartiles/static/js/main.5b2c73cd.chunk.js",
-    "main.js.map": "/lianelartiles/static/js/main.5b2c73cd.chunk.js.map",
+    "main.css": "/lianelartiles/static/css/main.65dfb67c.chunk.css",
+    "main.js": "/lianelartiles/static/js/main.f22b7604.chunk.js",
+    "main.js.map": "/lianelartiles/static/js/main.f22b7604.chunk.js.map",
     "runtime-main.js": "/lianelartiles/static/js/runtime-main.145aaa59.js",
     "runtime-main.js.map": "/lianelartiles/static/js/runtime-main.145aaa59.js.map",
     "static/js/2.d2717a59.chunk.js": "/lianelartiles/static/js/2.d2717a59.chunk.js",
@@ -10,7 +10,7 @@
     "static/js/3.a7f3276a.chunk.js": "/lianelartiles/static/js/3.a7f3276a.chunk.js",
     "static/js/3.a7f3276a.chunk.js.map": "/lianelartiles/static/js/3.a7f3276a.chunk.js.map",
     "index.html": "/lianelartiles/index.html",
-    "static/css/main.74b6462a.chunk.css.map": "/lianelartiles/static/css/main.74b6462a.chunk.css.map",
+    "static/css/main.65dfb67c.chunk.css.map": "/lianelartiles/static/css/main.65dfb67c.chunk.css.map",
     "static/js/2.d2717a59.chunk.js.LICENSE.txt": "/lianelartiles/static/js/2.d2717a59.chunk.js.LICENSE.txt",
     "static/media/Dark Toggle.7540ea88.svg": "/lianelartiles/static/media/Dark Toggle.7540ea88.svg",
     "static/media/GoLeft-Light.2ff3a5a0.svg": "/lianelartiles/static/media/GoLeft-Light.2ff3a5a0.svg",
@@ -38,7 +38,7 @@
     "static/media/App.css": "/lianelartiles/static/media/light-vertical-hive.ad5bdb57.svg",
     "static/media/html5-original.c28bc668.svg": "/lianelartiles/static/media/html5-original.c28bc668.svg",
     "static/media/javaScript.e13f41ac.svg": "/lianelartiles/static/media/javaScript.e13f41ac.svg",
-    "static/media/jsCV.76398e9d.svg": "/lianelartiles/static/media/jsCV.76398e9d.svg",
+    "static/media/jsCV.d2bd7a93.svg": "/lianelartiles/static/media/jsCV.d2bd7a93.svg",
     "static/media/jsx.69fe4469.svg": "/lianelartiles/static/media/jsx.69fe4469.svg",
     "static/media/less-plain-wordmark.d2230708.svg": "/lianelartiles/static/media/less-plain-wordmark.d2230708.svg",
     "static/media/light-imadev.a35b09f5.svg": "/lianelartiles/static/media/light-imadev.a35b09f5.svg",
@@ -58,7 +58,7 @@
   "entrypoints": [
     "static/js/runtime-main.145aaa59.js",
     "static/js/2.d2717a59.chunk.js",
-    "static/css/main.74b6462a.chunk.css",
-    "static/js/main.5b2c73cd.chunk.js"
+    "static/css/main.65dfb67c.chunk.css",
+    "static/js/main.f22b7604.chunk.js"
   ]
 }
