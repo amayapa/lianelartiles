@@ -227,7 +227,10 @@ const ContactMe = (props) => {
     }
   }
   useEffect(() => {
-    const display = isDone ? displayFullFrase() : displayChars()
+    if (isDone) {
+      displayFullFrase()
+    }
+    else { displayChars() }
     // eslint-disable-next-line
   }, [language])
 

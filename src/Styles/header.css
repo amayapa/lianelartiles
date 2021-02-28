@@ -3,11 +3,10 @@
   justify-content: space-between;
   align-items: center;
   width: 100%;
-  margin: auto;
   padding-left: 5%;
   padding-right: 5%;
-  margin-top: 10px;
-  margin-bottom: 10px;
+  padding-top: 10px;
+  padding-bottom: 10px;
 }
 .logo {
   display: flex;
@@ -62,19 +61,16 @@
   }
   .main-header {
     flex-direction: row;
-    margin: auto;
     margin-top: 10px;
   }
 }
 
 @media (max-width: 500px) {
   .logo {
-    margin: auto;
     margin-top: 10px;
   }
   .main-header {
     flex-direction: column;
-    margin: auto;
   }
 }
 @media (max-width: 385px) {

@@ -1,11 +1,13 @@
 #me {
-  text-align: right;
-  margin-right: 40%;
-  margin-top: 25vh;
-  overflow-y: auto;
-  height: 100%;
+  position: fixed;
   min-height: auto;
-  margin-bottom: 15%;
+  width: fit-content;
+  top: 40%;
+  bottom: 60%;
+  right: 90%;
+  left: 10%;
+  margin: 0 auto;
+  text-align: right;
 }
 #me::-webkit-scrollbar {
   display: none;
@@ -19,19 +21,12 @@
 #lema {
   font-size: 2vw;
 }
-@media (max-width: 1200px) {
+@media (orientation: portrait) {
   #me {
-    text-align: right;
-    margin-right: 35vw;
-    /* margin-top: 25vh; */
+    text-align: center;
   }
 }
 @media (max-width: 800px) {
-  #me {
-    /* margin-top: 25vh; */
-    margin-right: 0%;
-    text-align: center;
-  }
   #las {
     font-size: 10vw;
   }
@@ -41,31 +36,10 @@
   #lema {
     font-size: 3.5vw;
   }
-}
-@media (max-width: 500px) {
   #me {
-    /* margin-top: 40vh; */
-    /* margin-bottom: 10px; */
-    width: 100vw;
-  }
-}
-@media (max-width: 370px) {
-  #me {
-    /* margin: auto; */
-    /* margin-top: 15%; */
+    right: 0;
+    left: 0;
     text-align: center;
-  }
-}
-@media (max-height: 450px) {
-  #me {
-    /* margin: auto; */
-    /* margin-top: 0%; */
-    text-align: center;
-  }
-}
-@media (orientation: landscape) and (max-height: 600px) {
-  #me {
-    margin-top: 10vh;
   }
 }
 @media (orientation: landscape) and (max-height: 450px) {
@@ -77,8 +51,5 @@
   }
   #lema {
     font-size: 1.5vw;
-  }
-  #me {
-    margin-top: 5vh;
   }
 }

@@ -113,45 +113,40 @@ function App() {
   }
   /* ======================= RENDERING ======================= */
   return (
-    <div className="App html">
+    <div className="App">
       <Router>
-        <div className="general-container">
-          <Route path="/">
-            <Header darkMode={darkMode} language={language} />
-          </Route>
-          <Route exact path="/">
-            <LandingPage language={language} />
-          </Route>
-          <Route path="/about">
-            <About language={language} />
-          </Route>
-          <Route path="/contact">
-            <Contact language={language} />
-          </Route>
-          <Route path="/education">
-            <Education language={language} darkMode={darkMode} />
-          </Route>
-          <Route path="/projects">
-            <Projects language={language} darkMode={darkMode} />
-          </Route>
-          <Route path="/resume">
-            <Resume language={language} />
-          </Route>
-          <Route path="/skills">
-            <Skills language={language} />
-          </Route>
-          {/* <Route>
-            <Pdf exact path="/pdf" language={language} />
-          </Route> */}
-          <Route path="/">
-            <Footer
-              darkMode={darkMode}
-              setDarkMode={setDarkMode}
-              language={language}
-              setLanguage={setLanguage}
-            />
-          </Route>
-        </div>
+        <Route path="/">
+          <Header darkMode={darkMode} language={language} />
+        </Route>
+        <Route exact path="/">
+          <LandingPage language={language} />
+        </Route>
+        <Route path="/about">
+          <About language={language} />
+        </Route>
+        <Route path="/contact">
+          <Contact language={language} />
+        </Route>
+        <Route path="/education">
+          <Education language={language} darkMode={darkMode} />
+        </Route>
+        <Route path="/projects">
+          <Projects language={language} darkMode={darkMode} />
+        </Route>
+        <Route path="/resume">
+          <Resume language={language} />
+        </Route>
+        <Route path="/skills">
+          <Skills language={language} />
+        </Route>
+        <Route path="/">
+          <Footer
+            darkMode={darkMode}
+            setDarkMode={setDarkMode}
+            language={language}
+            setLanguage={setLanguage}
+          />
+        </Route>
       </Router>
     </div>
   );
