@@ -8,6 +8,7 @@ import darkToggle from '../images/Dark Toggle.svg';
 import lightToggle from '../images/Light Toggle.svg';
 import { Link } from 'react-router-dom';
 import SocialMedia from './SocialMedia';
+import { Tooltip } from '@material-ui/core';
 
 const Footer = (props) => {
   /* ======================= STATE ======================= */
@@ -29,36 +30,46 @@ const Footer = (props) => {
       </p>
       <nav className='main-footer'>
         <div className='flags'>
-          {!language.esp ? (<img
-            src={espFlag}
-            alt="imadev"
-            id='esp'
-            onClick={() => setLanguage({
-              eng: false,
-              esp: true,
-              fre: false
-            })}
-          />) : null}
-          {!language.eng ? (<img
-            src={engFlag}
-            alt="imadev"
-            id='eng'
-            onClick={() => setLanguage({
-              eng: true,
-              esp: false,
-              fre: false
-            })}
-          />) : null}
-          {!language.fre ? (<img
-            src={freFlag}
-            alt="imadev"
-            id='fre'
-            onClick={() => setLanguage({
-              eng: false,
-              esp: false,
-              fre: true
-            })}
-          />) : null}
+          {!language.esp ? (
+            <Tooltip title={language.fre ? 'Espagnole' : 'Spanish'}>
+              <img
+                src={espFlag}
+                alt="imadev"
+                id='esp'
+                onClick={() => setLanguage({
+                  eng: false,
+                  esp: true,
+                  fre: false
+                })}
+              /></Tooltip>) : null}
+          {!language.eng ? (
+            <Tooltip title={language.fre ? 'Anglais' : 'Inglés'}>
+              <img
+                src={engFlag}
+                alt="imadev"
+                id='eng'
+                onClick={() => setLanguage({
+                  eng: true,
+                  esp: false,
+                  fre: false
+                })}
+              />
+            </Tooltip>
+          ) : null}
+          {!language.fre ? (
+            <Tooltip title={language.eng ? 'French' : 'Francés'}>
+              <img
+                src={freFlag}
+                alt="imadev"
+                id='fre'
+                onClick={() => setLanguage({
+                  eng: false,
+                  esp: false,
+                  fre: true
+                })}
+              />
+            </Tooltip>
+          ) : null}
         </div>
         <div className='footer'>
           <Link className='link' to='/about'>
@@ -69,12 +80,13 @@ const Footer = (props) => {
           </Link>
         </div>
         <div className='toggle'>
-          <img
-            id='toggle'
-            src={darkMode ? darkToggle : lightToggle}
-            alt="toggleMode"
-            onClick={() => setDarkMode((prevMode) => !prevMode)}
-          />
+          <Tooltip title={language.eng ? 'Dark Mode' : language.esp ? 'Modo Oscuro' : 'Mode Sombre'}>
+            <img
+              id='toggle'
+              src={darkMode ? darkToggle : lightToggle}
+              alt="toggleMode"
+              onClick={() => setDarkMode((prevMode) => !prevMode)}
+            /></Tooltip>
         </div>
       </nav>
     </>
