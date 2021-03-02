@@ -1,15 +1,15 @@
-<svg width="900" height="776" viewBox="0 0 1345 976" fill="none" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+<svg width="1338" height="1005" viewBox="0 0 1338 1005" fill="none" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
 <g id="hive">
-<rect id="Polygon 8 8" x="134" y="-24" width="269" height="309" fill="url(#pattern0)"/>
-<rect id="Polygon 8 6" x="808" y="667" width="269" height="309" fill="url(#pattern1)"/>
-<rect id="Polygon 8 7" x="1076" y="667" width="269" height="309" fill="url(#pattern2)"/>
-<rect id="Polygon 8 10" x="404" y="438" width="269" height="309" fill="url(#pattern3)"/>
-<rect id="Polygon 8 5" x="672" y="436" width="269" height="309" fill="url(#pattern4)"/>
-<rect id="Polygon 8 11" y="208" width="269" height="309" fill="url(#pattern5)"/>
-<rect id="Polygon 8 2" x="1074" y="203" width="269" height="309" fill="url(#pattern6)"/>
-<rect id="Polygon 8 12" x="403" y="-24" width="269" height="309" fill="url(#pattern7)"/>
-<rect id="Polygon 8 13" x="538" y="206" width="269" height="309" fill="url(#pattern8)"/>
-<rect id="Polygon 8 3" x="941" y="436" width="269" height="309" fill="url(#pattern9)"/>
+<rect id="Polygon 8 8" x="134" width="269" height="309" fill="url(#pattern0)"/>
+<rect id="Polygon 8 6" x="802" y="696" width="269" height="309" fill="url(#pattern1)"/>
+<rect id="Polygon 8 7" x="1069" y="696" width="269" height="309" fill="url(#pattern2)"/>
+<rect id="Polygon 8 10" x="401" y="464" width="269" height="309" fill="url(#pattern3)"/>
+<rect id="Polygon 8 5" x="668" y="464" width="269" height="309" fill="url(#pattern4)"/>
+<rect id="Polygon 8 11" y="232" width="269" height="309" fill="url(#pattern5)"/>
+<rect id="Polygon 8 2" x="1069" y="232" width="269" height="309" fill="url(#pattern6)"/>
+<rect id="Polygon 8 12" x="401" width="269" height="309" fill="url(#pattern7)"/>
+<rect id="Polygon 8 13" x="535" y="232" width="269" height="309" fill="url(#pattern8)"/>
+<rect id="Polygon 8 3" x="935" y="464" width="269" height="309" fill="url(#pattern9)"/>
 </g>
 <defs>
 <pattern id="pattern0" patternContentUnits="objectBoundingBox" width="1" height="1">
