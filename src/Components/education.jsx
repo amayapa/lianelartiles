@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import LeftArrow from "../images/GoLeft.svg"
 import RightArrow from "../images/GoRight.svg"
 import LeftArrowLight from "../images/GoLeft-Light.svg"
@@ -65,17 +65,6 @@ const Education = ({ language, darkMode }) => {
           )
         })}
       </div>
-      {/* <div id='inputs'>
-        {schools.map((school, index) => {
-          return (
-            <div
-              key={index}
-              className={index !== current ? 'inputs' : 'checked'}
-              onClick={() => handleOnSlide(index)}
-            ></div>
-          )
-        })}
-      </div> */}
     </div>
   )
 }

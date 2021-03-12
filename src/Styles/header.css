@@ -54,6 +54,16 @@
   transform: scaleX(1);
 }
 
+.hLinkSelected > span::before {
+  content: "";
+  width: 90%;
+  margin-left: 5%;
+  height: 2px;
+  background-color: var(--text-color-dark);
+  position: absolute;
+  left: 0;
+  bottom: 0px;
+}
 @media screen and (max-width: 800px) {
   .logo {
     margin: auto;

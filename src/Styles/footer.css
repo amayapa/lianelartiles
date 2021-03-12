@@ -44,28 +44,33 @@ div {
     ),
     var(--footer-color-dark);
 }
-
 .flags {
   display: flex;
-  flex-direction: row;
-  justify-content: space-between;
+}
+.flags > button {
   cursor: pointer;
 }
-.flags img {
-  height: 20pt;
-  width: 30pt;
-  padding: 3px;
+
+:is(#esp, #eng, #fre):active {
+  outline: transparent;
+}
+:is(#esp, #eng, #fre) {
+  background-color: transparent;
+  font-size: 100%;
+  font-family: inherit;
+  font-weight: 500;
+  border: 0;
+  padding: 0;
+  margin-right: 8px;
+  color: var(--ft-color-dark);
   filter: var(--shadow-ft-dark);
 }
 
 .footer {
   display: flex;
-  list-style: none;
-  flex-direction: row;
   align-items: center;
   margin: 0;
   padding: 0;
-  margin-left: -7%;
 }
 .footer .flink {
   color: var(--ft-color-dark);
@@ -93,12 +98,17 @@ div {
   background-color: var(--ft-dark-hover-color);
   border-radius: 10px;
 }
-#fre:hover,
-#esp:hover,
-#eng:hover {
-  transform: scale(1.5);
-  transition: transform 0.5s;
+.fLinkSelected {
+  background-color: var(--ft-dark-hover-color);
+  border-radius: 10px;
+  color: var(--ft-color-dark);
+  filter: var(--shadow-ft-dark);
+  padding-top: 4px;
+  padding-bottom: 4px;
+  padding-left: 10px;
+  padding-right: 10px;
 }
+
 #wappMsg {
   width: auto;
   overflow: hidden;
@@ -238,7 +248,6 @@ div {
   .flags {
     display: flex;
     flex-direction: column;
-    height: 90px;
     justify-content: space-around;
     align-items: center;
     margin-left: 0;

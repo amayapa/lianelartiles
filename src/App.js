@@ -20,6 +20,7 @@ function App() {
     esp: false,
     fre: false,
   });
+
   const html = document.querySelector("#root");
   const root = document.querySelector(":root");
   const colors = getComputedStyle(root);
@@ -51,6 +52,11 @@ function App() {
   /* ======================= FUNCTIONS ======================= */
   useEffect(() => {
     localStorage.setItem("dark", JSON.stringify(darkMode));
+  }, [darkMode]);
+
+  useEffect(() => {
+    switchMode();
+    // eslint-disable-next-line
   }, [darkMode]);
 
   const switchMode = () => {
@@ -86,11 +92,6 @@ function App() {
       html.style.setProperty("--bg-card-dark", bgCardLight);
     }
   };
-
-  useEffect(() => {
-    switchMode();
-    // eslint-disable-next-line
-  }, [darkMode]);
 
   function getInitialMode() {
     const isReturningUser = "dark" in localStorage;
