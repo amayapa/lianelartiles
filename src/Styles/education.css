@@ -57,7 +57,7 @@
 }
 .arrows {
   cursor: pointer;
-  width: 10vw;
+  width: 3em;
   position: absolute;
   margin: 15px;
   top: auto;
@@ -69,38 +69,6 @@
 .right-arrow {
   right: 0;
 }
-/* #inputs {
-  display: flex;
-  margin: auto;
-  margin-top: 7%;
-}
-.inputs {
-  margin-top: 10px;
-  margin-left: 10px;
-  margin-right: 10px;
-  border: solid 2px var(--footer-color-dark);
-  border-radius: 50%;
-  width: 25px;
-  height: 25px;
-  cursor: pointer;
-  filter: var(--shadow-header-dark);
-}
-.checked {
-  margin-top: 10px;
-  margin-left: 10px;
-  margin-right: 10px;
-  border: solid 2px var(--footer-color-dark);
-  border-radius: 50%;
-  width: 25px;
-  height: 25px;
-  cursor: pointer;
-  filter: var(--shadow-header-dark);
-  background-color: var(--footer-color-dark);
-}
-.inputs:hover {
-  background-color: var(--footer-color-dark);
-} */
-
 @media (orientation: portrait) {
   .arrows {
     margin: 5px;
@@ -122,6 +90,9 @@
   }
   #inputs {
     margin-top: 6%;
+  }
+  .arrows {
+    width: 2em;
   }
 }
 @media (orientation: portrait) and (max-width: 400px) {
