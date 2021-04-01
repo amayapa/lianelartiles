@@ -1,60 +1,40 @@
 import React/* , { useState, useEffect } */ from 'react'
 import '../Styles/skills.css'
-
-import JavaScript from "../images/techs/javaScript.svg";
-import JSX from "../images/techs/jsx.svg";
-import HTML from "../images/techs/html5-original.svg";
-import CSS from "../images/techs/css3-original.svg"
-import LESS from "../images/techs/less-plain-wordmark.svg"
-import Express from "../images/techs/express-original.svg"
-import Git from "../images/techs/git-original.svg"
-import MongoDB from "../images/techs/mongodb-original.svg"
-import npm from "../images/techs/npm-original-wordmark.svg"
-import Photoshop from "../images/techs/photoshop-line.svg"
-import Node from "../images/techs/nodejs-original.svg"
-import Sequelize from "../images/techs/sequelize-original.svg"
-import ReactJs from "../images/techs/react-original.svg"
-import Redux from "../images/techs/redux-original.svg"
-import Postgres from "../images/techs/postgresql-original.svg"
-import Figma from "../images/techs/figma.svg"
-import ReactNative from "../images/techs/react-native.svg"
-import MaterialUI from "../images/techs/material-ui.svg"
-import Expo from "../images/techs/expo.svg"
-import StyledComponents from "../images/techs/styled-components.svg"
-import Firebase from "../images/techs/firebase.svg"
-import SQLite from "../images/techs/SQLite.svg"
+import { technologies } from "../data/technologies";
 
 const Skills = ({ language }) => {
   const skills = {
     programLanguages: [
-      { name: "JavaScript", logo: JavaScript },
+      { name: "JavaScript", logo: technologies.JavaScript },
+      { name: "TypeScript", logo: technologies.TypeScript },
     ],
     frontendTechnologies: [
-      { name: "JSX", logo: JSX },
-      { name: "HTML", logo: HTML },
-      { name: "CSS", logo: CSS },
-      { name: "LESS", logo: LESS },
-      { name: "React", logo: ReactJs },
-      { name: "Redux", logo: Redux },
-      { name: "React Native", logo: ReactNative },
-      { name: "Expo", logo: Expo },
-      { name: "Material UI", logo: MaterialUI },
-      { name: (<span>Styled<br />Components</span>), logo: StyledComponents },
+      { name: "HTML", logo: technologies.HTML },
+      { name: "CSS", logo: technologies.CSS },
+      { name: "LESS", logo: technologies.LESS },
+      { name: "React", logo: technologies.ReactJs },
+      { name: "Redux", logo: technologies.Redux },
+      { name: "React Native", logo: technologies.ReactNative },
+      { name: "Expo", logo: technologies.Expo },
+      { name: "Material UI", logo: technologies.MaterialUI },
+      { name: "React-Bootstrap", logo: technologies.ReactBootstrap },
+      { name: (<span>Styled<br />Components</span>), logo: technologies.StyledComponents },
     ],
     backendTechnologies: [
-      { name: "Node Js", logo: Node },
-      { name: "Express", logo: Express },
-      { name: "MongoDB", logo: MongoDB },
-      { name: "SQLite", logo: SQLite },
-      { name: "Sequelize", logo: Sequelize },
-      { name: "Firebase", logo: Firebase },
-      { name: "Postgres", logo: Postgres },
+      { name: "Node Js", logo: technologies.Node },
+      { name: "Express", logo: technologies.Express },
+      { name: "MongoDB", logo: technologies.MongoDB },
+      { name: "SQLite", logo: technologies.SQLite },
+      { name: "Sequelize", logo: technologies.Sequelize },
+      { name: "Firebase", logo: technologies.Firebase },
+      { name: "Postgres", logo: technologies.Postgres },
+      { name: "", logo: technologies.IndexedDB },
     ],
     otherTechnologies: [
-      { name: "Git", logo: Git },
-      { name: "npm", logo: npm },
-      { name: "Photoshop", logo: Photoshop },
-      { name: "Figma", logo: Figma },
+      { name: "Git", logo: technologies.Git },
+      { name: "npm", logo: technologies.npm },
+      { name: "Photoshop", logo: technologies.Photoshop },
+      { name: "Figma", logo: technologies.Figma },
     ]
   }
 

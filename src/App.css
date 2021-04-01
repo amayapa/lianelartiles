@@ -52,6 +52,19 @@ body {
   font-size: 1.2rem;
   display: flex;
 }
+::-webkit-scrollbar {
+  width: 12px;
+}
+::-webkit-scrollbar-track {
+  box-shadow: none;
+  border-radius: 5;
+  background-color: var(--footer-color-dark);
+}
+::-webkit-scrollbar-thumb {
+  background-color: var(--footer-color-light);
+  outline: none;
+  border-radius: 10px;
+}
 #root {
   background: var(--bg-img),
     linear-gradient(

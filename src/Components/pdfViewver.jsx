@@ -42,6 +42,7 @@ const Pdf = ({ language }) => {
         <object
           data={language.esp ? espPdf : language.fre ? frePdf : engPdf}
           type="application/pdf"
+          className='obj'
         >
         </object>
       </div>
