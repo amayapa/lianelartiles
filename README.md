@@ -6,10 +6,16 @@
 
 ## Some Screenshots
 
-![landing](https://user-images.githubusercontent.com/68341136/113426173-749af300-93a9-11eb-9098-eefbba7477bc.png)
+<a href="https://larts85.github.io/lianelartiles/#/">
+  <img src="https://user-images.githubusercontent.com/68341136/113426173-749af300-93a9-11eb-9098-eefbba7477bc.png" />
+</a>
 
-<a href="http://localhost:3000/lianelartiles#/education"><img src="https://user-images.githubusercontent.com/68341136/113426302-a57b2800-93a9-11eb-8806-80e9a1e84891.png" /></a>
+<a href="https://larts85.github.io/lianelartiles/#/education">
+  <img src="https://user-images.githubusercontent.com/68341136/113426302-a57b2800-93a9-11eb-8806-80e9a1e84891.png" />
+</a>
 
-<a href="http://localhost:3000/lianelartiles#/projects"><img src="https://user-images.githubusercontent.com/68341136/113435054-75875100-93b8-11eb-92ed-9de6ebf7a8de.png" /></a>
+<a href="https://larts85.github.io/lianelartiles/#/projects">
+  <img src="https://user-images.githubusercontent.com/68341136/113435054-75875100-93b8-11eb-92ed-9de6ebf7a8de.png" />
+</a>
 
 ![contacme](https://user-images.githubusercontent.com/68341136/113435725-c8153d00-93b9-11eb-8b0b-a786c0c9b2de.png)![skills](https://user-images.githubusercontent.com/68341136/113435259-d0b94380-93b8-11eb-8f12-3e3ac8f1bcea.png)
