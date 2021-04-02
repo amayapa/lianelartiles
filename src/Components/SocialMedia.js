@@ -1,13 +1,12 @@
 import React from "react";
+import { repos, personalLinks } from "../data/links";
 
 const SocialMedia = (props) => {
   const { language, darkMode } = props;
-  const wappMsg =
-    "http://wa.me/?text=I want to share with you this website that I found interesting. https://larts85.github.io/lianelartiles";
-  const wappMsj =
-    "http://wa.me/?text=Te comparto este sitio web que me pareció interesante. https://larts85.github.io/lianelartiles";
-  const wappMssg =
-    "http://wa.me/?text=Je vous partage ce site Web que j'ai trouvé intéressant. https://larts85.github.io/lianelartiles";
+
+  const wappMsg = `${personalLinks.WHATSAPP}I want to share with you this website that I found interesting. ${repos.PORTFOLIO}`;
+  const wappMsj = `${personalLinks.WHATSAPP}Te comparto este sitio web que me pareció interesante. ${repos.PORTFOLIO}`;
+  const wappMssg = `${personalLinks.WHATSAPP}Je vous partage ce site Web que j'ai trouvé intéressant. ${repos.PORTFOLIO}`;
 
   return (
     <>
@@ -42,7 +41,7 @@ const SocialMedia = (props) => {
         id="gitLink"
         target="_blank"
         rel="noopener noreferrer"
-        href="https://github.com/larts85"
+        href={personalLinks.GITHUB}
       >
         <svg
           className="smIcon"
@@ -78,7 +77,7 @@ const SocialMedia = (props) => {
         id="inLink"
         target="_blank"
         rel="noopener noreferrer"
-        href={`https://www.linkedin.com/in/imadev/?locale=${
+        href={`${personalLinks.LINKEDIN}/?locale=${
           language.eng ? "en_EN" : language.fre ? "fr_FR" : "es_ES"
         }`}
       >
@@ -91,8 +90,8 @@ const SocialMedia = (props) => {
         >
           <path
             id="in"
-            fill-rule="evenodd"
-            clip-rule="evenodd"
+            fillRule="evenodd"
+            clipRule="evenodd"
             d="M39.6882 0.00203733H498.308C508.684 -0.0809624 518.674 3.9349 526.105 11.1767C533.537 18.4186 537.81 28.301 537.996 38.676V499.148C537.856 509.553 533.604 519.481 526.167 526.761C518.73 534.04 508.714 538.081 498.308 537.998H39.6882C29.2975 538.104 19.2879 534.09 11.8499 526.833C4.41184 519.577 0.15107 509.67 0 499.28V38.8083C0.127934 28.4028 4.37853 18.473 11.8191 11.1978C19.2597 3.92255 29.2825 -0.103863 39.6882 0.00203733ZM159.503 201.662H79.6411V458.622H159.503V201.662ZM145.323 81.5846C137.708 76.4948 128.754 73.7781 119.594 73.7781C107.321 73.7781 95.5506 78.6503 86.8684 87.3243C78.1862 95.9982 73.3027 107.764 73.291 120.037C73.2823 129.197 75.9905 138.153 81.073 145.773C86.1555 153.394 93.384 159.335 101.844 162.847C110.304 166.358 119.615 167.281 128.6 165.5C137.585 163.718 145.839 159.312 152.319 152.838C158.799 146.364 163.214 138.114 165.004 129.13C166.794 120.147 165.88 110.835 162.376 102.372C158.873 93.9085 152.938 86.6744 145.323 81.5846ZM286.152 201.662H209.598V458.621H289.327V331.663C289.327 297.972 296.295 265.516 337.262 265.516C378.229 265.516 378.758 303.837 378.758 333.604V458.621H458.62V317.508C458.62 248.494 443.626 195.268 362.75 195.444C323.9 195.444 297.882 216.744 287.21 236.941H286.152V201.662Z"
             fill={darkMode ? "white" : "#201E1E"}
           />

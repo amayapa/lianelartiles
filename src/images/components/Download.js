@@ -3,6 +3,7 @@ import PropTypes from "prop-types";
 
 const Download = (props) => {
   const { darkMode, colors, size } = props;
+
   return (
     <svg
       width={size.width}

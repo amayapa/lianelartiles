@@ -3,6 +3,8 @@ import moonBank from "../images/moonbank.png";
 import argenClima from "../images/argenclima.svg";
 import cyberFitness from "../images/cyberFitness.png";
 import { technologies } from "../data/technologies";
+import { repos, webs } from "../data/links";
+import MoonBankApk from "../data/MoonBank.apk";
 
 export const projects = [
   {
@@ -32,7 +34,7 @@ export const projects = [
         fre: ["- Beaucoup d'autres bibliothèques mineures"],
       },
     },
-    webSite: "https://revaicare.com/",
+    webSite: webs.REVAI,
     repo: false,
   },
   {
@@ -59,8 +61,8 @@ export const projects = [
       },
     },
     webSite: false,
-    repo: "https://github.com/larts85/Wallet-Native",
-    download: "https://github.com/larts85/Wallet-Native",
+    repo: repos.MOONKBANK,
+    download: MoonBankApk,
   },
   {
     name: "ARGENCLIMA",
@@ -80,8 +82,8 @@ export const projects = [
       ],
       texts: false,
     },
-    webSite: "https://argenclima2020.web.app",
-    repo: "https://github.com/larts85/argenclima",
+    webSite: webs.ARGENCLIMA,
+    repo: repos.ARGENCLIMA,
   },
   {
     name: "CYBERFITNESS",
@@ -118,6 +120,6 @@ export const projects = [
       },
     },
     webSite: false,
-    repo: "https://github.com/larts85/Ciber-Fitness",
+    repo: repos.CYBERFITNESS,
   },
 ];
