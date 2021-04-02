@@ -51,13 +51,15 @@ const Projects = (props) => {
                           filter: 'drop-shadow(2px 2px 2px rgb(27, 27, 27))'
                         }}
                       >
-                        {project.technologies.icons.map((tech) => (
+                        {project.technologies.icons.map((tech, index) => (
                           <img
                             src={tech}
                             alt='ups'
                             width='50'
                             height='50'
-                            style={{ padding: 5 }} />
+                            style={{ padding: 5 }}
+                            key={index}
+                          />
                         ))}
                       </div>
                       <ul>
@@ -83,11 +85,13 @@ const Projects = (props) => {
                     rel="noopener noreferrer"
                     href={project.repo}
                   >
-                    <GitHubLogo
-                      size={{ width: "30", height: "30" }}
-                      darkMode={darkMode}
-                      colors={{ light: 'white', dark: '#201E1E' }}
-                    />
+                    <Tooltip title="Repository">
+                      <GitHubLogo
+                        size={{ width: "30", height: "30" }}
+                        darkMode={darkMode}
+                        colors={{ light: 'white', dark: '#201E1E' }}
+                      />
+                    </Tooltip>
                   </a>)}
                   {project.webSite && (<a
                     id="webLink"
@@ -95,11 +99,13 @@ const Projects = (props) => {
                     rel="noopener noreferrer"
                     href={project.webSite}
                   >
-                    <WWW
-                      size={{ width: "30", height: "30" }}
-                      darkMode={darkMode}
-                      colors={{ light: 'white', dark: '#201E1E' }}
-                    />
+                    <Tooltip title="Web Site">
+                      <WWW
+                        size={{ width: "30", height: "30" }}
+                        darkMode={darkMode}
+                        colors={{ light: 'white', dark: '#201E1E' }}
+                      />
+                    </Tooltip>
                   </a>)}
                   {project.download &&
                     <a
@@ -107,12 +113,15 @@ const Projects = (props) => {
                       target="_blank"
                       rel="noopener noreferrer"
                       href={project.download}
+                      download="MoonBank Android App"
                     >
-                      <Download
-                        size={{ width: "30", height: "30" }}
-                        darkMode={darkMode}
-                        colors={{ light: 'white', dark: '#201E1E' }}
-                      />
+                      <Tooltip title="Download App for Android">
+                        <Download
+                          size={{ width: "30", height: "30" }}
+                          darkMode={darkMode}
+                          colors={{ light: 'white', dark: '#201E1E' }}
+                        />
+                      </Tooltip>
                     </a>}
                 </div>
               </div>

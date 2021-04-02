@@ -10,7 +10,7 @@ const Header = ({ darkMode, language }) => {
   const location = useLocation();
 
   return (
-    <nav className='main-header cContainer'>
+    <nav className='main-header'>
       <div>
         <Link to='/'>
           <img
