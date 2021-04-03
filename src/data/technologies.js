@@ -28,9 +28,11 @@ import Context from "../images/techs/context.svg";
 import ReactBootstrap from "../images/techs/react-bootstrap.svg";
 import Passport from "../images/techs/passport.svg";
 import JWToken from "../images/techs/jwt.svg";
+import EmailJs from "../images/techs/emailJs.svg";
 
 export const technologies = {
   JavaScript,
+  EmailJs,
   JWToken,
   Passport,
   ReactBootstrap,

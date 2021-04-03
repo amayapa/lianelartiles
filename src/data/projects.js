@@ -2,6 +2,7 @@ import revai from "../images/REVAI.png";
 import moonBank from "../images/moonbank.png";
 import argenClima from "../images/argenclima.svg";
 import cyberFitness from "../images/cyberFitness.png";
+import imadev from "../images/imadev.svg";
 import { technologies } from "../data/technologies";
 import { repos, webs } from "../data/links";
 import MoonBankApk from "../data/MoonBank.apk";
@@ -121,5 +122,25 @@ export const projects = [
     },
     webSite: false,
     repo: repos.CYBERFITNESS,
+  },
+  {
+    name: "PORTFOLIO",
+    logo: imadev,
+    engText:
+      "This is my personal Website / Portfolio where you can see my career as a developer and was created with:",
+    spaText:
+      "Este es mi sitio personal / portafolio donde puedes encontrar mi trayectoria como desarrollador y fue creado con:",
+    freText:
+      "Ceci est mon site personnel / portfolio où vous pouvez trouver mon expérience en tant que développeur et il a été créé avec:",
+    technologies: {
+      icons: [
+        technologies.ReactJs,
+        technologies.MaterialUI,
+        technologies.EmailJs,
+        technologies.Figma,
+      ],
+    },
+    webSite: webs.PORTFOLIO,
+    repo: repos.PORTFOLIO,
   },
 ];

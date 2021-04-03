@@ -63,7 +63,7 @@ const Projects = (props) => {
                         ))}
                       </div>
                       <ul>
-                        {Object.keys(project.technologies.texts).length > 0 && (
+                        {project.technologies.texts && Object.keys(project.technologies.texts).length > 0 && (
                           <li>
                             <span className={darkMode ? 'toolTip-lightText' : 'toolTip-text'}>
                               {language.eng ? 'And:' : language.esp ? 'Ademas:' : 'En plus:'}
