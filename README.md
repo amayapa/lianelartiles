@@ -18,4 +18,4 @@
   <img src="https://user-images.githubusercontent.com/68341136/113435054-75875100-93b8-11eb-92ed-9de6ebf7a8de.png" />
 </a>
 
-![contacme](https://user-images.githubusercontent.com/68341136/113435725-c8153d00-93b9-11eb-8b0b-a786c0c9b2de.png)![skills](https://user-images.githubusercontent.com/68341136/113435259-d0b94380-93b8-11eb-8f12-3e3ac8f1bcea.png)
+[![contacme](https://user-images.githubusercontent.com/68341136/113435725-c8153d00-93b9-11eb-8b0b-a786c0c9b2de.png)](https://larts85.github.io/lianelartiles/#/contactme)[![skills](https://user-images.githubusercontent.com/68341136/113435259-d0b94380-93b8-11eb-8f12-3e3ac8f1bcea.png)](https://larts85.github.io/lianelartiles/#/skills)
