@@ -1,47 +1,49 @@
-import React/* , { useState, useEffect } */ from 'react'
+import React from 'react'
 import '../Styles/skills.css'
-import { technologies } from "../data/technologies";
+import * as technologies from '../constants/technologies';
 
 const Skills = ({ language }) => {
+  const { esp, eng } = language;
+
   const skills = {
     programLanguages: [
-      { name: "JavaScript", logo: technologies.JavaScript },
-      { name: "TypeScript", logo: technologies.TypeScript },
+      { name: "JavaScript", logo: technologies.javascript },
+      { name: "TypeScript", logo: technologies.typescript },
     ],
     frontendTechnologies: [
-      { name: "HTML", logo: technologies.HTML },
-      { name: "CSS", logo: technologies.CSS },
-      { name: "LESS", logo: technologies.LESS },
-      { name: "React", logo: technologies.ReactJs },
-      { name: "Redux", logo: technologies.Redux },
-      { name: "React Native", logo: technologies.ReactNative },
-      { name: "Expo", logo: technologies.Expo },
-      { name: "Material UI", logo: technologies.MaterialUI },
-      { name: "React-Bootstrap", logo: technologies.ReactBootstrap },
-      { name: (<span>Styled<br />Components</span>), logo: technologies.StyledComponents },
+      { name: "HTML", logo: technologies.html5 },
+      { name: "CSS", logo: technologies.css },
+      { name: "LESS", logo: technologies.less },
+      { name: "React", logo: technologies.reactJs },
+      { name: "Redux", logo: technologies.redux },
+      { name: "React Native", logo: technologies.reactNative },
+      { name: "Expo", logo: technologies.expo },
+      { name: "Material UI", logo: technologies.materialUI },
+      { name: "React-Bootstrap", logo: technologies.reactBootstrap },
+      { name: (<span>Styled<br />Components</span>), logo: technologies.styledComponents },
     ],
     backendTechnologies: [
-      { name: "Node Js", logo: technologies.Node },
-      { name: "Express", logo: technologies.Express },
-      { name: "MongoDB", logo: technologies.MongoDB },
-      { name: "SQLite", logo: technologies.SQLite },
-      { name: "Sequelize", logo: technologies.Sequelize },
-      { name: "Firebase", logo: technologies.Firebase },
-      { name: "Postgres", logo: technologies.Postgres },
-      { name: "", logo: technologies.IndexedDB },
+      { name: "Node Js", logo: technologies.nodejs },
+      { name: "Express", logo: technologies.express },
+      { name: "MongoDB", logo: technologies.mongodb },
+      { name: "SQLite", logo: technologies.sQLite },
+      { name: "Sequelize", logo: technologies.sequelize },
+      { name: "Firebase", logo: technologies.firebase },
+      { name: "Postgres", logo: technologies.postgresql },
+      { name: "", logo: technologies.indexedDB },
     ],
     otherTechnologies: [
-      { name: "Git", logo: technologies.Git },
+      { name: "Git", logo: technologies.git },
       { name: "npm", logo: technologies.npm },
-      { name: "Photoshop", logo: technologies.Photoshop },
-      { name: "Figma", logo: technologies.Figma },
+      { name: "Photoshop", logo: technologies.photoshop },
+      { name: "Figma", logo: technologies.figma },
     ]
   }
 
   return (
     <div id='skills-container'>
-      <h1>{language.eng ? 'Skills' : language.esp ? 'Tecnologías' : 'Des Compétances'}</h1>
-      <h3>{language.eng ? 'Programming languages' : language.esp ? 'Lenguajes de programación' : 'Langages de programmation'}</h3>
+      <h1>{eng ? 'Skills' : esp ? 'Tecnologías' : 'Des Compétances'}</h1>
+      <h3>{eng ? 'Programming languages' : esp ? 'Lenguajes de programación' : 'Langages de programmation'}</h3>
       <div className='skillsContainer' id='programLanguages' >
         {
           skills.programLanguages.map((lang, index) => {
@@ -54,7 +56,7 @@ const Skills = ({ language }) => {
           })
         }
       </div>
-      <h3>{language.eng ? 'Frontend Technologies' : language.esp ? 'Technologías Frontend' : 'Des technologies Frontend'}</h3>
+      <h3>{eng ? 'Frontend Technologies' : esp ? 'Technologías Frontend' : 'Des technologies Frontend'}</h3>
       <div className='skillsContainer'>
         {
           skills.frontendTechnologies.map((lang, index) => {
@@ -67,7 +69,7 @@ const Skills = ({ language }) => {
           })
         }
       </div>
-      <h3>{language.eng ? 'Backend Technologies' : language.esp ? 'Technologías Backend' : 'Des technologies Backend'}</h3>
+      <h3>{eng ? 'Backend Technologies' : esp ? 'Technologías Backend' : 'Des technologies Backend'}</h3>
       <div className='skillsContainer'>
         {
           skills.backendTechnologies.map((lang, index) => {
@@ -80,7 +82,7 @@ const Skills = ({ language }) => {
           })
         }
       </div>
-      <h3>{language.eng ? 'Other Technologies' : language.esp ? 'Otras Technologías' : 'Des autres Technologies'}</h3>
+      <h3>{eng ? 'Other Technologies' : esp ? 'Otras Technologías' : 'Des autres Technologies'}</h3>
       <div className='skillsContainer'>
         {
           skills.otherTechnologies.map((lang, index) => {
@@ -93,7 +95,6 @@ const Skills = ({ language }) => {
           })
         }
       </div>
-      {/* <Message language={language} /> */}
     </div>
   )
 }

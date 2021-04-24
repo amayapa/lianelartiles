@@ -1,12 +1,9 @@
-import LogoHenry from "../images/henry.png";
-import Fajardo from "../images/UCCFD.svg";
-import Alliance from "../images/alianza.png";
-import FCC from "../images/fcc.png";
-import { webs, personalLinks } from "./links";
+import { henry, FCC, alliance, UCCFD } from "../constants/logos";
+import { webs, personalLinks } from "../constants/links";
 export const schools = [
   {
     name: "Henry",
-    logo: LogoHenry,
+    logo: henry,
     engText:
       "Incredible academy that trained me as a Full Stack Web and Mobile Developer with an wide technological stack, and with JavaScript as the core technology.",
     spaText:
@@ -30,7 +27,7 @@ export const schools = [
     engName: "University of Sciences of Physical Culture and Sports",
     espName: "Univesidad de las Ciencias de la Cultura Física y el Deporte",
     freName: "Université des Sciences de la Culture Physique et des Sports",
-    logo: Fajardo,
+    logo: UCCFD,
     engText:
       'The University of Physical Culture and Sports Sciences "Manuel Fajardo" (UCCFD) is an institution certified by the National Accreditation Board, internationally recognized as the "University of Cuban Sports", its classrooms have graduated more than 90% of the Cuban Olympic champions. It is the governing center of 17 other faculties throughout the country, its campus is located in a central Cerro de La Habana municipality. It is close to the Sports City.',
     spaText:
@@ -43,7 +40,7 @@ export const schools = [
     engName: "French Alliance",
     espName: "Alianza Francesa",
     freName: "Alliance française",
-    logo: Alliance,
+    logo: alliance,
     engText: `International organization that aims to promote the French language and francophone culture around the world. Created in Paris on 21 July 1883 under the name Alliance française pour la propagation de la langue nationale dans les colonies et à l'étranger (French alliance for the propagation of the national language in the colonies and abroad) — now known simply as L'Alliance française — its primary concern is teaching French as a second language and is headquartered in Paris.`,
     spaText:
       "Organización internacional que tiene como objetivo promover la lengua francesa y la cultura francófona en todo el mundo. Creada en París el 21 de julio de 1883 con el nombre de Alliance française pour la propagation de la langue nationale dans les colonies et à l'étranger (alianza francesa para la propagación de la lengua nacional en las colonias y en el extranjero), ahora conocida simplemente como L ' Alliance française: su principal preocupación es la enseñanza del francés como segundo idioma y tiene su sede en París.",

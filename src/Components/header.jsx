@@ -1,12 +1,11 @@
 /* ======================= IMPORTATIONS ======================= */
 import React from 'react'
-import { Link } from 'react-router-dom'
+import { Link, useLocation } from 'react-router-dom'
 import '../Styles/header.css';
-import darkLogo from '../images/dark-imadev.svg'
-import lightLogo from '../images/light-imadev.svg'
-import { useLocation } from "react-router-dom";
+import { lightImadev, darkImadev } from "../constants/logos";
 
-const Header = ({ darkMode, language }) => {
+const Header = (props) => {
+  const { darkMode, language } = props;
   const location = useLocation();
 
   return (
@@ -14,7 +13,7 @@ const Header = ({ darkMode, language }) => {
       <div>
         <Link to='/'>
           <img
-            src={darkMode ? lightLogo : darkLogo}
+            src={darkMode ? lightImadev : darkImadev}
             className='logo'
             alt="imadev"
           />

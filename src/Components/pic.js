@@ -1,5 +1,5 @@
 import React from "react";
-import polPicture from "../images/pol-pic.svg";
+import { polPicture } from "../constants/images";
 import "../Styles/pic.css";
 
 const Pic = () => {

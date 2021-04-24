@@ -1,6 +1,5 @@
 import React from 'react'
-import { Tooltip } from '@material-ui/core';
-import { withStyles } from '@material-ui/core/styles';
+import { Tooltip, withStyles } from '@material-ui/core';
 import { projects } from '../data/projects';
 import Download from '../images/components/Download';
 import GitHubLogo from '../images/components/GitHub'
@@ -8,7 +7,9 @@ import WWW from '../images/components/WWW';
 import '../Styles/projects.css'
 
 const Projects = (props) => {
-  const { language, darkMode } = props;
+  const { darkMode } = props;
+  const { esp, eng } = props.language;
+
 
   const JSXTooltip = withStyles(() => ({
     tooltip: {
@@ -21,7 +22,7 @@ const Projects = (props) => {
   }))(Tooltip);
 
   const defineTextLanguage = (project) => {
-    const lang = language.eng ? 'eng' : language.esp ? 'esp' : 'fre';
+    const lang = eng ? 'eng' : esp ? 'esp' : 'fre';
     return project.technologies.texts?.[lang]?.map((tech, index) => (
       <li key={index}>
         <span className={darkMode ? 'toolTip-lightText' : 'toolTip-text'}>{tech}</span>
@@ -31,7 +32,7 @@ const Projects = (props) => {
 
   return (
     <div id='projects-container'>
-      <h1>{language.eng ? 'Projects' : language.esp ? 'Proyectos' : 'Des Projects'}</h1>
+      <h1>{eng ? 'Projects' : esp ? 'Proyectos' : 'Des Projects'}</h1>
       <div className="cards-container">
         {
           projects.map((project, index) => {
@@ -42,7 +43,7 @@ const Projects = (props) => {
                     <>
                       <h3 className={darkMode ? 'toolTip-lightText' : 'toolTip-text'}>{project.name}</h3>
                       <p className={darkMode ? 'toolTip-lightText' : 'toolTip-text'}>
-                        {language.eng ? project.engText : language.esp ? project.spaText : project.freText}
+                        {eng ? project.engText : esp ? project.spaText : project.freText}
                       </p>
                       <div
                         style={{
@@ -66,7 +67,7 @@ const Projects = (props) => {
                         {project.technologies.texts && Object.keys(project.technologies.texts).length > 0 && (
                           <li>
                             <span className={darkMode ? 'toolTip-lightText' : 'toolTip-text'}>
-                              {language.eng ? 'And:' : language.esp ? 'Ademas:' : 'En plus:'}
+                              {eng ? 'And:' : esp ? 'Ademas:' : 'En plus:'}
                             </span>
                           </li>
                         )}
