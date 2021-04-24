@@ -5,6 +5,8 @@ import Pdf from './pdfViewver';
 import JsResume from './JsResume';
 
 const Resume = ({ language }) => {
+  const { esp, eng, fre } = language;
+
   const [selected, setSelected] = useState('TradResume')
 
   const handleOnChange = (e, selected) => {
@@ -25,14 +27,14 @@ const Resume = ({ language }) => {
           id='asd'
           style={{ fontWeight: 'lighter', fontSize: 18 }}
         >
-          {language.esp ? 'CV Tradicional' : language.fre ? 'CV Traditionnel' : 'Traditional Resume'}
+          {esp ? 'CV Tradicional' : fre ? 'CV Traditionnel' : 'Traditional Resume'}
         </ToggleButton>
         <ToggleButton
           className='toggleButtons'
           value="JsResume"
           style={{ fontWeight: 'lighter', fontSize: 18 }}
         >
-          {language.eng ? 'JavaScript Resume' : language.esp ? 'CV JavaScript' : 'CV JavaScript'}
+          {eng ? 'JavaScript Resume' : esp ? 'CV JavaScript' : 'CV JavaScript'}
         </ToggleButton>
       </ToggleButtonGroup>
       {

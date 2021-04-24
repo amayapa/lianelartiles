@@ -1,16 +1,18 @@
-import revai from "../images/REVAI.png";
-import moonBank from "../images/moonbank.png";
-import argenClima from "../images/argenclima.svg";
-import cyberFitness from "../images/cyberFitness.png";
-import imadev from "../images/imadev.svg";
-import { technologies } from "../data/technologies";
-import { repos, webs } from "../data/links";
+import {
+  lightImadev,
+  REVAI,
+  moonbank,
+  argenClima,
+  cyberFitness,
+} from "../constants/logos";
+import * as technologies from "../constants/technologies";
+import { repos, webs } from "../constants/links";
 import MoonBankApk from "../data/MoonBank.apk";
 
 export const projects = [
   {
     name: "REVAI",
-    logo: revai,
+    logo: REVAI,
     engText:
       "Start Up project which mission is to give people the power to manage their own medical data. Used technologies:",
     spaText:
@@ -19,15 +21,15 @@ export const projects = [
       "Start Up Projet dont la mission est de donner aux gens la force de leurs antécédents médicaux, de leurs rendez-vous médicaux, etc. Des technologies utilisées:",
     technologies: {
       icons: [
-        technologies.ReactJs,
-        technologies.Redux,
-        technologies.Node,
-        technologies.Express,
-        technologies.MySql,
-        technologies.Sequelize,
-        technologies.MongoDB,
-        technologies.TypeScript,
-        technologies.Docker,
+        technologies.reactJs,
+        technologies.redux,
+        technologies.nodejs,
+        technologies.express,
+        technologies.mysql,
+        technologies.sequelize,
+        technologies.mongodb,
+        technologies.typescript,
+        technologies.docker,
       ],
       texts: {
         esp: ["- Muchas otras librerías menores"],
@@ -40,7 +42,7 @@ export const projects = [
   },
   {
     name: "MOONBANK",
-    logo: moonBank,
+    logo: moonbank,
     engText:
       "Virtual wallet (fintech) specializing in the management of, and dollars, recharging credit, using our own card, paying the services, a help chat and so on. Used technologies:",
     spaText:
@@ -49,11 +51,11 @@ export const projects = [
       "Portefeuille virtuel (Fintech) pour la gestion de devises, avec des fonctionnalités telles que l'achat et la vente de dollars, la recharge de crédit par divers moyens, le paiement des services, un chat d'aide et bien plus encore. Des technologies utilisées:",
     technologies: {
       icons: [
-        technologies.ReactNative,
-        technologies.Redux,
-        technologies.Expo,
-        technologies.Node,
-        technologies.Firebase,
+        technologies.reactNative,
+        technologies.redux,
+        technologies.expo,
+        technologies.nodejs,
+        technologies.firebase,
       ],
       texts: {
         esp: ["- Algunas otras librerías menores"],
@@ -76,10 +78,10 @@ export const projects = [
       "Start Up Projet dont la mission est de donner aux gens la force de leurs antécédents médicaux, de leurs rendez-vous médicaux, etc. Des technologies utilisées:",
     technologies: {
       icons: [
-        technologies.ReactJs,
-        technologies.IndexedDB,
-        technologies.StyledComponents,
-        technologies.Context,
+        technologies.reactJs,
+        technologies.indexedDB,
+        technologies.styledComponents,
+        technologies.context,
       ],
       texts: false,
     },
@@ -97,16 +99,16 @@ export const projects = [
       "Il s'agit d'un e-commerce réalisé comme une première grosse mission, dans laquelle mes collègues et moi rejoignons toutes les technologies apprises au bootcamp #SoyHenry. Des technologies utilisées:",
     technologies: {
       icons: [
-        technologies.ReactJs,
-        technologies.Redux,
-        technologies.MaterialUI,
-        technologies.Node,
-        technologies.Postgres,
-        technologies.Express,
-        technologies.Sequelize,
-        technologies.ReactBootstrap,
-        technologies.JWToken,
-        technologies.Passport,
+        technologies.reactJs,
+        technologies.redux,
+        technologies.materialUI,
+        technologies.nodejs,
+        technologies.postgresql,
+        technologies.express,
+        technologies.sequelize,
+        technologies.reactBootstrap,
+        technologies.jwt,
+        technologies.passport,
       ],
       texts: {
         eng: ["- Several Third-party login methods", "- Other minor libraries"],
@@ -125,7 +127,7 @@ export const projects = [
   },
   {
     name: "PORTFOLIO",
-    logo: imadev,
+    logo: lightImadev,
     engText:
       "This is my personal Website / Portfolio where you can see my career as a developer and was created with:",
     spaText:
@@ -134,10 +136,10 @@ export const projects = [
       "Ceci est mon site personnel / portfolio où vous pouvez trouver mon expérience en tant que développeur et il a été créé avec:",
     technologies: {
       icons: [
-        technologies.ReactJs,
-        technologies.MaterialUI,
-        technologies.EmailJs,
-        technologies.Figma,
+        technologies.reactJs,
+        technologies.materialUI,
+        technologies.emailJs,
+        technologies.figma,
       ],
     },
     webSite: webs.PORTFOLIO,

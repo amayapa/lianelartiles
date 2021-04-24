@@ -1,9 +1,9 @@
 import React from 'react'
-import jsResume from '../images/JsCV.svg';
+import { JsCV } from '../constants/images';
 import '../Styles/resume.css'
 
 const Resume = (props) => {
-  const language = props.language;
+  const { language } = props;
 
   return (
     <div id='jscv'>
@@ -13,7 +13,7 @@ const Resume = (props) => {
         language.esp ?
           'Este es un extracto de mi currículum, diseñado con algunos de mis conocimientos de JavaScript.' :
           'Voici un extrait de mon CV, conçu avec certaines de mes connaissances JavaScript.'}</p>
-      <img src={jsResume} alt='jscv' />
+      <img src={JsCV} alt='jscv' />
     </div>
   )
 }

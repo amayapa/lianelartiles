@@ -1,8 +1,7 @@
 /* ======================= IMPORTATIONS ======================= */
 import React from 'react';
 import '../Styles/footer.css';
-import darkToggle from '../images/Dark Toggle.svg';
-import lightToggle from '../images/Light Toggle.svg';
+import { darkToggle, lightToggle, } from '../constants/images';
 import { Link } from 'react-router-dom';
 import SocialMedia from './SocialMedia';
 import { Tooltip } from '@material-ui/core';
@@ -12,8 +11,6 @@ const Footer = (props) => {
   /* ======================= STATE ======================= */
   const { darkMode, setDarkMode, language, setLanguage } = props;
   const location = useLocation();
-
-  /* ======================= FUNCTIONS ======================= */
 
   /* ======================= RENDERING ======================= */
   return (

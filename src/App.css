@@ -1,9 +1,9 @@
 @import url("https://fonts.googleapis.com/css2?family=Saira&display=swap");
 :root {
-  --bg-img: url("./images/hive.svg");
-  --bg-light-img: url("./images/light-hive.svg");
-  --bg-img-portrait: url("./images/hive-portrait.svg");
-  --bg-light-img-portrait: url("./images/light-vertical-hive.svg");
+  --bg-img: url("./images/pics/hive.svg");
+  --bg-light-img: url("./images/pics/light-hive.svg");
+  --bg-img-portrait: url("./images/pics/hive-portrait.svg");
+  --bg-light-img-portrait: url("./images/pics/light-vertical-hive.svg");
   --bg-color-dark: #292a2e;
   --bg-color-light: #b8b8b8;
   --ft-color-dark: #ffffff;
