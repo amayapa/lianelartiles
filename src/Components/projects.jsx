@@ -87,50 +87,55 @@ const Projects = (props = {}) => {
                   </JSXTooltip>
                   <img src={project.logo} alt="ups" id='logo' />
                   <div className="card-links">
-                    {project.repo && (<a
-                      id="gitLink"
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      href={project.repo}
-                    >
+                    {project.repo && (
                       <Tooltip title="Repository">
-                        <GitHubLogo
-                          size={{ width: "30", height: "30" }}
-                          darkMode={darkMode}
-                          colors={{ light: 'white', dark: '#201E1E' }}
-                        />
+                        <a
+                          id="gitLink"
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          href={project.repo}
+                        >
+                          <GitHubLogo
+                            size={{ width: "30", height: "30" }}
+                            darkMode={darkMode}
+                            colors={{ light: 'white', dark: '#201E1E' }}
+                          />
+                        </a>
                       </Tooltip>
-                    </a>)}
-                    {project.webSite && (<a
-                      id="webLink"
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      href={project.webSite}
-                    >
+                    )}
+                    {project.webSite && (
                       <Tooltip title="Web Site">
-                        <WWW
-                          size={{ width: "30", height: "30" }}
-                          darkMode={darkMode}
-                          colors={{ light: 'white', dark: '#201E1E' }}
-                        />
+                        <a
+                          id="webLink"
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          href={project.webSite}
+                        >
+                          <WWW
+                            size={{ width: "30", height: "30" }}
+                            darkMode={darkMode}
+                            colors={{ light: 'white', dark: '#201E1E' }}
+                          />
+                        </a>
                       </Tooltip>
-                    </a>)}
+                    )}
                     {project.download &&
-                      <a
-                        id="downloadLink"
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        href={project.download}
-                        download="MoonBank Android App"
-                      >
-                        <Tooltip title="Download App for Android">
+                      <Tooltip title="Download App for Android">
+                        <a
+                          id="downloadLink"
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          href={project.download}
+                          download="MoonBank Android App"
+                        >
                           <Download
                             size={{ width: "30", height: "30" }}
                             darkMode={darkMode}
                             colors={{ light: 'white', dark: '#201E1E' }}
                           />
-                        </Tooltip>
-                      </a>}
+                        </a>
+                      </Tooltip>
+                    }
                     {project.video && (
                       <>
                         <Tooltip
