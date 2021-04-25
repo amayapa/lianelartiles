@@ -1,5 +1,5 @@
 import React from 'react'
-import jsResume from '../images/JsCV.svg';
+import jsResume from '../images/jsCV.svg';
 import '../Styles/resume.css'
 
 const Resume = (props) => {
