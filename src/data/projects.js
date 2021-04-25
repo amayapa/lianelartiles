@@ -1,10 +1,10 @@
-import revai from "../images/REVAI.png";
-import moonBank from "../images/moonbank.png";
-import argenClima from "../images/argenclima.svg";
-import cyberFitness from "../images/cyberFitness.png";
-import imadev from "../images/imadev.svg";
+import revai from "../images/logos/REVAI.png";
+import moonBank from "../images/logos/moonbank.png";
+import argenClima from "../images/logos/argenclima.svg";
+import cyberFitness from "../images/logos/cyberFitness.png";
+import imadev from "../images/logos/imadev.svg";
 import { technologies } from "../data/technologies";
-import { repos, webs } from "../data/links";
+import { media, repos, webs } from "../data/links";
 import MoonBankApk from "../data/MoonBank.apk";
 
 export const projects = [
@@ -64,6 +64,7 @@ export const projects = [
     webSite: false,
     repo: repos.MOONKBANK,
     download: MoonBankApk,
+    video: media.MOONKBANK_VIDEO,
   },
   {
     name: "ARGENCLIMA",
@@ -138,6 +139,7 @@ export const projects = [
         technologies.MaterialUI,
         technologies.EmailJs,
         technologies.Figma,
+        technologies.YouTube,
       ],
     },
     webSite: webs.PORTFOLIO,

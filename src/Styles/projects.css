@@ -23,6 +23,25 @@
   position: relative;
   margin: 1em;
 }
+.overlay {
+  position: fixed;
+  opacity: 1;
+  transition: 300ms ease-in-out;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.6);
+  pointer-events: all;
+}
+.overlay.active {
+  pointer-events: none;
+  opacity: 1;
+}
+.video {
+  background-color: transparent;
+  border: transparent;
+}
 #about {
   position: absolute;
   right: 10px;
@@ -39,7 +58,8 @@
   display: flex;
   margin-top: 1em;
 }
-.card-links > a {
+.card-links > a,
+.video {
   margin: 0.5em;
 }
 .toolTip-text {

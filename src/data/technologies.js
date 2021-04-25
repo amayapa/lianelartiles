@@ -29,6 +29,7 @@ import ReactBootstrap from "../images/techs/react-bootstrap.svg";
 import Passport from "../images/techs/passport.svg";
 import JWToken from "../images/techs/jwt.svg";
 import EmailJs from "../images/techs/emailJs.svg";
+import YouTube from "../images/logos/youtube.svg";
 
 export const technologies = {
   JavaScript,
@@ -62,4 +63,5 @@ export const technologies = {
   SQLite,
   MySql,
   TypeScript,
+  YouTube,
 };

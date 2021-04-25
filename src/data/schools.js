@@ -1,7 +1,7 @@
-import LogoHenry from "../images/henry.png";
-import Fajardo from "../images/UCCFD.svg";
-import Alliance from "../images/alianza.png";
-import FCC from "../images/fcc.png";
+import LogoHenry from "../images/logos/henry.png";
+import Fajardo from "../images/logos/UCCFD.svg";
+import Alliance from "../images/logos/alianza.png";
+import FCC from "../images/logos/fcc.png";
 import { webs, personalLinks } from "./links";
 export const schools = [
   {
