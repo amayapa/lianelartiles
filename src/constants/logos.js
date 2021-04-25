@@ -1,4 +1,5 @@
 // logos
+export const imadev = "images/logos/imadev.svg";
 export const darkImadev = "images/logos/dark-imadev.svg";
 export const lightImadev = "images/logos/light-imadev.svg";
 export const alliance = "images/logos/alianza.png";
