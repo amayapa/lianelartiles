@@ -20,3 +20,8 @@ export const repos = {
   ARGENCLIMA: "https://github.com/larts85/argenclima",
   CYBERFITNESS: "https://github.com/larts85/Ciber-Fitness",
 };
+
+export const media = {
+  MOONKBANK_VIDEO:
+    "https://www.youtube.com/watch?v=L2yQqAn2gy4&ab_channel=imadev",
+};

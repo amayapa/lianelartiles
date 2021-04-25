@@ -1,12 +1,12 @@
 import {
-  lightImadev,
   REVAI,
   moonbank,
   argenClima,
   cyberFitness,
+  imadev,
 } from "../constants/logos";
 import * as technologies from "../constants/technologies";
-import { repos, webs } from "../constants/links";
+import { media, repos, webs } from "../constants/links";
 import MoonBankApk from "../data/MoonBank.apk";
 
 export const projects = [
@@ -66,6 +66,7 @@ export const projects = [
     webSite: false,
     repo: repos.MOONKBANK,
     download: MoonBankApk,
+    video: media.MOONKBANK_VIDEO,
   },
   {
     name: "ARGENCLIMA",
@@ -127,7 +128,7 @@ export const projects = [
   },
   {
     name: "PORTFOLIO",
-    logo: lightImadev,
+    logo: imadev,
     engText:
       "This is my personal Website / Portfolio where you can see my career as a developer and was created with:",
     spaText:
