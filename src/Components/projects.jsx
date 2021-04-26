@@ -28,7 +28,7 @@ const Projects = (props = {}) => {
   }))(Tooltip);
 
   const defineTextLanguage = (project) => {
-    const lang = language.eng ? 'eng' : language.esp ? 'esp' : 'fre';
+    const lang = eng ? 'eng' : esp ? 'esp' : 'fre';
     return project.technologies.texts?.[lang]?.map((tech, index) => (
       <li key={index}>
         <span className={darkMode ? 'toolTip-lightText' : 'toolTip-text'}>{tech}</span>

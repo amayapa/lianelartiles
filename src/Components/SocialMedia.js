@@ -1,5 +1,5 @@
 import React from "react";
-import { repos, personalLinks } from "../data/links";
+import { repos, personalLinks } from "../constants/links";
 
 const SocialMedia = (props) => {
   const { language, darkMode } = props;

@@ -1,14 +1,12 @@
 import React, { useState } from 'react';
-import LeftArrow from "../images/GoLeft.svg"
-import RightArrow from "../images/GoRight.svg"
-import LeftArrowLight from "../images/GoLeft-Light.svg"
-import RightArrowLight from "../images/GoRight-Light.svg"
+import { goRightLight, GoRight, GoLeft, goLeftLight } from "../constants/images"
 import '../Styles/education.css'
 import '../Styles/slideButtons.css'
 import { schools } from "../data/schools";
 import SliderButton from "../Components/sliderButton";
 
-const Education = ({ language, darkMode }) => {
+const Education = (props) => {
+  const { language, darkMode } = props;
   const [current, setCurrent] = useState(0);
   const length = schools.length;
 
@@ -27,7 +25,7 @@ const Education = ({ language, darkMode }) => {
     <div id='education-container'>
       <h1>{language.eng ? 'Education' : language.esp ? 'Educación' : 'Éducation'}</h1>
       <div id='school-container'>
-        <img onClick={() => prevSlide()} className='arrows left-arrow' src={darkMode ? LeftArrowLight : LeftArrow} alt='ups' />
+        <img onClick={() => prevSlide()} className='arrows left-arrow' src={darkMode ? goLeftLight : GoLeft} alt='ups' />
         {
           schools.map((school, index) => {
             return (
@@ -51,7 +49,7 @@ const Education = ({ language, darkMode }) => {
             )
           })
         }
-        <img onClick={() => nextSlide()} className='arrows right-arrow' src={darkMode ? RightArrowLight : RightArrow} alt='ups' />
+        <img onClick={() => nextSlide()} className='arrows right-arrow' src={darkMode ? goRightLight : GoRight} alt='ups' />
       </div>
       <div id='hexangon-container'>
         {schools.map((school, index) => {

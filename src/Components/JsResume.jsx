@@ -3,7 +3,7 @@ import jsResume from '../images/jsCV.svg';
 import '../Styles/resume.css'
 
 const Resume = (props) => {
-  const language = props.language;
+  const { language } = props;
 
   return (
     <div id='jscv'>

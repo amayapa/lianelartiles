@@ -57,10 +57,15 @@
 .card-links {
   display: flex;
   margin-top: 1em;
+  align-items: center;
 }
 .card-links > a,
 .video {
   margin: 0.5em;
+}
+.video {
+  background-color: transparent;
+  border: transparent;
 }
 .toolTip-text {
   color: var(--text-color-light);
