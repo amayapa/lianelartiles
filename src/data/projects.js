@@ -1,11 +1,9 @@
-import {
-  REVAI,
-  moonbank,
-  argenClima,
-  cyberFitness,
-  imadev,
-} from "../constants/logos";
-import * as technologies from "../constants/technologies";
+import REVAI from "../images/logos/REVAI.png";
+import moonbank from "../images/logos/moonbank.png";
+import argenClima from "../images/logos/argenclima.svg";
+import cyberFitness from "../images/logos/cyberFitness.png";
+import imadev from "../images/logos/imadev.svg";
+import { technologies } from "../constants/technologies";
 import { media, repos, webs } from "../constants/links";
 import MoonBankApk from "../data/MoonBank.apk";
 
@@ -21,15 +19,15 @@ export const projects = [
       "Start Up Projet dont la mission est de donner aux gens la force de leurs antécédents médicaux, de leurs rendez-vous médicaux, etc. Des technologies utilisées:",
     technologies: {
       icons: [
-        technologies.reactJs,
-        technologies.redux,
-        technologies.nodejs,
-        technologies.express,
-        technologies.mysql,
-        technologies.sequelize,
-        technologies.mongodb,
-        technologies.typescript,
-        technologies.docker,
+        technologies.ReactJs,
+        technologies.Redux,
+        technologies.Node,
+        technologies.Express,
+        technologies.MySql,
+        technologies.Sequelize,
+        technologies.MongoDB,
+        technologies.TypeScript,
+        technologies.Docker,
       ],
       texts: {
         esp: ["- Muchas otras librerías menores"],
@@ -51,11 +49,11 @@ export const projects = [
       "Portefeuille virtuel (Fintech) pour la gestion de devises, avec des fonctionnalités telles que l'achat et la vente de dollars, la recharge de crédit par divers moyens, le paiement des services, un chat d'aide et bien plus encore. Des technologies utilisées:",
     technologies: {
       icons: [
-        technologies.reactNative,
-        technologies.redux,
-        technologies.expo,
-        technologies.nodejs,
-        technologies.firebase,
+        technologies.ReactJs,
+        technologies.Redux,
+        technologies.Expo,
+        technologies.Node,
+        technologies.Firebase,
       ],
       texts: {
         esp: ["- Algunas otras librerías menores"],
@@ -79,10 +77,10 @@ export const projects = [
       "Start Up Projet dont la mission est de donner aux gens la force de leurs antécédents médicaux, de leurs rendez-vous médicaux, etc. Des technologies utilisées:",
     technologies: {
       icons: [
-        technologies.reactJs,
-        technologies.indexedDB,
-        technologies.styledComponents,
-        technologies.context,
+        technologies.ReactJs,
+        technologies.IndexedDB,
+        technologies.StyledComponents,
+        technologies.Context,
       ],
       texts: false,
     },
@@ -100,16 +98,16 @@ export const projects = [
       "Il s'agit d'un e-commerce réalisé comme une première grosse mission, dans laquelle mes collègues et moi rejoignons toutes les technologies apprises au bootcamp #SoyHenry. Des technologies utilisées:",
     technologies: {
       icons: [
-        technologies.reactJs,
-        technologies.redux,
-        technologies.materialUI,
-        technologies.nodejs,
-        technologies.postgresql,
-        technologies.express,
-        technologies.sequelize,
-        technologies.reactBootstrap,
-        technologies.jwt,
-        technologies.passport,
+        technologies.ReactJs,
+        technologies.Redux,
+        technologies.MaterialUI,
+        technologies.Node,
+        technologies.Postgres,
+        technologies.Express,
+        technologies.Sequelize,
+        technologies.ReactJs,
+        technologies.JWToken,
+        technologies.Passport,
       ],
       texts: {
         eng: ["- Several Third-party login methods", "- Other minor libraries"],
@@ -137,10 +135,11 @@ export const projects = [
       "Ceci est mon site personnel / portfolio où vous pouvez trouver mon expérience en tant que développeur et il a été créé avec:",
     technologies: {
       icons: [
-        technologies.reactJs,
-        technologies.materialUI,
-        technologies.emailJs,
-        technologies.figma,
+        technologies.ReactJs,
+        technologies.MaterialUI,
+        technologies.EmailJs,
+        technologies.Figma,
+        technologies.YouTube,
       ],
     },
     webSite: webs.PORTFOLIO,

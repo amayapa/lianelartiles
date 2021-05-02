@@ -1,12 +1,26 @@
 // logos
-export const imadev = "images/logos/imadev.svg";
-export const darkImadev = "images/logos/dark-imadev.svg";
-export const lightImadev = "images/logos/light-imadev.svg";
-export const alliance = "images/logos/alianza.png";
-export const moonbank = "images/logos/moonbank.png";
-export const argenClima = "images/logos/argenclima.svg";
-export const cyberFitness = "images/logos/cyberFitness.png";
-export const REVAI = "images/logos/REVAI.png";
-export const UCCFD = "images/logos/UCCFD.svg";
-export const henry = "images/logos/henry.png";
-export const FCC = "images/logos/fcc.png";
+import imadev from "../images/logos/imadev.svg";
+import darkImadev from "../images/logos/dark-imadev.svg";
+import lightImadev from "../images/logos/light-imadev.svg";
+import alliance from "../images/logos/alianza.png";
+import moonbank from "../images/logos/moonbank.png";
+import argenClima from "../images/logos/argenclima.svg";
+import cyberFitness from "../images/logos/cyberFitness.png";
+import REVAI from "../images/logos/REVAI.png";
+import UCCFD from "../images/logos/UCCFD.svg";
+import henry from "../images/logos/henry.png";
+import FCC from "../images/logos/fcc.png";
+
+export const logos = {
+  imadev,
+  darkImadev,
+  lightImadev,
+  alliance,
+  moonbank,
+  argenClima,
+  cyberFitness,
+  REVAI,
+  UCCFD,
+  henry,
+  FCC,
+};

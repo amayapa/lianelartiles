@@ -1,4 +1,7 @@
-import { henry, FCC, alliance, UCCFD } from "../constants/logos";
+import henry from "../images/logos/henry.png";
+import UCCFD from "../images/logos/UCCFD.svg";
+import alliance from "../images/logos/alianza.png";
+import FCC from "../images/logos/fcc.png";
 import { webs, personalLinks } from "../constants/links";
 export const schools = [
   {

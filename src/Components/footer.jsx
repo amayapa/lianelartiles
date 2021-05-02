@@ -1,7 +1,7 @@
 /* ======================= IMPORTATIONS ======================= */
 import React from 'react';
 import '../Styles/footer.css';
-import { darkToggle, lightToggle, } from '../constants/images';
+import { images, } from '../constants/images';
 import { Link } from 'react-router-dom';
 import SocialMedia from './SocialMedia';
 import { Tooltip } from '@material-ui/core';
@@ -71,7 +71,7 @@ const Footer = (props) => {
           <Tooltip title={language.eng ? 'Dark Mode' : language.esp ? 'Modo Oscuro' : 'Mode Sombre'}>
             <img
               id='toggle'
-              src={darkMode ? darkToggle : lightToggle}
+              src={darkMode ? images.darkToggle : images.lightToggle}
               alt="toggleMode"
               onClick={() => setDarkMode((prevMode) => !prevMode)}
             /></Tooltip>

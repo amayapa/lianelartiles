@@ -38,6 +38,10 @@
   pointer-events: none;
   opacity: 1;
 }
+.video {
+  background-color: transparent;
+  border: transparent;
+}
 #about {
   position: absolute;
   right: 10px;

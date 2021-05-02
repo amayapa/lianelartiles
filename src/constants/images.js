@@ -1,14 +1,28 @@
 // images
-export const fcc = "images/pics/fcc.png";
-export const goLeftLight = "images/pics/GoLeft-Light.svg";
-export const GoLeft = "images/pics/GoLeft.svg";
-export const goRightLight = "images/pics/GoRight-Light.svg";
-export const GoRight = "images/pics/GoRight.svg";
-export const JsCV = "images/pics/JsCV.svg";
-export const darkToggle = "images/pics/Dark Toggle.svg";
-export const lightToggle = "images/pics/Light Toggle.svg";
-export const hive = "images/pics/hive.svg";
-export const hivePortrait = "images/pics/hive-portrait.svg";
-export const lightHive = "images/pics/light-hive.svg";
-export const lightVerticalHive = "images/pics/light-vertical-hive.svg";
-export const polPicture = "images/pics/pol-pic.svg";
+import goLeftLight from "../images/pics/GoLeft-Light.svg";
+import GoLeft from "../images/pics/GoLeft.svg";
+import goRightLight from "../images/pics/GoRight-Light.svg";
+import GoRight from "../images/pics/GoRight.svg";
+import JsCV from "../images/pics/jsCV.svg";
+import darkToggle from "../images/pics/Dark Toggle.svg";
+import lightToggle from "../images/pics/Light Toggle.svg";
+import hive from "../images/pics/hive.svg";
+import hivePortrait from "../images/pics/hive-portrait.svg";
+import lightHive from "../images/pics/light-hive.svg";
+import lightVerticalHive from "../images/pics/light-vertical-hive.svg";
+import polPicture from "../images/pics/pol-pic.svg";
+
+export const images = {
+  goLeftLight,
+  GoLeft,
+  goRightLight,
+  GoRight,
+  JsCV,
+  darkToggle,
+  lightToggle,
+  hive,
+  hivePortrait,
+  lightHive,
+  lightVerticalHive,
+  polPicture,
+};

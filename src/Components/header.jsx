@@ -2,7 +2,7 @@
 import React from 'react'
 import { Link, useLocation } from 'react-router-dom'
 import '../Styles/header.css';
-import { lightImadev, darkImadev } from "../constants/logos";
+import { logos } from "../constants/logos";
 
 const Header = (props) => {
   const { darkMode, language } = props;
@@ -13,7 +13,7 @@ const Header = (props) => {
       <div>
         <Link to='/'>
           <img
-            src={darkMode ? lightImadev : darkImadev}
+            src={darkMode ? logos.lightImadev : logos.darkImadev}
             className='logo'
             alt="imadev"
           />

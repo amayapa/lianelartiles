@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect, useCallback } from "react";
 import PropTypes from "prop-types";
 import { makeStyles } from "@material-ui/core/styles";
 import ReactPlayer from "react-player";
@@ -46,39 +46,42 @@ const useStyles = makeStyles(() => ({
 }));
 
 const PlayerModal = (props) => {
-  const { video, videoTitle, open, setOpen, darkMode } = props;
+  const { videoTitle, open, setOpen, darkMode, playerProps } = props;
   const classes = useStyles({ open, darkMode });
 
-  const handleOnClose = () => {
-    setOpen(!open);
-  };
+  const escFunction = useCallback((event) => {
+    if (event.key === "Escape") {
+      setOpen(false);
+    }
+    //eslint-disable-next-line
+  }, []);
+
+  useEffect(() => {
+    document.addEventListener("keydown", escFunction, false);
+    return () => {
+      document.removeEventListener("keydown", escFunction, false);
+    };
+    //eslint-disable-next-line
+  }, []);
 
   return (
     <div className={classes.modal}>
       <div className={classes.header}>
         <h1 className={classes.title}>{videoTitle}</h1>
-        <button onClick={() => handleOnClose()}>&times;</button>
+        <button onClick={() => setOpen(!open)}>&times;</button>
       </div>
       <div className={classes.body}>
-        <ReactPlayer
-          url={video}
-          controls
-          width="720px"
-          height="405px"
-          style={{
-            maxWidth: "80vw",
-          }}
-          playing={open}
-        />
+        <ReactPlayer {...playerProps} />
       </div>
     </div>
   );
 };
 
 PlayerModal.propTypes = {
-  video: PropTypes.string,
   videoTitle: PropTypes.string,
+  playerProps: PropTypes.object,
   open: PropTypes.bool,
+  setOpen: PropTypes.func,
   darkMode: PropTypes.bool,
 };
 

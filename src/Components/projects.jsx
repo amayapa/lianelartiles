@@ -1,5 +1,6 @@
-import React, { useState } from 'react'
-import { Tooltip, withStyles } from '@material-ui/core';
+import React, { useState } from 'react';
+import { Tooltip } from '@material-ui/core';
+import { withStyles } from '@material-ui/core/styles';
 import { projects } from '../data/projects';
 import Download from '../images/components/Download';
 import GitHubLogo from '../images/components/GitHub'
@@ -8,9 +9,9 @@ import '../Styles/projects.css'
 import PlayerModal from './PlayerModal';
 import VideoIcon from '../images/components/Video';
 
-const Projects = (props) => {
-  const { darkMode } = props;
-  const { esp, eng } = props.language;
+const Projects = (props = {}) => {
+  const { language, darkMode } = props;
+  const { eng, esp } = props.language;
   const [open, setOpen] = useState(false);
   const [modalProps, setModalProps] = useState({
     url: '',
@@ -39,7 +40,7 @@ const Projects = (props) => {
   return (
     <>
       <div id='projects-container'>
-        <h1>{eng ? 'Projects' : esp ? 'Proyectos' : 'Des Projects'}</h1>
+        <h1>{language.eng ? 'Projects' : language.esp ? 'Proyectos' : 'Des Projects'}</h1>
         <div className="cards-container">
           {
             projects.map((project, index) => {
@@ -50,7 +51,7 @@ const Projects = (props) => {
                       <>
                         <h3 className={darkMode ? 'toolTip-lightText' : 'toolTip-text'}>{project.name}</h3>
                         <p className={darkMode ? 'toolTip-lightText' : 'toolTip-text'}>
-                          {eng ? project.engText : esp ? project.spaText : project.freText}
+                          {language.eng ? project.engText : language.esp ? project.spaText : project.freText}
                         </p>
                         <div
                           style={{
@@ -74,7 +75,7 @@ const Projects = (props) => {
                           {project.technologies.texts && Object.keys(project.technologies.texts).length > 0 && (
                             <li>
                               <span className={darkMode ? 'toolTip-lightText' : 'toolTip-text'}>
-                                {eng ? 'And:' : esp ? 'Ademas:' : 'En plus:'}
+                                {language.eng ? 'And:' : language.esp ? 'Ademas:' : 'En plus:'}
                               </span>
                             </li>
                           )}
@@ -87,50 +88,55 @@ const Projects = (props) => {
                   </JSXTooltip>
                   <img src={project.logo} alt="ups" id='logo' />
                   <div className="card-links">
-                    {project.repo && (<a
-                      id="gitLink"
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      href={project.repo}
-                    >
+                    {project.repo && (
                       <Tooltip title="Repository">
-                        <GitHubLogo
-                          size={{ width: "30", height: "30" }}
-                          darkMode={darkMode}
-                          colors={{ light: 'white', dark: '#201E1E' }}
-                        />
+                        <a
+                          id="gitLink"
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          href={project.repo}
+                        >
+                          <GitHubLogo
+                            size={{ width: "30", height: "30" }}
+                            darkMode={darkMode}
+                            colors={{ light: 'white', dark: '#201E1E' }}
+                          />
+                        </a>
                       </Tooltip>
-                    </a>)}
-                    {project.webSite && (<a
-                      id="webLink"
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      href={project.webSite}
-                    >
+                    )}
+                    {project.webSite && (
                       <Tooltip title="Web Site">
-                        <WWW
-                          size={{ width: "30", height: "30" }}
-                          darkMode={darkMode}
-                          colors={{ light: 'white', dark: '#201E1E' }}
-                        />
+                        <a
+                          id="webLink"
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          href={project.webSite}
+                        >
+                          <WWW
+                            size={{ width: "30", height: "30" }}
+                            darkMode={darkMode}
+                            colors={{ light: 'white', dark: '#201E1E' }}
+                          />
+                        </a>
                       </Tooltip>
-                    </a>)}
+                    )}
                     {project.download &&
-                      <a
-                        id="downloadLink"
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        href={project.download}
-                        download="MoonBank Android App"
-                      >
-                        <Tooltip title="Download App for Android">
+                      <Tooltip title="Download App for Android">
+                        <a
+                          id="downloadLink"
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          href={project.download}
+                          download="MoonBank Android App"
+                        >
                           <Download
                             size={{ width: "30", height: "30" }}
                             darkMode={darkMode}
                             colors={{ light: 'white', dark: '#201E1E' }}
                           />
-                        </Tooltip>
-                      </a>}
+                        </a>
+                      </Tooltip>
+                    }
                     {project.video && (
                       <>
                         <Tooltip
@@ -164,11 +170,21 @@ const Projects = (props) => {
         </div>
       </div>
       <PlayerModal
-        video={modalProps.url}
         videoTitle={modalProps.title}
         open={open}
         setOpen={setOpen}
         darkMode={darkMode}
+        playerProps={{
+          playing: open,
+          light: true,
+          url: modalProps.url,
+          controls: true,
+          width: "720px",
+          height: "405px",
+          style: {
+            maxWidth: "80vw",
+          }
+        }}
       />
       <div
         className={open ? "overlay" : "overlay.active"}
