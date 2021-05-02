@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { goRightLight, GoRight, GoLeft, goLeftLight } from "../constants/images"
+import { images } from "../constants/images"
 import '../Styles/education.css'
 import '../Styles/slideButtons.css'
 import { schools } from "../data/schools";
@@ -25,7 +25,7 @@ const Education = (props) => {
     <div id='education-container'>
       <h1>{language.eng ? 'Education' : language.esp ? 'Educación' : 'Éducation'}</h1>
       <div id='school-container'>
-        <img onClick={() => prevSlide()} className='arrows left-arrow' src={darkMode ? goLeftLight : GoLeft} alt='ups' />
+        <img onClick={() => prevSlide()} className='arrows left-arrow' src={darkMode ? images.goLeftLight : images.GoLeft} alt='ups' />
         {
           schools.map((school, index) => {
             return (
@@ -49,7 +49,7 @@ const Education = (props) => {
             )
           })
         }
-        <img onClick={() => nextSlide()} className='arrows right-arrow' src={darkMode ? goRightLight : GoRight} alt='ups' />
+        <img onClick={() => nextSlide()} className='arrows right-arrow' src={darkMode ? images.goRightLight : images.GoRight} alt='ups' />
       </div>
       <div id='hexangon-container'>
         {schools.map((school, index) => {

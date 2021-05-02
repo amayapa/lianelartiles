@@ -11,6 +11,7 @@ import VideoIcon from '../images/components/Video';
 
 const Projects = (props = {}) => {
   const { language, darkMode } = props;
+  const { eng, esp } = props.language;
   const [open, setOpen] = useState(false);
   const [modalProps, setModalProps] = useState({
     url: '',
