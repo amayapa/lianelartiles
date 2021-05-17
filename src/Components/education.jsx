@@ -58,6 +58,7 @@ const Education = (props) => {
               current={current}
               darkMode={darkMode}
               index={index}
+              key={index}
               handleOnSlide={handleOnSlide}
             />
           )
