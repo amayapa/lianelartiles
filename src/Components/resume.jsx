@@ -4,8 +4,8 @@ import ToggleButtonGroup from '@material-ui/lab/ToggleButtonGroup';
 import Pdf from './pdfViewver';
 import JsResume from './JsResume';
 
-const Resume = ({ language }) => {
-  const { esp, eng, fre } = language;
+const Resume = ({ languages }) => {
+  const { esp, eng, fre } = languages;
 
   const [selected, setSelected] = useState('TradResume')
 
@@ -38,7 +38,7 @@ const Resume = ({ language }) => {
         </ToggleButton>
       </ToggleButtonGroup>
       {
-        selected === 'TradResume' ? <Pdf language={language} /> : <JsResume language={language} />
+        selected === 'TradResume' ? <Pdf languages={languages} /> : <JsResume languages={languages} />
       }
     </div>
   )

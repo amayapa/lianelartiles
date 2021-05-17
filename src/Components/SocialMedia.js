@@ -1,74 +1,131 @@
-import React from "react";
-import { repos, personalLinks } from "../constants/links";
+import React, { useEffect, useState } from "react";
+import { personalLinks, webs } from "../constants/links";
+import Share from "../images/components/Share";
+import GitHub from "../images/components/GitHub";
+import LinkedIn from "../images/components/LinkedIn";
+import IsMobile from "ismobilejs";
+import { logos } from "../constants/logos";
+import { Tooltip } from "@material-ui/core";
 
 const SocialMedia = (props) => {
-  const { language, darkMode } = props;
+  const { languages, darkMode, setMessage } = props;
+  const [isMobile, setIsMobile] = useState(false);
 
-  const wappMsg = `${personalLinks.WHATSAPP}I want to share with you this website that I found interesting. ${repos.PORTFOLIO}`;
-  const wappMsj = `${personalLinks.WHATSAPP}Te comparto este sitio web que me pareció interesante. ${repos.PORTFOLIO}`;
-  const wappMssg = `${personalLinks.WHATSAPP}Je vous partage ce site Web que j'ai trouvé intéressant. ${repos.PORTFOLIO}`;
+  useEffect(() => {
+    const userAgent = window.navigator;
+    setIsMobile(IsMobile(userAgent).any);
+  }, []);
+
+  const copiedSuccessfully = languages.esp
+    ? "Copiado exitosamente al portapaleles"
+    : languages.eng
+    ? "Clipboard successfully set"
+    : "Copie réussie dans le presse-papiers";
+  const copyFailed = languages.esp
+    ? "No pudo copiarse al portapaleles"
+    : languages.eng
+    ? "Clipboard write failed"
+    : "Impossible de copier dans le presse-papiers";
+  const wappMsg = languages.eng
+    ? "_I want to share with you this website that I found interesting:_"
+    : languages.esp
+    ? "_Te comparto este sitio web que me pareció interesante:_"
+    : "_Je vous partage ce site web que j'ai trouvé intéressant:_";
+
+  const shareOptions = [
+    {
+      logo: logos.whatsApp,
+      link: `${personalLinks.WHATSAPP}${wappMsg} ${webs.PORTFOLIO}`,
+      tooltip: "WhatsApp",
+      action: (link) => window.open(link),
+    },
+    // {
+    //   logo: logos.messenger,
+    //   link: `$`,
+    //   tooltip: "Facebook Messenger",
+    //   action: () => console.log("cooming soon messenger"),
+    // },
+    // {
+    //   logo: logos.facebook,
+    //   link: `$`,
+    //   tooltip: "Facebook",
+    //   action: () => console.log("cooming soon facebook"),
+    // },
+    {
+      logo: logos.copy,
+      tooltip: languages.eng
+        ? "Copy to clipboard"
+        : languages.esp
+        ? "Copiar al portapapeles"
+        : "Copier dans le press-papiers",
+      action: () =>
+        navigator.clipboard.writeText(webs.PORTFOLIO).then(
+          () => setMessage({ success: true, copiedSuccessfully }),
+          () => setMessage({ success: false, copyFailed })
+        ),
+    },
+  ];
 
   return (
     <>
-      <a
-        id="wappLink"
-        target="_blank"
-        rel="noopener noreferrer"
-        href={`${language.eng ? wappMsg : language.esp ? wappMsj : wappMssg}`}
-      >
-        <svg
+      <div id="shareLink">
+        <Share
           className="smIcon"
-          width="30"
-          height="30"
-          viewBox="0 0 56 56"
-          fill="none"
-        >
-          <path
-            id="share light"
-            d="M56 6V50C56 53.3138 53.3138 56 50 56H6C2.68625 56 0 53.3138 0 50V6C0 2.68625 2.68625 0 6 0H50C53.3138 0 56 2.68625 56 6ZM38 33C36.1797 33 34.5221 33.6951 33.2771 34.8339L24.7824 29.737C25.0725 28.5971 25.0725 27.4027 24.7824 26.2629L33.2771 21.166C34.5221 22.3049 36.1797 23 38 23C41.866 23 45 19.866 45 16C45 12.134 41.866 9 38 9C34.134 9 31 12.134 31 16C31 16.5996 31.0756 17.1816 31.2175 17.7371L22.7227 22.834C21.4779 21.6951 19.8203 21 18 21C14.134 21 11 24.134 11 28C11 31.866 14.134 35 18 35C19.8203 35 21.4779 34.3049 22.7229 33.1661L31.2176 38.263C31.0728 38.8307 30.9998 39.4143 31.0001 40.0001C31.0001 43.8661 34.1341 47.0001 38.0001 47.0001C41.8661 47.0001 45.0001 43.8661 45.0001 40.0001C45 36.134 41.866 33 38 33Z"
-            fill={darkMode ? "white" : "#201E1E"}
-          />
-        </svg>
-        <span id="wappMsg">
-          {language.eng
+          darkMode={darkMode}
+          size={{
+            width: "30",
+            height: "30",
+          }}
+          colors={{
+            dark: "#ffffff",
+            light: "#201e1e",
+          }}
+          isMobile={isMobile}
+        />
+        <span id="share" className="msg">
+          {languages.eng
             ? "Share this website"
-            : language.esp
+            : languages.esp
             ? "Compartir este sitio web"
             : "Partagez ce site"}
+          <div id="share-options">
+            {shareOptions.map(({ logo, link, tooltip, action }, index) => {
+              return (
+                <Tooltip title={tooltip} key={index}>
+                  <img
+                    src={logo}
+                    className="share-option"
+                    alt="Ups"
+                    onClick={() => action(link)}
+                  />
+                </Tooltip>
+              );
+            })}
+          </div>
         </span>
-      </a>
+      </div>
       <a
         id="gitLink"
         target="_blank"
         rel="noopener noreferrer"
         href={personalLinks.GITHUB}
       >
-        <svg
+        <GitHub
           className="smIcon"
-          width="30"
-          height="30"
-          viewBox="0 0 55 54"
-          fill="none"
-        >
-          <g id="github">
-            <path
-              id="Vector"
-              fillRule="evenodd"
-              clipRule="evenodd"
-              d="M27.2238 0C12.1905 0 0 12.1878 0 27.2238C0 39.2524 7.80044 49.4566 18.6173 53.0568C19.9774 53.3092 20.4769 52.4662 20.4769 51.7471C20.4769 51.098 20.4516 48.9534 20.4399 46.6786C12.8662 48.3255 11.2681 43.4666 11.2681 43.4666C10.0297 40.3199 8.24539 39.4832 8.24539 39.4832C5.77493 37.7935 8.43158 37.8287 8.43158 37.8287C11.1649 38.0203 12.6048 40.6341 12.6048 40.6341C15.0328 44.7951 18.9734 43.5924 20.5269 42.8972C20.7713 41.1377 21.4768 39.9363 22.2553 39.2564C16.2086 38.5689 9.85164 36.2342 9.85164 25.8028C9.85164 22.8306 10.9156 20.402 12.6571 18.4951C12.3739 17.8099 11.4421 15.041 12.9203 11.2911C12.9203 11.2911 15.206 10.5594 20.4084 14.0816C22.5804 13.478 24.9097 13.1746 27.2238 13.1642C29.5364 13.1746 31.8671 13.4771 34.0432 14.0807C39.2393 10.5585 41.5222 11.2902 41.5222 11.2902C43.0041 15.0396 42.0722 17.809 41.7896 18.4942C43.5351 20.4011 44.5914 22.8297 44.5914 25.8019C44.5914 36.2581 38.2227 38.5599 32.1606 39.2343C33.1375 40.0792 34.0076 41.7364 34.0076 44.2758C34.0076 47.9184 33.976 50.85 33.976 51.7467C33.976 52.4711 34.4665 53.32 35.846 53.0527C46.6565 49.4489 54.448 39.2479 54.448 27.2238C54.4475 12.1887 42.2584 0.000450781 27.2238 0.000450781V0Z"
-              fill={darkMode ? "white" : "#201E1E"}
-            />
-            <path
-              id="Vector_2"
-              d="M10.311 39.0869C10.251 39.2222 10.0383 39.2628 9.8444 39.1703C9.64605 39.082 9.5356 38.8976 9.59961 38.7619C9.65822 38.6221 9.87145 38.5838 10.0685 38.6771C10.2668 38.766 10.3795 38.9521 10.3105 39.0874L10.311 39.0869ZM11.4137 40.3172C11.2843 40.4376 11.0305 40.3817 10.8583 40.191C10.6798 40.0016 10.6464 39.7478 10.7785 39.6257C10.9128 39.5057 11.159 39.5625 11.3375 39.7519C11.5151 39.9439 11.5503 40.1955 11.4141 40.3177L11.4137 40.3172ZM12.4875 41.8847C12.3207 42.001 12.0475 41.8924 11.8789 41.6503C11.7121 41.4077 11.7121 41.117 11.8834 41.0011C12.0516 40.8848 12.3207 40.9898 12.492 41.2297C12.6579 41.4753 12.6579 41.7661 12.4875 41.8842V41.8847ZM13.9576 43.3999C13.8089 43.5644 13.4906 43.5202 13.258 43.2962C13.0204 43.0766 12.9541 42.7642 13.1033 42.6001C13.2548 42.4351 13.5744 42.4811 13.8084 42.7038C14.046 42.9229 14.1177 43.2358 13.9585 43.3994L13.9576 43.3999ZM15.9863 44.2794C15.92 44.4926 15.6144 44.5896 15.3056 44.4985C14.9977 44.4052 14.7961 44.1559 14.8593 43.9404C14.9224 43.7254 15.2303 43.6248 15.5409 43.7218C15.8488 43.8146 16.0503 44.0626 15.9863 44.2794ZM18.2147 44.4422C18.2223 44.6667 17.9609 44.8524 17.6376 44.8569C17.3117 44.8646 17.048 44.6824 17.0448 44.4615C17.0448 44.2348 17.3009 44.0513 17.6264 44.045C17.9496 44.0391 18.2151 44.2195 18.2151 44.4417L18.2147 44.4422ZM20.2875 44.0896C20.3263 44.3083 20.1013 44.5332 19.7799 44.5932C19.4643 44.6518 19.1713 44.5156 19.1307 44.2988C19.092 44.0743 19.321 43.8493 19.6365 43.7912C19.9584 43.7357 20.2469 43.8678 20.2875 44.0901V44.0896Z"
-              fill={darkMode ? "white" : "#201E1E"}
-            />
-          </g>
-        </svg>
-        <span id="gitMsg">
-          {language.eng
+          darkMode={darkMode}
+          size={{
+            width: "30",
+            height: "30",
+          }}
+          colors={{
+            dark: "#ffffff",
+            light: "#201e1e",
+          }}
+        />
+        <span id="gitMsg" className="msg">
+          {languages.eng
             ? "Check my repositories"
-            : language.esp
+            : languages.esp
             ? "Revisa mis repositorios"
             : "Vérifier mes référentiels"}
         </span>
@@ -78,28 +135,25 @@ const SocialMedia = (props) => {
         target="_blank"
         rel="noopener noreferrer"
         href={`${personalLinks.LINKEDIN}/?locale=${
-          language.eng ? "en_EN" : language.fre ? "fr_FR" : "es_ES"
+          languages.eng ? "en_EN" : languages.fre ? "fr_FR" : "es_ES"
         }`}
       >
-        <svg
+        <LinkedIn
           className="smIcon"
-          width="56"
-          height="56"
-          viewBox="0 0 538 538"
-          fill="none"
-        >
-          <path
-            id="in"
-            fillRule="evenodd"
-            clipRule="evenodd"
-            d="M39.6882 0.00203733H498.308C508.684 -0.0809624 518.674 3.9349 526.105 11.1767C533.537 18.4186 537.81 28.301 537.996 38.676V499.148C537.856 509.553 533.604 519.481 526.167 526.761C518.73 534.04 508.714 538.081 498.308 537.998H39.6882C29.2975 538.104 19.2879 534.09 11.8499 526.833C4.41184 519.577 0.15107 509.67 0 499.28V38.8083C0.127934 28.4028 4.37853 18.473 11.8191 11.1978C19.2597 3.92255 29.2825 -0.103863 39.6882 0.00203733ZM159.503 201.662H79.6411V458.622H159.503V201.662ZM145.323 81.5846C137.708 76.4948 128.754 73.7781 119.594 73.7781C107.321 73.7781 95.5506 78.6503 86.8684 87.3243C78.1862 95.9982 73.3027 107.764 73.291 120.037C73.2823 129.197 75.9905 138.153 81.073 145.773C86.1555 153.394 93.384 159.335 101.844 162.847C110.304 166.358 119.615 167.281 128.6 165.5C137.585 163.718 145.839 159.312 152.319 152.838C158.799 146.364 163.214 138.114 165.004 129.13C166.794 120.147 165.88 110.835 162.376 102.372C158.873 93.9085 152.938 86.6744 145.323 81.5846ZM286.152 201.662H209.598V458.621H289.327V331.663C289.327 297.972 296.295 265.516 337.262 265.516C378.229 265.516 378.758 303.837 378.758 333.604V458.621H458.62V317.508C458.62 248.494 443.626 195.268 362.75 195.444C323.9 195.444 297.882 216.744 287.21 236.941H286.152V201.662Z"
-            fill={darkMode ? "white" : "#201E1E"}
-          />
-        </svg>
-        <span id="inMsg">
-          {language.eng
+          darkMode={darkMode}
+          size={{
+            width: "30",
+            height: "30",
+          }}
+          colors={{
+            dark: "#ffffff",
+            light: "#201e1e",
+          }}
+        />
+        <span id="inMsg" className="msg">
+          {languages.eng
             ? "Let's connect"
-            : language.esp
+            : languages.esp
             ? "Conectemos"
             : "Connectons-nous"}
         </span>

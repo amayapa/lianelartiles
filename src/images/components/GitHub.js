@@ -2,9 +2,10 @@ import React from "react";
 import PropTypes from "prop-types";
 
 const GitHub = (props) => {
-  const { darkMode, colors, size } = props;
+  const { darkMode, colors, size, className } = props;
   return (
     <svg
+      className={className}
       width={size.width}
       height={size.height}
       viewBox="0 0 55 54"
@@ -29,6 +30,7 @@ const GitHub = (props) => {
 };
 
 GitHub.propTypes = {
+  className: PropTypes.string,
   darkMode: PropTypes.bool,
   colors: PropTypes.object,
   size: PropTypes.object,

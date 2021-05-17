@@ -4,7 +4,7 @@ import espPdf from '../data/Lianel-Artiles-Dev-CV-Esp.pdf';
 import frePdf from '../data/Lianel-Artiles-Dev-CV-Fre.pdf';
 
 const Pdf = (props) => {
-  const { esp, eng, fre } = props.language;
+  const { esp, eng, fre } = props.languages;
   const [isMobile, setIsMobile] = useState(false);
 
   const engButtton = (<span>DOWNLOAD<br />RESUME IN PDF</span>);

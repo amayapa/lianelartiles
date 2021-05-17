@@ -2,8 +2,8 @@ import React from 'react'
 import '../Styles/skills.css'
 import { technologies } from '../constants/technologies';
 
-const Skills = ({ language }) => {
-  const { esp, eng } = language;
+const Skills = ({ languages }) => {
+  const { esp, eng } = languages;
 
   const skills = {
     programLanguages: [

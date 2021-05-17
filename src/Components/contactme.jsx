@@ -8,7 +8,7 @@ init("user_mF5LDF8IugLjLsmSkJldy");
 
 const ContactMe = (props) => {
   /* ======================= STATE & VARS ======================== */
-  const language = props.language;
+  const languages = props.languages;
   const [span, setSpan] = useState('')
   const [string, setString] = useState({ firstline: '', secondLine: '' })
   const [state, setState] = useState({ name: '', email: '', body: '' })
@@ -73,10 +73,10 @@ const ContactMe = (props) => {
     let invalidEmailFormat = "";
 
     if (!state.name || !state.email || !state.body) {
-      emptyField = language.eng ? "All fields must be completed" : language.esp ? 'Todos los campos deben ser completados' : 'Tous les champs doivent etre completé';
+      emptyField = languages.eng ? "All fields must be completed" : languages.esp ? 'Todos los campos deben ser completados' : 'Tous les champs doivent etre completé';
     }
     else if (!/\S+@\S+\.\S+/.test(state.email)) {
-      invalidEmailFormat = language.eng ? "Invalid email format" : language.esp ? 'Fomato de correo inválido' : "Le format de l'email n'est pas valide";
+      invalidEmailFormat = languages.eng ? "Invalid email format" : languages.esp ? 'Fomato de correo inválido' : "Le format de l'email n'est pas valide";
     }
     if (emptyField || invalidEmailFormat) {
       setErr({ emptyField, invalidEmailFormat });
@@ -93,7 +93,7 @@ const ContactMe = (props) => {
   }
 
   function displayFullFrase() {
-    if (language.eng) {
+    if (languages.eng) {
       firstline = englishFL;
       secondLine = englishSL;
       setString({
@@ -101,7 +101,7 @@ const ContactMe = (props) => {
         secondLine
       })
     }
-    else if (language.esp) {
+    else if (languages.esp) {
       firstline = spanishFL;
       secondLine = spanishSL;
       setString({
@@ -120,7 +120,7 @@ const ContactMe = (props) => {
   }
 
   const displayFirstLine = () => {
-    if (language.eng) {
+    if (languages.eng) {
       if (i < englishFL.length) {
         firstline = firstline + englishFL[i] + '|'
         setString({
@@ -134,7 +134,7 @@ const ContactMe = (props) => {
         clearInterval(interval);
       }
     }
-    else if (language.esp) {
+    else if (languages.esp) {
       if (i < spanishFL.length) {
         firstline = firstline + spanishFL[i] + '|'
         setString({
@@ -165,7 +165,7 @@ const ContactMe = (props) => {
   }
 
   function displaySecondLine() {
-    if (language.eng) {
+    if (languages.eng) {
       if (f < englishSL.length) {
         secondLine = secondLine + englishSL[f] + '|'
         setString({
@@ -185,7 +185,7 @@ const ContactMe = (props) => {
         i = 0;
       }
     }
-    else if (language.esp) {
+    else if (languages.esp) {
       if (f < spanishSL.length) {
         secondLine = secondLine + spanishSL[f] + '|'
         setString({
@@ -232,7 +232,7 @@ const ContactMe = (props) => {
     }
     else { displayChars() }
     // eslint-disable-next-line
-  }, [language])
+  }, [languages])
 
   /* ======================== RENDERING ========================= */
   return (
@@ -248,7 +248,7 @@ const ContactMe = (props) => {
             id='name'
             className='form'
             type="text"
-            placeholder={language.eng ? 'name' : language.esp ? 'nombre' : 'nom'}
+            placeholder={languages.eng ? 'name' : languages.esp ? 'nombre' : 'nom'}
             onChange={e => handleOnChange(e)}
           />
           <input
@@ -256,7 +256,7 @@ const ContactMe = (props) => {
             id='email'
             className='form'
             type="text"
-            placeholder={language.eng ? 'email' : language.esp ? 'correo electrónico' : 'email'}
+            placeholder={languages.eng ? 'email' : languages.esp ? 'correo electrónico' : 'email'}
             onChange={e => handleOnChange(e)}
           />
           <textarea
@@ -266,23 +266,23 @@ const ContactMe = (props) => {
             wrap='soft'
             className='form'
             rows="15" cols="33"
-            placeholder={language.eng ? 'Your message' : language.esp ? 'Su mensaje' : 'Votre message'}
+            placeholder={languages.eng ? 'Your message' : languages.esp ? 'Su mensaje' : 'Votre message'}
             onChange={e => handleOnChange(e)}
           />
           <button
             id='btn'
             className='form'
-          ><p>{language.eng ? 'SEND' : language.esp ? 'ENVIAR' : 'ENVOYER'}</p>
+          ><p>{languages.eng ? 'SEND' : languages.esp ? 'ENVIAR' : 'ENVOYER'}</p>
           </button>
         </div>
         {
           Err.emptyField ||
             Err.invalidEmailFormat ? (
-              <div className='error'>
-                {Err.emptyField ? <span>{Err.emptyField}<br /></span> : null}
-                {Err.invalidEmailFormat ? <span>{Err.invalidEmailFormat}<br /></span> : null}
-              </div>
-            ) : null
+            <div className='error'>
+              {Err.emptyField ? <span>{Err.emptyField}<br /></span> : null}
+              {Err.invalidEmailFormat ? <span>{Err.invalidEmailFormat}<br /></span> : null}
+            </div>
+          ) : null
         }
         {
           loading ? (
@@ -292,7 +292,7 @@ const ContactMe = (props) => {
           ) : success ? (
             <div className='success'>
               <span>
-                {language.eng ? "Email sent successfully" : language.esp ? 'Correo electrónico enviado con éxito' : "E-mail envoyé avec succès"}
+                {languages.eng ? "Email sent successfully" : languages.esp ? 'Correo electrónico enviado con éxito' : "E-mail envoyé avec succès"}
               </span>
             </div>
           ) : null

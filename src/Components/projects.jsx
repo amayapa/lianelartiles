@@ -10,8 +10,8 @@ import PlayerModal from './PlayerModal';
 import VideoIcon from '../images/components/Video';
 
 const Projects = (props = {}) => {
-  const { language, darkMode } = props;
-  const { eng, esp } = props.language;
+  const { languages, darkMode } = props;
+  const { eng, esp } = props.languages;
   const [open, setOpen] = useState(false);
   const [modalProps, setModalProps] = useState({
     url: '',
@@ -40,7 +40,7 @@ const Projects = (props = {}) => {
   return (
     <>
       <div id='projects-container'>
-        <h1>{language.eng ? 'Projects' : language.esp ? 'Proyectos' : 'Des Projects'}</h1>
+        <h1>{languages.eng ? 'Projects' : languages.esp ? 'Proyectos' : 'Des Projects'}</h1>
         <div className="cards-container">
           {
             projects.map((project, index) => {
@@ -51,7 +51,7 @@ const Projects = (props = {}) => {
                       <>
                         <h3 className={darkMode ? 'toolTip-lightText' : 'toolTip-text'}>{project.name}</h3>
                         <p className={darkMode ? 'toolTip-lightText' : 'toolTip-text'}>
-                          {language.eng ? project.engText : language.esp ? project.spaText : project.freText}
+                          {languages.eng ? project.engText : languages.esp ? project.spaText : project.freText}
                         </p>
                         <div
                           style={{
@@ -75,7 +75,7 @@ const Projects = (props = {}) => {
                           {project.technologies.texts && Object.keys(project.technologies.texts).length > 0 && (
                             <li>
                               <span className={darkMode ? 'toolTip-lightText' : 'toolTip-text'}>
-                                {language.eng ? 'And:' : language.esp ? 'Ademas:' : 'En plus:'}
+                                {languages.eng ? 'And:' : languages.esp ? 'Ademas:' : 'En plus:'}
                               </span>
                             </li>
                           )}
