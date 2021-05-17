@@ -1,4 +1,4 @@
-/* do not touch this empty tag selector */
+/* Do not touch this empty tag selector!! */
 div {
 }
 
@@ -27,6 +27,36 @@ div {
   padding-right: 5px;
   text-align: end;
   font-weight: var(--text-copyRight-dark);
+}
+#message-container {
+  width: 100%;
+  position: fixed;
+  bottom: 75px;
+  left: 0;
+  right: 0;
+}
+#success {
+  background-color: #cde8944f;
+  color: green;
+  text-align: center;
+  width: 70%;
+  padding: 5px;
+  padding-left: 10px;
+  padding-right: 10px;
+  border-radius: 5px;
+  display: initial;
+}
+#failure {
+  background-color: #e894944f;
+  color: #9e0838;
+  text-align: center;
+  width: 70%;
+  padding: 5px;
+  padding-left: 10px;
+  padding-right: 10px;
+  border-radius: 5px;
+  display: initial;
+  transition: 1s ease-in;
 }
 .main-footer {
   display: flex;
@@ -108,8 +138,7 @@ div {
   padding-left: 10px;
   padding-right: 10px;
 }
-
-#wappMsg {
+.msg {
   width: auto;
   overflow: hidden;
   white-space: nowrap;
@@ -117,34 +146,35 @@ div {
   transition: max-width 4s linear;
   visibility: hidden;
   position: fixed;
+  color: var(--footer-color-dark);
+}
+.wappLink {
+  position: relative;
+}
+#share {
   bottom: 150px;
   left: 50px;
-  color: var(--footer-color-dark);
+  border: solid 1px var(--footer-color-dark);
+  border-radius: 5px;
+  padding-left: 4px;
+  padding-right: 4px;
+  margin-bottom: -1.5em;
+}
+.share-option {
+  margin: 10px;
+  cursor: pointer;
+}
+.share-option {
+  width: 30px;
+  height: 30px;
 }
 #gitMsg {
-  width: auto;
-  overflow: hidden;
-  white-space: nowrap;
-  max-width: 0%;
-  transition: max-width 4s linear;
-  visibility: hidden;
-  position: fixed;
   bottom: 110px;
   left: 50px;
-  color: var(--footer-color-dark);
-  animation: fadein ease-in-out 4s;
 }
 #inMsg {
-  width: auto;
-  overflow: hidden;
-  white-space: nowrap;
-  max-width: 0%;
-  transition: max-width 4s linear;
-  visibility: hidden;
-  position: fixed;
   bottom: 70px;
   left: 50px;
-  color: var(--footer-color-dark);
 }
 @media (orientation: landscape) {
   #gitLink:hover #gitMsg {
@@ -156,7 +186,7 @@ div {
     visibility: visible;
     max-width: 100%;
   }
-  #wappLink:hover #wappMsg {
+  #shareLink:hover #share {
     visibility: visible;
     max-width: 100%;
   }

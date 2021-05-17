@@ -2,7 +2,7 @@ import React from "react";
 import PropTypes from "prop-types";
 
 const Download = (props) => {
-  const { darkMode, colors, size } = props;
+  const { darkMode, colors } = props;
 
   return (
     <svg

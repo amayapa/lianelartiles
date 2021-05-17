@@ -3,19 +3,19 @@ import '../Styles/aboutme.css'
 import Pic from "./pic";
 
 const AboutMe = (props) => {
-  const language = props.language;
+  const languages = props.languages;
 
   return (
     <div className='aboutme-container'>
       <Pic />
       <div className='text'>
-        {language.eng ? (
+        {languages.eng ? (
             <p>
               My self-sacrificing, disciplined and responsible aptitudes 🧘🏼‍♂️, were the main keys to walk through this difficult path, and make true that dream of make myself a Developer. 💪🏼<br/>
               Passionate by foreign languages, teamwork and solve technical problems.
               FullStack development experience of web and mobile applications.
             </p>
-          ) : language.esp ?
+          ) : languages.esp ?
               (
                 <p>
                   Me considero una persona disciplinada y responsable 🧘🏼‍♂️. Esas características me permitieron enfrentar los desafíos que nos puso la cuarentena e hicieron posible cumplir mi sueño de volverme desarrollador.💪🏼<br/>

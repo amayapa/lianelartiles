@@ -4,7 +4,7 @@ import '../Styles/landingPage.css'
 
 const LandingPage = (props) => {
   /* ======================= STATE ======================= */
-  const { esp, eng } = props.language;
+  const { esp, eng } = props.languages;
 
   /* ======================= FUNCTIONS ======================= */
 

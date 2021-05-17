@@ -15,7 +15,7 @@ import Skills from "./Components/skills";
 function App() {
   /* ======================= STATE & VARS ======================= */
   const [darkMode, setDarkMode] = useState(getInitialMode());
-  const [language, setLanguage] = useState({
+  const [languages, setLanguages] = useState({
     eng: true,
     esp: false,
     fre: false,
@@ -117,35 +117,35 @@ function App() {
     <div className="App">
       <Router>
         <Route path="/">
-          <Header darkMode={darkMode} language={language} />
+          <Header darkMode={darkMode} languages={languages} />
         </Route>
         <Route exact path="/">
-          <LandingPage language={language} />
+          <LandingPage languages={languages} />
         </Route>
         <Route path="/about">
-          <About language={language} />
+          <About languages={languages} />
         </Route>
         <Route path="/contact">
-          <Contact language={language} />
+          <Contact languages={languages} />
         </Route>
         <Route path="/education">
-          <Education language={language} darkMode={darkMode} />
+          <Education languages={languages} darkMode={darkMode} />
         </Route>
         <Route path="/projects">
-          <Projects language={language} darkMode={darkMode} />
+          <Projects languages={languages} darkMode={darkMode} />
         </Route>
         <Route path="/resume">
-          <Resume language={language} />
+          <Resume languages={languages} />
         </Route>
         <Route path="/skills">
-          <Skills language={language} />
+          <Skills languages={languages} />
         </Route>
         <Route path="/">
           <Footer
             darkMode={darkMode}
             setDarkMode={setDarkMode}
-            language={language}
-            setLanguage={setLanguage}
+            languages={languages}
+            setLanguages={setLanguages}
           />
         </Route>
       </Router>

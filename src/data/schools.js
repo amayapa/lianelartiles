@@ -44,7 +44,7 @@ export const schools = [
     espName: "Alianza Francesa",
     freName: "Alliance française",
     logo: alliance,
-    engText: `International organization that aims to promote the French language and francophone culture around the world. Created in Paris on 21 July 1883 under the name Alliance française pour la propagation de la langue nationale dans les colonies et à l'étranger (French alliance for the propagation of the national language in the colonies and abroad) — now known simply as L'Alliance française — its primary concern is teaching French as a second language and is headquartered in Paris.`,
+    engText: `International organization that aims to promote the French languages and francophone culture around the world. Created in Paris on 21 July 1883 under the name Alliance française pour la propagation de la langue nationale dans les colonies et à l'étranger (French alliance for the propagation of the national languages in the colonies and abroad) — now known simply as L'Alliance française — its primary concern is teaching French as a second languages and is headquartered in Paris.`,
     spaText:
       "Organización internacional que tiene como objetivo promover la lengua francesa y la cultura francófona en todo el mundo. Creada en París el 21 de julio de 1883 con el nombre de Alliance française pour la propagation de la langue nationale dans les colonies et à l'étranger (alianza francesa para la propagación de la lengua nacional en las colonias y en el extranjero), ahora conocida simplemente como L ' Alliance française: su principal preocupación es la enseñanza del francés como segundo idioma y tiene su sede en París.",
     freText:

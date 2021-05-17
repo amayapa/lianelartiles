@@ -6,7 +6,7 @@ import { schools } from "../data/schools";
 import SliderButton from "../Components/sliderButton";
 
 const Education = (props) => {
-  const { language, darkMode } = props;
+  const { languages, darkMode } = props;
   const [current, setCurrent] = useState(0);
   const length = schools.length;
 
@@ -23,7 +23,7 @@ const Education = (props) => {
 
   return (
     <div id='education-container'>
-      <h1>{language.eng ? 'Education' : language.esp ? 'Educación' : 'Éducation'}</h1>
+      <h1>{languages.eng ? 'Education' : languages.esp ? 'Educación' : 'Éducation'}</h1>
       <div id='school-container'>
         <img onClick={() => prevSlide()} className='arrows left-arrow' src={darkMode ? images.goLeftLight : images.GoLeft} alt='ups' />
         {
@@ -37,12 +37,12 @@ const Education = (props) => {
                     </a>
                     <h1 className={school && school.webSite && school.webSite.includes('uccfd') ? 'school-name fajardo' : 'school-name'}>
                       {
-                        language.eng ? school.name || school.engName :
-                          language.esp ? school.name || school.espName :
+                        languages.eng ? school.name || school.engName :
+                          languages.esp ? school.name || school.espName :
                             school.name || school.freName
                       }
                     </h1>
-                    <p>{language.eng ? school.engText : language.esp ? school.spaText : school.freText}</p>
+                    <p>{languages.eng ? school.engText : languages.esp ? school.spaText : school.freText}</p>
                   </>
                 )}
               </div>
