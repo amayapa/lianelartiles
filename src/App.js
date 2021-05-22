@@ -11,10 +11,12 @@ import Education from "./Components/education";
 import Projects from "./Components/projects";
 import Resume from "./Components/resume";
 import Skills from "./Components/skills";
+import IsMobile from "ismobilejs";
 
 function App() {
   /* ======================= STATE & VARS ======================= */
   const [darkMode, setDarkMode] = useState(getInitialMode());
+  const [isMobile, setIsMobile] = useState(false);
   const [languages, setLanguages] = useState({
     eng: true,
     esp: false,
@@ -50,6 +52,11 @@ function App() {
   const bgCardLight = colors.getPropertyValue("--bg-card-light");
 
   /* ======================= FUNCTIONS ======================= */
+  useEffect(() => {
+    const userAgent = window.navigator;
+    setIsMobile(IsMobile(userAgent).any);
+  }, []);
+
   useEffect(() => {
     localStorage.setItem("dark", JSON.stringify(darkMode));
   }, [darkMode]);
@@ -132,7 +139,11 @@ function App() {
           <Education languages={languages} darkMode={darkMode} />
         </Route>
         <Route path="/projects">
-          <Projects languages={languages} darkMode={darkMode} />
+          <Projects
+            languages={languages}
+            darkMode={darkMode}
+            isMobile={isMobile}
+          />
         </Route>
         <Route path="/resume">
           <Resume languages={languages} />
@@ -146,6 +157,7 @@ function App() {
             setDarkMode={setDarkMode}
             languages={languages}
             setLanguages={setLanguages}
+            isMobile={isMobile}
           />
         </Route>
       </Router>

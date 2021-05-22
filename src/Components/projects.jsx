@@ -8,10 +8,15 @@ import WWW from '../images/components/WWW';
 import '../Styles/projects.css'
 import PlayerModal from './PlayerModal';
 import VideoIcon from '../images/components/Video';
+import Overlay from './Overlay';
+import useWindowDimensions from '../Utils/WindowDimensionsHook';
 
 const Projects = (props = {}) => {
-  const { languages, darkMode } = props;
+  const { languages, darkMode, isMobile } = props;
   const { eng, esp } = props.languages;
+  const { height, width } = useWindowDimensions();
+
+
   const [open, setOpen] = useState(false);
   const [modalProps, setModalProps] = useState({
     url: '',
@@ -182,14 +187,15 @@ const Projects = (props = {}) => {
           width: "720px",
           height: "405px",
           style: {
-            maxWidth: "80vw",
+            maxWidth: isMobile && height > width ? '100vw' : '80vw',
+            maxHeight: '80vh'
           }
         }}
       />
-      <div
-        className={open ? "overlay" : "overlay.active"}
-        onClick={() => setOpen(!open)}
-      ></div>
+      <Overlay
+        open={open}
+        setOpen={setOpen}
+      />
     </>
   )
 }
