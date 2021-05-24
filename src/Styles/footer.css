@@ -36,8 +36,8 @@ div {
   right: 0;
 }
 #success {
-  background-color: #cde8944f;
-  color: green;
+  background-color: var(--msg-container-dark);
+  color: var(--msg-dark);
   text-align: center;
   width: 70%;
   padding: 5px;
@@ -67,12 +67,7 @@ div {
   align-items: center;
   width: 100%;
   height: 50px;
-  background: linear-gradient(
-      180deg,
-      var(--ft-gradient-a),
-      var(--ft-gradient-b)
-    ),
-    var(--footer-color-dark);
+  background: var(--bg-card-dark);
 }
 .flags {
   display: flex;
@@ -148,23 +143,40 @@ div {
   position: fixed;
   color: var(--footer-color-dark);
 }
+.mobileMsg {
+  width: auto;
+  overflow: hidden;
+  white-space: nowrap;
+  max-width: 0%;
+  transition: max-width 2s linear;
+  position: fixed;
+  color: var(--footer-color-dark);
+  max-width: 100%;
+  transition: max-width 4s linear;
+}
 .wappLink {
   position: relative;
 }
 #share {
   bottom: 150px;
   left: 50px;
-  border: solid 1px var(--footer-color-dark);
+  background: linear-gradient(
+      180deg,
+      var(--ft-gradient-a),
+      var(--ft-gradient-b)
+    ),
+    var(--footer-color-dark);
   border-radius: 5px;
   padding-left: 4px;
   padding-right: 4px;
   margin-bottom: -1.5em;
 }
+#share > span {
+  color: var(--ft-color-dark);
+}
 .share-option {
   margin: 10px;
   cursor: pointer;
-}
-.share-option {
   width: 30px;
   height: 30px;
 }

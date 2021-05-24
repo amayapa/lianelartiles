@@ -50,6 +50,10 @@ function App() {
   const textCRLight = colors.getPropertyValue("--text-copyRight-light");
   const bgCardDark = colors.getPropertyValue("--bg-card-dark");
   const bgCardLight = colors.getPropertyValue("--bg-card-light");
+  const msgContainerDark = colors.getPropertyValue("--msg-container-dark");
+  const msgContainerLight = colors.getPropertyValue("--msg-container-light");
+  const msgDark = colors.getPropertyValue("--msg-dark");
+  const msgLight = colors.getPropertyValue("--msg-light");
 
   /* ======================= FUNCTIONS ======================= */
   useEffect(() => {
@@ -82,6 +86,8 @@ function App() {
       html.style.setProperty("--shadow-header-dark", shadowHeaderDark);
       html.style.setProperty("--bg-card-dark", bgCardDark);
       html.style.setProperty("--text-copyRight-dark", textCRLight);
+      html.style.setProperty("--msg-container-dark", msgContainerDark);
+      html.style.setProperty("--msg-dark", msgDark);
     } else {
       html.style.setProperty("--bg-img", bgLightImage);
       html.style.setProperty("--bg-img-portrait", bgLightPortraitImage);
@@ -97,6 +103,8 @@ function App() {
       html.style.setProperty("--shadow-header-dark", shadowHeaderLight);
       html.style.setProperty("--text-copyRight-dark", textCRDark);
       html.style.setProperty("--bg-card-dark", bgCardLight);
+      html.style.setProperty("--msg-container-dark", msgContainerLight);
+      html.style.setProperty("--msg-dark", msgLight);
     }
   };
 

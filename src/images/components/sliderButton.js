@@ -1,5 +1,5 @@
 import React from "react";
-import "../Styles/slideButtons.css";
+import "../../Styles/slideButtons.css";
 
 const SliderButton = ({ index, current, darkMode, handleOnSlide }) => {
   return (

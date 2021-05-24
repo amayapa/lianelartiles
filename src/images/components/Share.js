@@ -1,8 +1,9 @@
 import React from "react";
 import PropTypes from "prop-types";
+import { toogleShareBox } from "../../Utils/DOM-Manipulation";
 
 const Share = (props) => {
-  const { darkMode, colors, size, className } = props;
+  const { darkMode, colors, size, className, setOpen, isMobile } = props;
 
   return (
     <svg
@@ -11,6 +12,9 @@ const Share = (props) => {
       height={size.height}
       viewBox="0 0 56 56"
       fill="none"
+      onClick={() => {
+        isMobile ? setOpen(true) : toogleShareBox(isMobile);
+      }}
     >
       <path
         id="share light"

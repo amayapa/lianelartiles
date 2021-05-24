@@ -3,6 +3,8 @@ export const personalLinks = {
   LINKEDIN: "https://www.linkedin.com/in/imadev",
   GITHUB: "https://github.com/larts85",
   FREE_CODE_CAMP: "https://www.freecodecamp.org/imadev",
+  MESSENGER: "fb-messenger://share?link=",
+  FACEBOOK: "http://www.facebook.com/dialog/send?",
 };
 
 export const webs = {

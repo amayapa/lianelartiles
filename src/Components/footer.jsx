@@ -9,12 +9,12 @@ import { useLocation } from "react-router-dom";
 
 const Footer = (props) => {
   /* ======================= STATE ======================= */
-  const { darkMode, setDarkMode, languages, setLanguages } = props;
+  const { darkMode, setDarkMode, languages, setLanguages, isMobile } = props;
   const location = useLocation();
 
   const [message, setMessage] = useState({});
   const [tooltip, setTooltip] = useState('');
-
+  const [open, setOpen] = useState(false);
 
   useEffect(() => {
     let tooltip = '';
@@ -34,20 +34,23 @@ const Footer = (props) => {
 
   /* ======================= RENDERING ======================= */
   return (
-    <>
-      <div className='sm'>
+    <footer>
+      <section className='sm'>
         <SocialMedia
           darkMode={darkMode}
           languages={languages}
           setMessage={setMessage}
+          isMobile={isMobile}
+          open={open}
+          setOpen={setOpen}
         />
-      </div>
+      </section>
       <p id='message-container'><span id={message.success ? 'success' : message.failure ? 'failure' : null}>{message.success ? message.copiedSuccessfully : message.copyFailed}</span></p>
       <p id='copyright'>
         Copyright &copy; {new Date().getFullYear()}, Lianel Artiles
       </p>
-      <nav className='main-footer'>
-        <div className='flags'>
+      <nav className='main-footer' onClick={() => setOpen(false)}>
+        <div className='flags' onClick={() => setOpen(false)}>
           {Object.keys(languages).map((key, index) => !languages[key] && (
             <button key={index} id={key} onClick={() => setLanguages({
               esp: false,
@@ -77,7 +80,7 @@ const Footer = (props) => {
             /></Tooltip>
         </div>
       </nav>
-    </>
+    </footer>
   )
 }
 
