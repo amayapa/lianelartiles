@@ -9,17 +9,15 @@ const Header = (props) => {
   const location = useLocation();
 
   return (
-    <nav className='main-header'>
-      <div>
-        <Link to='/'>
-          <img
-            src={darkMode ? logos.lightImadev : logos.darkImadev}
-            className='logo'
-            alt="imadev"
-          />
-        </Link>
-      </div>
-      <div className='header'>
+    <header className='main-header'>
+      <Link to='/'>
+        <img
+          src={darkMode ? logos.lightImadev : logos.darkImadev}
+          className='logo'
+          alt="imadev"
+        />
+      </Link>
+      <nav className='header'>
         <ul>
           <Link className={location.pathname === '/resume' ? 'link hLinkSelected' : 'link hlink'} to='/resume'>
             <span>{languages.eng ? 'Resume' : languages.esp ? 'CV' : 'CV'}</span>
@@ -34,8 +32,8 @@ const Header = (props) => {
             <span>{languages.eng ? 'Projects' : languages.esp ? 'Proyectos' : 'Projects'}</span>
           </Link>
         </ul>
-      </div>
-    </nav>
+      </nav>
+    </header>
   )
 }
 

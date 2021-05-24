@@ -16,7 +16,6 @@ const useStyles = makeStyles(() => ({
       : "translate(-50%, -50%) scale(0)",
     boxShadow: "none",
     zIndex: 100,
-    maxWidth: "80vw",
   }),
   header: ({ darkMode }) => ({
     borderTopLeftRadius: 10,
@@ -49,13 +48,6 @@ const PlayerModal = (props) => {
   const { videoTitle, open, setOpen, darkMode, playerProps } = props;
   const classes = useStyles({ open, darkMode });
 
-  const escFunction = useCallback((event) => {
-    if (event.key === "Escape") {
-      setOpen(false);
-    }
-    //eslint-disable-next-line
-  }, []);
-
   useEffect(() => {
     document.addEventListener("keydown", escFunction, false);
     return () => {
@@ -64,13 +56,20 @@ const PlayerModal = (props) => {
     //eslint-disable-next-line
   }, []);
 
+  const escFunction = useCallback((event) => {
+    if (event.key === "Escape") {
+      setOpen(false);
+    }
+    //eslint-disable-next-line
+  }, []);
+
   return (
     <div className={classes.modal}>
       <div className={classes.header}>
-        <h1 className={classes.title}>{videoTitle}</h1>
+        <h1>{videoTitle}</h1>
         <button onClick={() => setOpen(!open)}>&times;</button>
       </div>
-      <div className={classes.body}>
+      <div>
         <ReactPlayer {...playerProps} />
       </div>
     </div>

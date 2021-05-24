@@ -8,7 +8,7 @@ const Download = (props) => {
     <svg
       xmlns="http://www.w3.org/2000/svg"
       viewBox="0 0 510.88 512"
-      class="Logo_image__246BE"
+      className="Logo_image__246BE"
     >
       <rect
         x="270.57"

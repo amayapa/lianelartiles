@@ -1,4 +1,3 @@
-// images
 import goLeftLight from "../images/pics/GoLeft-Light.svg";
 import GoLeft from "../images/pics/GoLeft.svg";
 import goRightLight from "../images/pics/GoRight-Light.svg";

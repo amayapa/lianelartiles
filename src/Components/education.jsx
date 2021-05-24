@@ -3,7 +3,7 @@ import { images } from "../constants/images"
 import '../Styles/education.css'
 import '../Styles/slideButtons.css'
 import { schools } from "../data/schools";
-import SliderButton from "../Components/sliderButton";
+import SliderButton from "../images/components/sliderButton";
 
 const Education = (props) => {
   const { languages, darkMode } = props;
@@ -58,6 +58,7 @@ const Education = (props) => {
               current={current}
               darkMode={darkMode}
               index={index}
+              key={index}
               handleOnSlide={handleOnSlide}
             />
           )

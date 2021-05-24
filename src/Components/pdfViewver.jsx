@@ -2,6 +2,8 @@ import React, { useEffect, useState } from 'react';
 import engPdf from '../data/Lianel-Artiles-Dev-CV-Eng.pdf';
 import espPdf from '../data/Lianel-Artiles-Dev-CV-Esp.pdf';
 import frePdf from '../data/Lianel-Artiles-Dev-CV-Fre.pdf';
+import IsMobile from "ismobilejs";
+
 
 const Pdf = (props) => {
   const { esp, eng, fre } = props.languages;
@@ -12,9 +14,8 @@ const Pdf = (props) => {
   const freButtton = (<span>TÉLÉCHARGEZ<br /> CV AU PDF.</span>);
 
   useEffect(() => {
-    if (typeof window.orientation !== "undefined") {
-      setIsMobile(true)
-    }
+    const userAgent = window.navigator;
+    setIsMobile(IsMobile(userAgent).any);
   }, [])
 
   if (isMobile) {

@@ -49,7 +49,6 @@ const ContactMe = (props) => {
             setLoading(false)
             setSuccess(true)
           }
-          console.log('result', result.text);
         }, (error) => {
           console.log('Error', error.text);
         });

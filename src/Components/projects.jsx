@@ -8,11 +8,19 @@ import WWW from '../images/components/WWW';
 import '../Styles/projects.css'
 import PlayerModal from './PlayerModal';
 import VideoIcon from '../images/components/Video';
+import Overlay from './Overlay';
+import TooltipOverlay from './Overlay';
+import useWindowDimensions from '../Utils/WindowDimensionsHook';
 
 const Projects = (props = {}) => {
-  const { languages, darkMode } = props;
+  const { languages, darkMode, isMobile } = props;
   const { eng, esp } = props.languages;
+  const { height, width } = useWindowDimensions();
+
+
   const [open, setOpen] = useState(false);
+  const [tooltipOpened, setTooltipOpened] = useState({});
+  const [openTooltipOverlay, setOpenTooltipOverlay] = useState(false);
   const [modalProps, setModalProps] = useState({
     url: '',
     title: ''
@@ -20,7 +28,7 @@ const Projects = (props = {}) => {
 
   const JSXTooltip = withStyles(() => ({
     tooltip: {
-      backgroundColor: !darkMode ? '#b8b8b8' : '#292a2e',
+      background: !darkMode ? `linear-gradient(180deg, #FFFFFF 0%, rgba(255, 255, 255, 0) 100%), #707070` : `linear-gradient(180deg, rgba(255, 255, 255, 0.3) 0%, rgba(255, 255, 255, 0) 100%), #292A2E`,
       maxWidth: 320,
       fontSize: 16,
       padding: 15,
@@ -36,6 +44,42 @@ const Projects = (props = {}) => {
       </li>
     ))
   }
+  const renderTooltipContent = (project) => (
+    <>
+      <h3 className={darkMode ? 'toolTip-lightText' : 'toolTip-text'}>{project.name}</h3>
+      <p className={darkMode ? 'toolTip-lightText' : 'toolTip-text'}>
+        {languages.eng ? project.engText : languages.esp ? project.spaText : project.freText}
+      </p>
+      <div
+        style={{
+          display: 'flex',
+          flexWrap: 'wrap',
+          filter: 'drop-shadow(2px 2px 2px rgb(27, 27, 27))'
+        }}
+      >
+        {project.technologies.icons.map((tech, index) => (
+          <img
+            src={tech}
+            alt='ups'
+            width='50'
+            height='50'
+            style={{ padding: 5 }}
+            key={index}
+          />
+        ))}
+      </div>
+      <ul>
+        {project.technologies.texts && Object.keys(project.technologies.texts).length > 0 && (
+          <li>
+            <span className={darkMode ? 'toolTip-lightText' : 'toolTip-text'}>
+              {languages.eng ? 'And:' : languages.esp ? 'Ademas:' : 'En plus:'}
+            </span>
+          </li>
+        )}
+        {defineTextLanguage(project)}
+      </ul>
+    </>
+  )
 
   return (
     <>
@@ -46,46 +90,22 @@ const Projects = (props = {}) => {
             projects.map((project, index) => {
               return (
                 <div className="project-card" key={index}>
-                  <JSXTooltip
-                    title={
-                      <>
-                        <h3 className={darkMode ? 'toolTip-lightText' : 'toolTip-text'}>{project.name}</h3>
-                        <p className={darkMode ? 'toolTip-lightText' : 'toolTip-text'}>
-                          {languages.eng ? project.engText : languages.esp ? project.spaText : project.freText}
-                        </p>
-                        <div
-                          style={{
-                            display: 'flex',
-                            flexWrap: 'wrap',
-                            filter: 'drop-shadow(2px 2px 2px rgb(27, 27, 27))'
-                          }}
-                        >
-                          {project.technologies.icons.map((tech, index) => (
-                            <img
-                              src={tech}
-                              alt='ups'
-                              width='50'
-                              height='50'
-                              style={{ padding: 5 }}
-                              key={index}
-                            />
-                          ))}
-                        </div>
-                        <ul>
-                          {project.technologies.texts && Object.keys(project.technologies.texts).length > 0 && (
-                            <li>
-                              <span className={darkMode ? 'toolTip-lightText' : 'toolTip-text'}>
-                                {languages.eng ? 'And:' : languages.esp ? 'Ademas:' : 'En plus:'}
-                              </span>
-                            </li>
-                          )}
-                          {defineTextLanguage(project)}
-                        </ul>
-                      </>
-                    }
+                  {isMobile ? (<JSXTooltip
+                    open={tooltipOpened[index]}
+                    title={renderTooltipContent(project)}
                   >
-                    <p id="about">?</p>
-                  </JSXTooltip>
+                    <p id="about" onClick={() => {
+                      setOpenTooltipOverlay(true)
+                      setTooltipOpened({
+                        [index]: !tooltipOpened[index]
+                      })
+                    }}>?</p>
+                  </JSXTooltip>) :
+                    (<JSXTooltip
+                      title={renderTooltipContent(project)}
+                    >
+                      <p id="about">?</p>
+                    </JSXTooltip>)}
                   <img src={project.logo} alt="ups" id='logo' />
                   <div className="card-links">
                     {project.repo && (
@@ -147,8 +167,7 @@ const Projects = (props = {}) => {
                               title: project.name
                             });
                             setOpen(!open)
-                          }
-                          }
+                          }}
                           arrow
                           placement='bottom-end'
                         >
@@ -182,14 +201,25 @@ const Projects = (props = {}) => {
           width: "720px",
           height: "405px",
           style: {
-            maxWidth: "80vw",
+            maxWidth: isMobile && height > width ? '100vw' : '80vw',
+            maxHeight: '80vh'
           }
         }}
       />
-      <div
-        className={open ? "overlay" : "overlay.active"}
-        onClick={() => setOpen(!open)}
-      ></div>
+      <TooltipOverlay
+        open={openTooltipOverlay}
+        stateChangers={[
+          setOpenTooltipOverlay,
+          setTooltipOpened
+        ]}
+        styles={{
+          backgroundColor: 'rgba(0, 0, 0, 0)'
+        }}
+      />
+      <Overlay
+        open={open}
+        stateChangers={[setOpen]}
+      />
     </>
   )
 }
