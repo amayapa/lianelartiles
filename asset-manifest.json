@@ -1,8 +1,8 @@
 {
   "files": {
-    "main.css": "/lianelartiles/static/css/main.941cca73.chunk.css",
-    "main.js": "/lianelartiles/static/js/main.f75c26b9.chunk.js",
-    "main.js.map": "/lianelartiles/static/js/main.f75c26b9.chunk.js.map",
+    "main.css": "/lianelartiles/static/css/main.52425302.chunk.css",
+    "main.js": "/lianelartiles/static/js/main.078bbdc6.chunk.js",
+    "main.js.map": "/lianelartiles/static/js/main.078bbdc6.chunk.js.map",
     "runtime-main.js": "/lianelartiles/static/js/runtime-main.6bfec0ba.js",
     "runtime-main.js.map": "/lianelartiles/static/js/runtime-main.6bfec0ba.js.map",
     "static/js/2.61a83b87.chunk.js": "/lianelartiles/static/js/2.61a83b87.chunk.js",
@@ -10,9 +10,10 @@
     "static/js/3.8f7e4c00.chunk.js": "/lianelartiles/static/js/3.8f7e4c00.chunk.js",
     "static/js/3.8f7e4c00.chunk.js.map": "/lianelartiles/static/js/3.8f7e4c00.chunk.js.map",
     "index.html": "/lianelartiles/index.html",
-    "static/css/main.941cca73.chunk.css.map": "/lianelartiles/static/css/main.941cca73.chunk.css.map",
+    "static/css/main.52425302.chunk.css.map": "/lianelartiles/static/css/main.52425302.chunk.css.map",
     "static/js/2.61a83b87.chunk.js.LICENSE.txt": "/lianelartiles/static/js/2.61a83b87.chunk.js.LICENSE.txt",
     "static/media/Dark Toggle.7540ea88.svg": "/lianelartiles/static/media/Dark Toggle.7540ea88.svg",
+    "static/media/FastShopping.e8e6a2da.png": "/lianelartiles/static/media/FastShopping.e8e6a2da.png",
     "static/media/GoLeft-Light.2ff3a5a0.svg": "/lianelartiles/static/media/GoLeft-Light.2ff3a5a0.svg",
     "static/media/GoLeft.ff9f9e95.svg": "/lianelartiles/static/media/GoLeft.ff9f9e95.svg",
     "static/media/GoRight-Light.e23978f4.svg": "/lianelartiles/static/media/GoRight-Light.e23978f4.svg",
@@ -52,7 +53,7 @@
     "static/media/material-ui.741a52f5.svg": "/lianelartiles/static/media/material-ui.741a52f5.svg",
     "static/media/mongodb-original.416baad2.svg": "/lianelartiles/static/media/mongodb-original.416baad2.svg",
     "static/media/moonbank.ef61e0b3.png": "/lianelartiles/static/media/moonbank.ef61e0b3.png",
-    "static/media/mysql.461bd2df.svg": "/lianelartiles/static/media/mysql.461bd2df.svg",
+    "static/media/mysql-original-wordmark.4e6fc768.svg": "/lianelartiles/static/media/mysql-original-wordmark.4e6fc768.svg",
     "static/media/nodejs-original.7ca28bcc.svg": "/lianelartiles/static/media/nodejs-original.7ca28bcc.svg",
     "static/media/npm-original-wordmark.2c362bda.svg": "/lianelartiles/static/media/npm-original-wordmark.2c362bda.svg",
     "static/media/passport.e4c7042d.svg": "/lianelartiles/static/media/passport.e4c7042d.svg",
@@ -71,7 +72,7 @@
   "entrypoints": [
     "static/js/runtime-main.6bfec0ba.js",
     "static/js/2.61a83b87.chunk.js",
-    "static/css/main.941cca73.chunk.css",
-    "static/js/main.f75c26b9.chunk.js"
+    "static/css/main.52425302.chunk.css",
+    "static/js/main.078bbdc6.chunk.js"
   ]
 }
