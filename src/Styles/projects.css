@@ -48,7 +48,7 @@
   top: 0;
   font-weight: bolder;
   font-size: 2em;
-  color: var(--footer-color-light);
+  color: var(--ft-text-dark);
 }
 #logo {
   margin-top: 26px;
@@ -68,7 +68,6 @@
   border: transparent;
 }
 .toolTip-text {
-  color: var(--text-color-light);
   text-align: justify;
   text-justify: inter-word;
 }

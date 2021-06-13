@@ -36,7 +36,7 @@ object {
   margin-bottom: 150px;
 }
 #downloadBtn > a > span {
-  color: var(--footer-color-light);
+  color: var(--ft-text-light);
   font-size: 150%;
 }
 

@@ -15,9 +15,9 @@
     margin-left: 5vw;
     text-align: justify;
     text-justify: inter-word;
-    padding: 20px;
     height: fit-content;
     background-color: rgba(0, 0, 0, 0.2);
+    padding: 20px;
     border-radius: 10px;
   }
 }

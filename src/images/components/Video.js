@@ -8,7 +8,7 @@ const Video = (props) => {
     <svg
       width={size.width}
       height={size.height}
-      class="MuiSvgIcon-root jss174"
+      className="MuiSvgIcon-root jss174"
       focusable="false"
       viewBox="0 0 24 24"
       aria-hidden="true"

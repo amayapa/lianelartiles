@@ -16,7 +16,7 @@ const Projects = (props = {}) => {
   const { languages, darkMode, isMobile } = props;
   const { eng, esp } = props.languages;
   const { height, width } = useWindowDimensions();
-
+  const toolTipTextColorContent = { color: darkMode ? '#fff' : '#333' }
 
   const [open, setOpen] = useState(false);
   const [tooltipOpened, setTooltipOpened] = useState({});
@@ -40,14 +40,14 @@ const Projects = (props = {}) => {
     const lang = eng ? 'eng' : esp ? 'esp' : 'fre';
     return project.technologies.texts?.[lang]?.map((tech, index) => (
       <li key={index}>
-        <span className={darkMode ? 'toolTip-lightText' : 'toolTip-text'}>{tech}</span>
+        <span className='toolTip-text' style={toolTipTextColorContent}>{tech}</span>
       </li>
     ))
   }
   const renderTooltipContent = (project) => (
     <>
-      <h3 className={darkMode ? 'toolTip-lightText' : 'toolTip-text'}>{project.name}</h3>
-      <p className={darkMode ? 'toolTip-lightText' : 'toolTip-text'}>
+      <h3 className='toolTip-text' style={toolTipTextColorContent}>{project.name}</h3>
+      <p className='toolTip-text' style={toolTipTextColorContent}>
         {languages.eng ? project.engText : languages.esp ? project.spaText : project.freText}
       </p>
       <div
@@ -71,7 +71,7 @@ const Projects = (props = {}) => {
       <ul>
         {project.technologies.texts && Object.keys(project.technologies.texts).length > 0 && (
           <li>
-            <span className={darkMode ? 'toolTip-lightText' : 'toolTip-text'}>
+            <span className='toolTip-text' style={toolTipTextColorContent}>
               {languages.eng ? 'And:' : languages.esp ? 'Ademas:' : 'En plus:'}
             </span>
           </li>

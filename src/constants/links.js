@@ -21,6 +21,7 @@ export const repos = {
   MOONKBANK: "https://github.com/larts85/Wallet-Native",
   ARGENCLIMA: "https://github.com/larts85/argenclima",
   CYBERFITNESS: "https://github.com/larts85/Ciber-Fitness",
+  FAST_SHOPPING: "https://github.com/larts85/Fast-Shopping",
 };
 
 export const media = {

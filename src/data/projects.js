@@ -1,16 +1,12 @@
-import REVAI from "../images/logos/REVAI.png";
-import moonbank from "../images/logos/moonbank.png";
-import argenClima from "../images/logos/argenclima.svg";
-import cyberFitness from "../images/logos/cyberFitness.png";
-import imadev from "../images/logos/imadev.svg";
 import { technologies } from "../constants/technologies";
 import { media, repos, webs } from "../constants/links";
 import MoonBankApk from "../data/MoonBank.apk";
+import { logos } from "../constants/logos";
 
 export const projects = [
   {
     name: "REVAI",
-    logo: REVAI,
+    logo: logos.REVAI,
     engText:
       "Start Up project which mission is to give people the power to manage their own medical data. Used technologies:",
     spaText:
@@ -40,7 +36,7 @@ export const projects = [
   },
   {
     name: "MOONBANK",
-    logo: moonbank,
+    logo: logos.moonbank,
     engText:
       "Virtual wallet (fintech) specializing in the management of, and dollars, recharging credit, using our own card, paying the services, a help chat and so on. Used technologies:",
     spaText:
@@ -67,8 +63,37 @@ export const projects = [
     video: media.MOONKBANK_VIDEO,
   },
   {
+    name: "Fast Shopping",
+    logo: logos.FastShopping,
+    // engText:
+    //   "Virtual wallet (fintech) specializing in the management of, and dollars, recharging credit, using our own card, paying the services, a help chat and so on. Used technologies:",
+    // spaText:
+    //   "Billetera virtual (Fintech) para la gestión de dinero, con características como la compra-venta de dólares, recarga de crédito por diversos medios, pago du servicios, un chat de ayuda y mucho más. Tecnologías utilizadas:",
+    // freText:
+    //   "Portefeuille virtuel (Fintech) pour la gestion de devises, avec des fonctionnalités telles que l'achat et la vente de dollars, la recharge de crédit par divers moyens, le paiement des services, un chat d'aide et bien plus encore. Des technologies utilisées:",
+    technologies: {
+      icons: [
+        technologies.ReactJs,
+        technologies.Redux,
+        technologies.StyledComponents,
+        technologies.Node,
+        technologies.MySQL,
+        technologies.Express,
+        technologies.MaterialUI,
+        technologies.Sequelize,
+      ],
+      // texts: {
+      //   esp: ["- Algunas otras librerías menores"],
+      //   eng: ["- Some other minor libraries"],
+      //   fre: ["- Quelques autres bibliothèques mineures"],
+      // },
+    },
+    webSite: false,
+    repo: repos.FAST_SHOPPING,
+  },
+  {
     name: "ARGENCLIMA",
-    logo: argenClima,
+    logo: logos.argenClima,
     engText:
       "React project with learning porpose, it's a weather app focus only in the Argentine provinces, for each one of then also include an extract from wikipedia. Used technologies:",
     spaText:
@@ -89,7 +114,7 @@ export const projects = [
   },
   {
     name: "CYBERFITNESS",
-    logo: cyberFitness,
+    logo: logos.cyberFitness,
     engText:
       "It is an e-commerce carried out as a first great mission, in which my colleagues and I combine all the technologies learned in the #SoyHenry bootcamp. Used technologies:",
     spaText:
@@ -126,7 +151,7 @@ export const projects = [
   },
   {
     name: "PORTFOLIO",
-    logo: imadev,
+    logo: logos.imadev,
     engText:
       "This is my personal Website / Portfolio where you can see my career as a developer and was created with:",
     spaText:

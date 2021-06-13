@@ -1,38 +1,12 @@
 @import url("https://fonts.googleapis.com/css2?family=Saira&display=swap");
 :root {
-  --bg-img: url("./images/pics/hive.svg");
-  --bg-light-img: url("./images/pics/light-hive.svg");
-  --bg-img-portrait: url("./images/pics/hive-portrait.svg");
-  --bg-light-img-portrait: url("./images/pics/light-vertical-hive.svg");
-  --bg-color-dark: #292a2e;
-  --bg-color-light: #707070;
-  --ft-color-dark: #ffffff;
-  --text-color-dark: #ffffff;
-  --text-color-light: #000000;
-  --footer-color-dark: #b8b8b8;
-  --footer-color-light: #292a2e;
-  --bg-gradient-dark-a: #ffffff4d 0%;
-  --bg-gradient-dark-b: #ffffff00 100%;
-  --bg-gradient-light-a: #ffffff 0%;
-  --bg-gradient-light-b: #ffffff00 100%;
-  --bg-card-dark: linear-gradient(180deg, #ffffff 0%, #ffffff00 100%), #707070;
-  --bg-card-light: linear-gradient(180deg, #ffffff4d 0%, #ffffff00 100%),
-    #292a2e;
-  --ft-gradient-a: #ffffff4d 0%;
-  --ft-gradient-b: #ffffff00 100%;
-  --ft-dark-hover-color: #5f5e5e48;
-  --ft-light-hover-color: #d1caca2d;
-  --shadow-ft-dark: drop-shadow(3px 3px 2px #1b1b1b);
-  --shadow-header-dark: drop-shadow(4px 4px 3px #000000a6);
-  --shadow-header-light: drop-shadow(4px 4px 3px #000000);
-  --shadow-sm-light: drop-shadow(4px 4px 3px #0000008f);
-  --text-copyRight-dark: bold;
-  --text-copyRight-light: normal;
-  --fit-content: fit-content;
-  --msg-container-dark: #99b55e7a;
-  --msg-dark: #0fb00f;
-  --msg-container-light: #cde8944f;
-  --msg-light: green;
+  /* dark mode */
+  --bg-img-dark: url("./images/pics/hive.svg");
+  --bg-img-portrait-dark: url("./images/pics/hive-portrait.svg");
+
+  /* light mode */
+  --bg-img-light: url("./images/pics/light-hive.svg");
+  --bg-img-portrait-light: url("./images/pics/light-vertical-hive.svg");
 }
 *,
 *::before,
@@ -46,25 +20,25 @@ body {
   font-size: 1.2rem;
   display: flex;
 }
-::-webkit-scrollbar {
+/* ::-webkit-scrollbar {
   width: 12px;
 }
 ::-webkit-scrollbar-track {
   box-shadow: none;
-  border-radius: 5;
-  background-color: var(--footer-color-dark);
+  background-color: var(--bg-card-dark);
 }
 ::-webkit-scrollbar-thumb {
-  background-color: var(--footer-color-light);
+  background-color: var(--bg-card-dark);
   outline: none;
   border-radius: 10px;
-}
+  width: 10px;
+} */
 #root {
-  background: var(--bg-img),
+  background: var(--bg-img-dark),
     linear-gradient(
       180deg,
-      var(--bg-gradient-dark-a),
-      var(--bg-gradient-dark-b)
+      var(--bg-gradient-a-dark),
+      var(--bg-gradient-b-dark)
     ),
     var(--bg-color-dark);
   background-size: 100% 100%, 100% 100%;
@@ -96,11 +70,11 @@ h4 {
 }
 @media (orientation: portrait) {
   #root {
-    background: var(--bg-img-portrait),
+    background: var(--bg-img-portrait-dark),
       linear-gradient(
         180deg,
-        var(--bg-gradient-dark-a),
-        var(--bg-gradient-dark-b)
+        var(--bg-gradient-a-dark),
+        var(--bg-gradient-b-dark)
       ),
       var(--bg-color-dark);
     width: 100%;
