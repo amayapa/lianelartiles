@@ -65,12 +65,9 @@ export const projects = [
   {
     name: "Fast Shopping",
     logo: logos.FastShopping,
-    // engText:
-    //   "Virtual wallet (fintech) specializing in the management of, and dollars, recharging credit, using our own card, paying the services, a help chat and so on. Used technologies:",
-    // spaText:
-    //   "Billetera virtual (Fintech) para la gestión de dinero, con características como la compra-venta de dólares, recarga de crédito por diversos medios, pago du servicios, un chat de ayuda y mucho más. Tecnologías utilizadas:",
-    // freText:
-    //   "Portefeuille virtuel (Fintech) pour la gestion de devises, avec des fonctionnalités telles que l'achat et la vente de dollars, la recharge de crédit par divers moyens, le paiement des services, un chat d'aide et bien plus encore. Des technologies utilisées:",
+    engText: "Simple but elegant shopping cart. Used technologies:",
+    spaText: "Imple pero elegante carrito de compras. Tecnologías utilizadas:",
+    freText: "Panier simple mais élégant. Des technologies utilisées:",
     technologies: {
       icons: [
         technologies.ReactJs,
@@ -82,11 +79,6 @@ export const projects = [
         technologies.MaterialUI,
         technologies.Sequelize,
       ],
-      // texts: {
-      //   esp: ["- Algunas otras librerías menores"],
-      //   eng: ["- Some other minor libraries"],
-      //   fre: ["- Quelques autres bibliothèques mineures"],
-      // },
     },
     webSite: false,
     repo: repos.FAST_SHOPPING,
