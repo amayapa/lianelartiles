@@ -16,7 +16,7 @@ const LandingPage = (props) => {
         {eng ? 'FullStack Web and Mobile Developer' : esp ? 'Desarrollador FullStack Web y Mobile' : 'Développeur Web et Mobile FullStack'}
       </span><br />
       <span id='lema'>
-        {eng ? 'At last working on my passion' : esp ? 'Finalmente haciendo lo que me apasiona' : 'En travaillant enfin sur ma passion'}
+        {eng ? 'Working on my passion' : esp ? 'Haciendo lo que me apasiona' : 'En travaillant sur ma passion'}
       </span>
     </div>
   )
