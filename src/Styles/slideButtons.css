@@ -12,11 +12,5 @@
   filter: var(--shadow-header-dark);
 }
 #hexagon:hover {
-  background-color: var(--footer-color-dark);
+  background-color: var(--ft-text-dark);
 }
-/* 
-.bottom-half-checked {
-  -webkit-transform: rotate(180deg);
-  -ms-transform: rotate(180deg);
-  transform: rotate(180deg);
-} */

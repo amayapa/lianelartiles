@@ -38,7 +38,7 @@
   margin: auto;
 }
 .school > p {
-  color: var(--footer-color-light);
+  color: var(--ft-text-dark);
   max-width: 550px;
   text-align: justify;
   text-justify: inter-word;
@@ -47,7 +47,7 @@
 }
 .school > h1 {
   margin-top: 25px;
-  color: var(--footer-color-light);
+  color: var(--ft-text-dark);
   max-width: 500px;
 }
 .school > a > img {

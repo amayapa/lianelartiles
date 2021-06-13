@@ -12,6 +12,7 @@ import Projects from "./Components/projects";
 import Resume from "./Components/resume";
 import Skills from "./Components/skills";
 import IsMobile from "ismobilejs";
+import { cssVariables } from "./data/cssVariables";
 
 function App() {
   /* ======================= STATE & VARS ======================= */
@@ -24,38 +25,11 @@ function App() {
   });
 
   const html = document.querySelector("#root");
-  const root = document.querySelector(":root");
-  const colors = getComputedStyle(root);
-  const bgLightImage = colors.getPropertyValue("--bg-light-img");
-  const bgLightPortraitImage = colors.getPropertyValue(
-    "--bg-light-img-portrait"
-  );
-  const bgImage = colors.getPropertyValue("--bg-img");
-  const bgPortraitImage = colors.getPropertyValue("--bg-img-portrait");
-  const bgColorDark = colors.getPropertyValue("--bg-color-dark");
-  const bgColorLight = colors.getPropertyValue("--bg-color-light");
-  const textColorDark = colors.getPropertyValue("--text-color-dark");
-  const textColorLight = colors.getPropertyValue("--text-color-light");
-  const footerColorDark = colors.getPropertyValue("--footer-color-dark");
-  const footerColorLight = colors.getPropertyValue("--footer-color-light");
-  const bgGradientDarkA = colors.getPropertyValue("--bg-gradient-dark-a");
-  const bgGradientDarkB = colors.getPropertyValue("--bg-gradient-dark-b");
-  const bgGradientLightA = colors.getPropertyValue("--bg-gradient-light-a");
-  const bgGradientLightB = colors.getPropertyValue("--bg-gradient-light-b");
-  const ftDarkHoverColor = colors.getPropertyValue("--ft-dark-hover-color");
-  const ftLightHoverColor = colors.getPropertyValue("--ft-light-hover-color");
-  const shadowHeaderDark = colors.getPropertyValue("--shadow-header-dark");
-  const shadowHeaderLight = colors.getPropertyValue("--shadow-header-light");
-  const textCRDark = colors.getPropertyValue("--text-copyRight-dark");
-  const textCRLight = colors.getPropertyValue("--text-copyRight-light");
-  const bgCardDark = colors.getPropertyValue("--bg-card-dark");
-  const bgCardLight = colors.getPropertyValue("--bg-card-light");
-  const msgContainerDark = colors.getPropertyValue("--msg-container-dark");
-  const msgContainerLight = colors.getPropertyValue("--msg-container-light");
-  const msgDark = colors.getPropertyValue("--msg-dark");
-  const msgLight = colors.getPropertyValue("--msg-light");
+  const colors = getComputedStyle(document.querySelector(":root"));
 
   /* ======================= FUNCTIONS ======================= */
+  useEffect(() => {}, []);
+
   useEffect(() => {
     const userAgent = window.navigator;
     setIsMobile(IsMobile(userAgent).any);
@@ -70,41 +44,28 @@ function App() {
     // eslint-disable-next-line
   }, [darkMode]);
 
+  const bgImgDark = colors.getPropertyValue("--bg-img-dark");
+  const bgImgPortraitDark = colors.getPropertyValue("--bg-img-portrait-dark");
+  const bgimgLight = colors.getPropertyValue("--bg-img-light");
+  const bgImgPortraitLight = colors.getPropertyValue("--bg-img-portrait-light");
+
+  const setCSSVariables = (mode) => {
+    cssVariables.forEach(({ name, darkModeValue, lightModeValue }) => {
+      const cssProperty = `${name}-dark`;
+      const value = mode === "dark" ? darkModeValue : lightModeValue;
+      html.style.setProperty(cssProperty, value);
+    });
+  };
+
   const switchMode = () => {
     if (darkMode) {
-      html.style.setProperty("--bg-img", bgImage);
-      html.style.setProperty("--bg-img-portrait", bgPortraitImage);
-      html.style.setProperty("--bg-color-dark", bgColorDark);
-      html.style.setProperty("--bg-color-light", bgColorLight);
-      html.style.setProperty("--footer-color-dark", footerColorDark);
-      html.style.setProperty("--footer-color-light", footerColorLight);
-      html.style.setProperty("--bg-gradient-dark-a", bgGradientDarkA);
-      html.style.setProperty("--bg-gradient-dark-b", bgGradientDarkB);
-      html.style.setProperty("--text-color-dark", textColorDark);
-      html.style.setProperty("--ft-color-dark", textColorLight);
-      html.style.setProperty("--ft-dark-hover-color", ftDarkHoverColor);
-      html.style.setProperty("--shadow-header-dark", shadowHeaderDark);
-      html.style.setProperty("--bg-card-dark", bgCardDark);
-      html.style.setProperty("--text-copyRight-dark", textCRLight);
-      html.style.setProperty("--msg-container-dark", msgContainerDark);
-      html.style.setProperty("--msg-dark", msgDark);
+      setCSSVariables("dark");
+      html.style.setProperty("--bg-img-dark", bgImgDark);
+      html.style.setProperty("--bg-img-portrait-dark", bgImgPortraitDark);
     } else {
-      html.style.setProperty("--bg-img", bgLightImage);
-      html.style.setProperty("--bg-img-portrait", bgLightPortraitImage);
-      html.style.setProperty("--bg-color-dark", bgColorLight);
-      html.style.setProperty("--bg-color-light", bgColorDark);
-      html.style.setProperty("--footer-color-dark", footerColorLight);
-      html.style.setProperty("--footer-color-light", footerColorDark);
-      html.style.setProperty("--bg-gradient-dark-a", bgGradientLightA);
-      html.style.setProperty("--bg-gradient-dark-b", bgGradientLightB);
-      html.style.setProperty("--text-color-dark", textColorLight);
-      html.style.setProperty("--ft-color-dark", textColorDark);
-      html.style.setProperty("--ft-dark-hover-color", ftLightHoverColor);
-      html.style.setProperty("--shadow-header-dark", shadowHeaderLight);
-      html.style.setProperty("--text-copyRight-dark", textCRDark);
-      html.style.setProperty("--bg-card-dark", bgCardLight);
-      html.style.setProperty("--msg-container-dark", msgContainerLight);
-      html.style.setProperty("--msg-dark", msgLight);
+      setCSSVariables("light");
+      html.style.setProperty("--bg-img-dark", bgimgLight);
+      html.style.setProperty("--bg-img-portrait-dark", bgImgPortraitLight);
     }
   };
 

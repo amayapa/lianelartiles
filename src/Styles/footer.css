@@ -23,10 +23,10 @@ div {
   right: 0;
   margin: 0;
   font-size: 10px;
-  font-weight: var(--text-copyRight-dark);
   padding-right: 5px;
   text-align: end;
-  font-weight: var(--text-copyRight-dark);
+  font-weight: var(--text-copyright-dark);
+  letter-spacing: 0.5px;
 }
 #message-container {
   width: 100%;
@@ -87,7 +87,7 @@ div {
   border: 0;
   padding: 0;
   margin-right: 8px;
-  color: var(--ft-color-dark);
+  color: var(--ft-text-dark);
   filter: var(--shadow-ft-dark);
 }
 
@@ -98,7 +98,7 @@ div {
   padding: 0;
 }
 .footer .flink {
-  color: var(--ft-color-dark);
+  color: var(--ft-text-dark);
   filter: var(--shadow-ft-dark);
   padding-top: 4px;
   padding-bottom: 4px;
@@ -120,13 +120,13 @@ div {
   transform: rotateY(180deg);
 }
 .flink:hover {
-  background-color: var(--ft-dark-hover-color);
+  background-color: var(--ft-hover-color-dark);
   border-radius: 10px;
 }
 .fLinkSelected {
-  background-color: var(--ft-dark-hover-color);
+  background-color: var(--ft-hover-color-dark);
   border-radius: 10px;
-  color: var(--ft-color-dark);
+  color: var(--ft-text-dark);
   filter: var(--shadow-ft-dark);
   padding-top: 4px;
   padding-bottom: 4px;
@@ -141,7 +141,7 @@ div {
   transition: max-width 4s linear;
   visibility: hidden;
   position: fixed;
-  color: var(--footer-color-dark);
+  color: var(--text-color-dark);
 }
 .mobileMsg {
   width: auto;
@@ -150,7 +150,7 @@ div {
   max-width: 0%;
   transition: max-width 2s linear;
   position: fixed;
-  color: var(--footer-color-dark);
+  color: var(--ft-text-dark);
   max-width: 100%;
   transition: max-width 4s linear;
 }
@@ -160,19 +160,14 @@ div {
 #share {
   bottom: 150px;
   left: 50px;
-  background: linear-gradient(
-      180deg,
-      var(--ft-gradient-a),
-      var(--ft-gradient-b)
-    ),
-    var(--footer-color-dark);
+  background: var(--bg-card-dark);
   border-radius: 5px;
   padding-left: 4px;
   padding-right: 4px;
   margin-bottom: -1.5em;
 }
 #share > span {
-  color: var(--ft-color-dark);
+  color: var(--ft-text-dark);
 }
 .share-option {
   margin: 10px;

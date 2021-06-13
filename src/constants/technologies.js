@@ -20,7 +20,6 @@ import Expo from "../images/techs/expo.svg";
 import StyledComponents from "../images/techs/styled-components.svg";
 import Firebase from "../images/techs/firebase.svg";
 import SQLite from "../images/techs/SQLite.svg";
-import MySql from "../images/techs/mysql.svg";
 import TypeScript from "../images/techs/typescript.svg";
 import Docker from "../images/techs/docker.svg";
 import IndexedDB from "../images/techs/indexedDB.svg";
@@ -30,6 +29,7 @@ import Passport from "../images/techs/passport.svg";
 import JWToken from "../images/techs/jwt.svg";
 import EmailJs from "../images/techs/emailJs.svg";
 import YouTube from "../images/logos/youtube.svg";
+import MySQL from "../images/techs/mysql-original-wordmark.svg";
 
 export const technologies = {
   EmailJs,
@@ -61,7 +61,7 @@ export const technologies = {
   StyledComponents,
   Firebase,
   SQLite,
-  MySql,
+  MySQL,
   TypeScript,
   YouTube,
 };
