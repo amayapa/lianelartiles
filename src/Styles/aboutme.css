@@ -1,6 +1,14 @@
 .aboutme-container::-webkit-scrollbar {
   display: none;
 }
+@keyframes text {
+  0% {
+    transform: translateX(-35vw);
+  }
+  100% {
+    transform: translateX(0vw);
+  }
+}
 @media (orientation: landscape) {
   .aboutme-container {
     display: flex;
@@ -19,6 +27,7 @@
     background-color: rgba(0, 0, 0, 0.2);
     padding: 20px;
     border-radius: 10px;
+    animation: text 3s;
   }
 }
 @media (orientation: landscape) and (max-height: 800px) {
