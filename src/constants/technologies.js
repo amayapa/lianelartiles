@@ -30,6 +30,8 @@ import JWToken from "../images/techs/jwt.svg";
 import EmailJs from "../images/techs/emailJs.svg";
 import YouTube from "../images/logos/youtube.svg";
 import MySQL from "../images/techs/mysql-original-wordmark.svg";
+import Heroku from "../images/techs/Heroku.svg";
+import FirebaseHosting from "../images/techs/firebase-hosting.svg";
 
 export const technologies = {
   EmailJs,
@@ -60,8 +62,10 @@ export const technologies = {
   Expo,
   StyledComponents,
   Firebase,
+  FirebaseHosting,
   SQLite,
   MySQL,
   TypeScript,
   YouTube,
+  Heroku,
 };

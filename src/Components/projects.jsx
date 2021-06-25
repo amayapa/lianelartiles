@@ -28,7 +28,9 @@ const Projects = (props = {}) => {
 
   const JSXTooltip = withStyles(() => ({
     tooltip: {
-      background: !darkMode ? `linear-gradient(180deg, #FFFFFF 0%, rgba(255, 255, 255, 0) 100%), #707070` : `linear-gradient(180deg, rgba(255, 255, 255, 0.3) 0%, rgba(255, 255, 255, 0) 100%), #292A2E`,
+      background: !darkMode
+        ? `linear-gradient(180deg, #FFFFFF 0%, rgba(255, 255, 255, 0) 100%), #707070`
+        : `linear-gradient(180deg, rgba(255, 255, 255, 0.3) 0%, rgba(255, 255, 255, 0) 100%), #292A2E`,
       maxWidth: 320,
       fontSize: 16,
       padding: 15,

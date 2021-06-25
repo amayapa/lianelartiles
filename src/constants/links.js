@@ -14,6 +14,7 @@ export const webs = {
   PORTFOLIO: "https://larts85.github.io/lianelartiles",
   FRENCH_ALLIANCE: "https://www.fondation-alliancefr.org/",
   HENRY: "https://soyhenry.com/",
+  FAST_SHOPPING: "https://larts85.github.io/fast-shopping-client",
 };
 
 export const repos = {
@@ -21,7 +22,7 @@ export const repos = {
   MOONKBANK: "https://github.com/larts85/Wallet-Native",
   ARGENCLIMA: "https://github.com/larts85/argenclima",
   CYBERFITNESS: "https://github.com/larts85/Ciber-Fitness",
-  FAST_SHOPPING: "https://github.com/larts85/Fast-Shopping",
+  FAST_SHOPPING: "https://github.com/larts85/fast-shopping-client",
 };
 
 export const media = {
